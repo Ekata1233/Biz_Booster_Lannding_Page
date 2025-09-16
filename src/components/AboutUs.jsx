@@ -206,7 +206,7 @@ export default function AboutSection() {
               className="hidden lg:flex items-center justify-center gap-4 mt-8"
             >
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
                 className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-md hover:shadow-lg"
               >
                 <FaGooglePlay size={22} /> Google Play

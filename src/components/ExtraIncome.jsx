@@ -17,31 +17,31 @@ const steps = [
     desc: "No fixed hours—you are completely flexible",
     extra: "Join as a service partner or franchise owner",
     icon: "🌎",
-    img: "/images/work.png",
+    img: "/evergreenopportunities.png",
     color: "from-purple-500 to-pink-500",
   },
   {
-    title: "Package Required",
+    title: "Team earning",
     desc: "To start your journey, you need to select a package",
     extra: "Choose from different packages designed for services and franchise",
     icon: "📦",
-    img: "/images/package.png",
+    img: "/boostsales.png",
     color: "from-amber-500 to-orange-500",
   },
   {
-    title: "Weekly Payout",
+    title: "Monthly Payout",
     desc: "Get your earnings weekly after successful sales",
     extra: "Both services and franchise models get paid weekly",
     icon: "💰",
-    img: "/images/payout.png",
+    img: "/GP.png",
     color: "from-green-500 to-emerald-500",
   },
   {
-    title: "Attend Trainings",
+    title: "Team Revenue Earning",
     desc: "Learn from experts and grow faster",
     extra: "We train both service providers and franchise partners",
     icon: "🎓",
-    img: "/images/training.png",
+    img: "/boostsales.png",
     color: "from-red-500 to-rose-500",
   },
 ];
@@ -125,7 +125,7 @@ export default function ExtraIncome() {
   <img
     src={steps[activeStep].img}
     alt={steps[activeStep].title}
-    className="w-full max-w-xs sm:max-w-sm md:max-w-100 lg:w-100 lg:max-w-100 lg:max-h-100 xl:max-w-lg rounded-2xl shadow-lg object-contain"
+    className="w-full max-w-xs sm:max-w-sm md:max-w-100 lg:w-100 lg:max-w-100 lg:max-h-100 xl:max-w-lg shadow-blue-200 object-cover"
   />
 </motion.div>
         </div>

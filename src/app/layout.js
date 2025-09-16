@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata = {
   title: "Fetch True",
   description: "Providing B2B solutions and franchise opportunities.",
+   icons: {
+    icon: "/Fetch true web icon.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
