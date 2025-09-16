@@ -125,7 +125,7 @@ export default function DownloadBanner() {
         </motion.div>
 
         {/* Main Banner Content */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8">
+        <div className=" gap-6 md:gap-8 p-6 md:p-8">
           {/* Left Column - App Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -175,14 +175,14 @@ export default function DownloadBanner() {
           </motion.div>
           
           {/* Right Column - Download CTA */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             className="bg-gradient-to-b from-blue-50 to-indigo-50 p-6 md:p-8 rounded-lg md:rounded-xl shadow-inner relative overflow-hidden"
-          >
+          > */}
             {/* Floating elements */}
-            <motion.div
+            {/* <motion.div
               animate={{
                 y: [0, -15, 0],
               }}
@@ -207,9 +207,9 @@ export default function DownloadBanner() {
               className="absolute bottom-6 md:bottom-10 left-6 md:left-10 text-indigo-200 text-4xl md:text-5xl opacity-30"
             >
               <FaRocket />
-            </motion.div>
+            </motion.div> */}
             
-            <div className="text-center mb-4 md:mb-6 relative z-10">
+            {/* <div className="text-center mb-4 md:mb-6 relative z-10">
               <motion.h3
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -226,10 +226,10 @@ export default function DownloadBanner() {
               >
                 Download our app and transform your business
               </motion.p>
-            </div>
+            </div> */}
             
             {/* Download Buttons - Updated with smaller size and single row layout */}
-            <div className="flex flex-row gap-3 md:gap-4 mb-6 md:mb-8 relative z-10 justify-center">
+            {/* <div className="flex flex-row gap-3 md:gap-4 mb-6 md:mb-8 relative z-10 justify-center">
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -264,7 +264,7 @@ export default function DownloadBanner() {
                   <div className="text-xs md:text-sm">App Store</div>
                 </div>
               </motion.button>
-            </div>
+            </div> */}
             
             {/* QR Code Section */}
             {/* <motion.div
@@ -280,7 +280,7 @@ export default function DownloadBanner() {
               </div>
               <p className="text-xs md:text-sm text-gray-600">Scan to download</p>
             </motion.div> */}
-          </motion.div>
+          {/* </motion.div> */}
         </div>
         
         {/* Trust Badge Footer */}

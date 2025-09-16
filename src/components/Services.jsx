@@ -157,7 +157,7 @@ const ServicesSection = () => {
                 key={service._id}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${
                   activeService?._id === service._id
-                    ? "bg-blue-600 text-white shadow-lg"
+                    ? "bg-gradient-to-r from-[#00509D] to-[#007ACC] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
                 onClick={() => handleServiceChange(service)}
