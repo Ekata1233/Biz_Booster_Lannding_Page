@@ -211,12 +211,12 @@ export default function AboutSection() {
               >
                 <FaGooglePlay size={22} /> Google Play
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="flex items-center gap-2 bg-gray-900 text-white px-5 py-3 rounded-lg font-semibold hover:bg-black transition shadow-md hover:shadow-lg"
               >
                 <FaApple size={22} /> App Store
-              </a>
+              </a> */}
             </motion.div>
 
             {/* Download Buttons for mobile */}
@@ -225,17 +225,17 @@ export default function AboutSection() {
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8 lg:hidden"
             >
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
                 className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-md hover:shadow-lg w-full sm:w-auto justify-center"
               >
                 <FaGooglePlay size={22} /> Google Play
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="flex items-center gap-2 bg-gray-900 text-white px-5 py-3 rounded-lg font-semibold hover:bg-black transition shadow-md hover:shadow-lg w-full sm:w-auto justify-center"
               >
                 <FaApple size={22} /> App Store
-              </a>
+              </a> */}
             </motion.div>
           </motion.div>
         </div>

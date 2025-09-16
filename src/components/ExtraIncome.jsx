@@ -145,8 +145,10 @@ export default function ExtraIncome() {
             Join thousands of partners who are already earning with our platform
           </p>
           <div className="flex justify-center space-x-3 sm:space-x-4">
+
             <button className="px-4 sm:px-6 py-2 sm:py-3  bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-sm hover:shadow-md">
-              Download Now
+              <a href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x">
+              Download Now</a>
             </button>
           </div>
         </motion.div>
