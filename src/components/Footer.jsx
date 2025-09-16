@@ -38,12 +38,12 @@ function Footer() {
         image:
           "https://i.pinimg.com/736x/44/2b/18/442b1839d663a7ffe73828a6ba28ec10.jpg",
       },
-      {
-        type: "appstore",
-        link: "https://apple.com/app-store/",
-        image:
-          "https://i.pinimg.com/1200x/20/8e/c3/208ec34130feffa6c2905e9c3575ae8c.jpg",
-      },
+      // {
+      //   type: "appstore",
+      //   link: "https://apple.com/app-store/",
+      //   image:
+      //     "https://i.pinimg.com/1200x/20/8e/c3/208ec34130feffa6c2905e9c3575ae8c.jpg",
+      // },
     ],
   };
 
