@@ -215,8 +215,8 @@ const StepCard = ({ step, index, activeStep }) => {
                 transition={{ delay: 1.6 }}
               >
                 <div className="text-sm text-gray-600">Current Month</div>
-                <div className="text-2xl font-bold text-green-600 mt-1">₹1,25,000</div>
-                <div className="text-xs text-gray-500 mt-2">+15% from last month</div>
+                <div className="text-2xl font-bold text-green-600 mt-1">₹1,00,000</div>
+                {/* <div className="text-xs text-gray-500 mt-2">+15% from last month</div> */}
               </motion.div>
 
               <motion.p 
