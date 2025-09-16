@@ -86,7 +86,7 @@ const BlogSection = () => {
         <div className="text-center mt-10">
           <Link
             href="/blog"
-            className="inline-flex items-center px-5 py-3 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="inline-flex items-center px-5 py-3 text-base font-medium rounded-md bg-gradient-to-r from-blue-600 to-blue-800 text-white hover:bg-blue-700"
           >
             View All Blogs
           </Link>

@@ -104,7 +104,7 @@ export default function AssuranceCard() {
           </p>
         </div>
         <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-blue-900 text-sm sm:text-base">
-          Activate Now
+          Contact Us
         </button>
       </div>
 

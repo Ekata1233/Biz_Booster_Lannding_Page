@@ -64,7 +64,7 @@ export default function ExtraIncome() {
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-5 tracking-tight">
             Unlock Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
               Earnings Potential
             </span>
           </h2>
@@ -145,7 +145,7 @@ export default function ExtraIncome() {
             Join thousands of partners who are already earning with our platform
           </p>
           <div className="flex justify-center space-x-3 sm:space-x-4">
-            <button className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-sm hover:shadow-md">
+            <button className="px-4 sm:px-6 py-2 sm:py-3  bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-sm hover:shadow-md">
               Download Now
             </button>
           </div>
