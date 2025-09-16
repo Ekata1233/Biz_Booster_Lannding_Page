@@ -34,7 +34,7 @@ function Footer() {
       { type: "youtube", link: "https://www.youtube.com/@FetchTrue" },
       {
         type: "playstore",
-        link: "https://play.google.com/",
+        link: "https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x",
         image:
           "https://i.pinimg.com/736x/44/2b/18/442b1839d663a7ffe73828a6ba28ec10.jpg",
       },

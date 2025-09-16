@@ -223,7 +223,7 @@ const ServicesSection = () => {
                 <div className="flex justify-left mt-4">
                     <button
                       onClick={() => setShowVideo(true)}
-                      className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center"
+                      className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center"
                       aria-label="Play video"
                     >
                       <span className="mr-1">▶</span> Play Video
@@ -281,7 +281,7 @@ const ServicesSection = () => {
                  <div className="flex justify-start mt-3">
                         <button
                           onClick={() => handlePlayVideo(service)}
-                          className="bg-blue-600 text-white rounded-full p-1 text-sm shadow-lg hover:bg-blue-700 transition flex items-center"
+                          className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-1 text-sm shadow-lg hover:bg-blue-700 transition flex items-center"
                           aria-label="Play video"
                         >
                           <span className="mr-1">▶</span> Play Video
