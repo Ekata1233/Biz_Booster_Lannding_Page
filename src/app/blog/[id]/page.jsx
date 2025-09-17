@@ -14,6 +14,8 @@ export default function BlogPost() {
   const [relatedPosts, setRelatedPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+    const [trendingPosts, setTrendingPosts] = useState([]);
+
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -44,10 +46,15 @@ export default function BlogPost() {
       }
     };
 
-    const fetchRelatedPosts = async (tags, currentId) => {
+    const fetchRelatedPosts = async () => {
+      setLoading(true)
       try {
-        const res = await fetch(`https://landing-page-yclw.vercel.app/api/related-posts?tags=${tags.join(',')}&category=${blog.category}`);
-        if (res.ok) {
+                const { data: allData } = await axios.get(`https://landing-page-yclw.vercel.app/api/blog`);
+                const relatedPosts = allData.data.filter(
+                    post => post.category === currentData.data.category && post._id !== id
+                );
+                setSearchedPosts(relatedPosts);        
+          if (res.ok) {
           const data = await res.json();
           if (data.success) {
             setRelatedPosts(data.data.slice(0, 3)); // Get top 3 related posts
@@ -60,6 +67,26 @@ export default function BlogPost() {
 
     if (id) fetchBlog();
   }, [id]);
+
+
+useEffect(() => {
+  const fetchTrending = async () => {
+    try {
+      const res = await fetch("https://landing-page-yclw.vercel.app/api/fblog");
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          setTrendingPosts(data.data);
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching trending posts:", error);
+    }
+  };
+
+  fetchTrending();
+}, []);
+
 
   if (loading) {
     return (
@@ -273,62 +300,95 @@ export default function BlogPost() {
               </button>
             </div>
           </div>
+          {relatedPosts.length > 0 && (
+  <div className="mt-12">
+    <h3 className="text-2xl font-bold text-gray-900 mb-6">You May Also Like</h3>
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {relatedPosts.slice(0, 3).map((post, index) => (
+        <div 
+          key={index}
+          className="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer hover:shadow-md transition"
+          onClick={() => router.push(`/blog/${post._id}`)}
+        >
+          {post.mainImage && (
+            <div className="h-40 w-full overflow-hidden">
+              <img
+                src={post.mainImage}
+                alt={post.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </div>
+          )}
+          <div className="p-4">
+            <h4 className="font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors">
+              {post.title}
+            </h4>
+            <p className="text-sm text-gray-500 mt-2">
+              {post.createdAt && new Date(post.createdAt).toLocaleDateString()}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
         </article>
 
         {/* Sidebar with Related Posts */}
-        <aside className="w-full lg:w-1/3">
-          <div className="sticky top-24">
-            {relatedPosts.length > 0 && (
-              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                  </svg>
-                  Related Posts
-                </h3>
-                <div className="space-y-6">
-                  {relatedPosts.map((post, index) => (
-                    <div 
-                      key={index} 
-                      className="group cursor-pointer"
-                      onClick={() => router.push(`/blog/${post.category}`)}
-                    >
-                      <div className="flex gap-4">
-                        {post.mainImage && (
-                          <div className="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                            <img 
-                              src={post.mainImage} 
-                              alt={post.title}
-                              width={80}
-                              height={80}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-                            />
-                          </div>
-                        )}
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-gray-900 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                            {post.title}
-                          </h4>
-                          <p className="text-sm text-gray-500 mb-2">
-                            {post.createdAt && new Date(post.createdAt).toLocaleDateString()}
-                          </p>
-                          {post.tags && post.tags.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
-                              {post.tags.slice(0, 2).map((tag, i) => (
-                                <span key={i} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                                  #{tag}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      {index < relatedPosts.length - 1 && <hr className="my-4 border-gray-200" />}
-                    </div>
-                  ))}
+        {/* RIGHT SIDE - Sidebar */}
+<aside className="w-full lg:w-1/3">
+  <div className="sticky top-24 space-y-8">
+
+    {/* Search Blogs */}
+    <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">Search Blog</h3>
+      <div className="flex">
+        <input 
+          type="text"
+          placeholder="Search..."
+          className="flex-grow px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors">
+          Search
+        </button>
+      </div>
+    </div>
+
+    {/* Trending Posts */}
+    {trendingPosts?.length > 0 && (
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        <h3 className="text-xl font-bold text-gray-900 mb-6">Trending Posts</h3>
+        <div className="space-y-6">
+          {trendingPosts.slice(0, 5).map((post, index) => (
+            <div 
+              key={index} 
+              className="flex gap-4 cursor-pointer group"
+              onClick={() => router.push(`/blog/${post._id}`)}
+            >
+              {post.mainImage && (
+                <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                  <img
+                    src={post.mainImage}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                  />
                 </div>
+              )}
+              <div className="flex-1">
+                <h4 className="font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                  {post.title}
+                </h4>
+                <p className="text-sm text-gray-500">
+                  {post.createdAt && new Date(post.createdAt).toLocaleDateString()}
+                </p>
               </div>
-            )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+
 
             <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe to Newsletter</h3>
