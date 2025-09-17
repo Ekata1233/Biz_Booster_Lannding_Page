@@ -13,8 +13,7 @@ const MissionSection = () => {
   const content = [
     {
       title: "Our Mission",
-      description:
-        "Our mission is to simplify business expansion across India by connecting companies with trained Growth Partners who represent them locally. We aim to break down geographical barriers and create opportunities for growth in every corner of the country.",
+      description:"Our mission is to simplify your brand expansion across India by connecting companies with trained Growth Partners. We aim you to become our growth partners, unlock the potential growth in financial freedom. Our mission is to simplify your brand expansion across India by connecting companies with trained Growth Partners who represent them locally. We aim to break down geographical barriers and create opportunities for growth in every corner of the country.",
       image: "/mission.avif",
       color: "from-blue-500 to-blue-600",
       reverse: false,
@@ -27,8 +26,7 @@ const MissionSection = () => {
     },
     {
       title: "Our Vision",
-      description:
-        "Our goal is to become India's most trusted online marketplace, helping businesses grow without limits. We envision a future where every company, regardless of size, can easily expand their reach across diverse markets with confidence and efficiency.",
+      description:"Our goal is to become India’s most trust online marketplace, helps brand to grow without limits, transferring your dream into reality with Fetch True franchise. We assist you to expand your brand across India. With Fetch True Franchise you unlock earning opportunities are not limited to just one avenue, team revenue, onboarding franchisee and team building are some of the ways you can earn. We support you till your success.",
       image: "/vision.avif",
       color: "from-purple-500 to-purple-600",
       reverse: true,
@@ -41,8 +39,7 @@ const MissionSection = () => {
     },
     {
       title: "Our Core Values",
-      description:
-        "The fundamental beliefs that guide our actions, decisions, and relationships. These principles shape our culture and define who we are as a company.",
+      description:"Our fundamental beliefs that guide actions, decisions, and relationships. These principles shape our culture and define who we are as a company/Partners.",
       image: "/coreValues.avif",
       color: "from-emerald-500 to-emerald-600",
       reverse: false,
@@ -58,15 +55,15 @@ const MissionSection = () => {
   // Core values with descriptions
   const coreValues = [
     { 
-      name: "Innovation", 
+      name: "Innovative solutions. ", 
       description: "We constantly seek new ways to solve problems and create value" 
     },
     { 
-      name: "Integrity", 
+      name: "Fully Refundable Policy.", 
       description: "We do what's right, not what's easy" 
     },
     { 
-      name: "Collaboration", 
+      name: "We will guide you till you succeed. ", 
       description: "We achieve more when we work together" 
     },
     { 
@@ -283,7 +280,7 @@ const MissionSection = () => {
         </div>
         <div>
           <h4 className="font-semibold text-gray-900">{value.name}</h4>
-          <p className="text-gray-600 text-sm mt-1">{value.description}</p>
+          {/* <p className="text-gray-600 text-sm mt-1">{value.description}</p> */}
         </div>
       </motion.div>
     ))}
