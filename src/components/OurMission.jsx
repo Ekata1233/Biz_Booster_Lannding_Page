@@ -69,10 +69,10 @@ const MissionSection = () => {
       name: "Collaboration", 
       description: "We achieve more when we work together" 
     },
-    // { 
-    //   name: "Excellence", 
-    //   description: "We strive for the highest quality in everything we do" 
-    // },
+    { 
+      name: "Excellence", 
+      description: "We strive for the highest quality in everything we do" 
+    },
     // { 
     //   name: "Customer Focus", 
     //   description: "Our customers' success is our success" 
@@ -223,11 +223,11 @@ const MissionSection = () => {
                   <div
                     className={`absolute inset-0 bg-gradient-to-t ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl`}
                   ></div>
-                  <div className="absolute top-4 left-4 bg-white p-3 rounded-full shadow-lg">
+                  {/* <div className="absolute top-4 left-4 bg-white p-3 rounded-full shadow-lg">
                     <span className={`text-transparent bg-clip-text bg-gradient-to-r ${item.color}`}>
                       {item.icon}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
 
@@ -260,15 +260,15 @@ const MissionSection = () => {
                       <motion.li
                         key={i}
                         variants={coreValueItem}
-                        className="p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start gap-4"
+                        className="p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4 w-1/2"
                         whileHover={{ 
                           x: 8,
                           transition: { duration: 0.3 }
                         }}
                       >
-                        <div className={`p-2 rounded-full bg-gradient-to-r ${item.color} text-white mt-1`}>
+                        <div className={`p-1 rounded-full bg-gradient-to-r ${item.color} text-white mt-1`}>
                           <svg
-                            className="w-5 h-5"
+                            className=" h-3"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -281,9 +281,9 @@ const MissionSection = () => {
                             />
                           </svg>
                         </div>
-                        <div>
+                        <div className="">
                           <h4 className="font-semibold text-gray-900">{value.name}</h4>
-                          <p className="text-gray-600 text-sm mt-1">{value.description}</p>
+                          {/* <p className="text-gray-600 text-sm mt-1">{value.description}</p> */}
                         </div>
                       </motion.li>
                     ))}
