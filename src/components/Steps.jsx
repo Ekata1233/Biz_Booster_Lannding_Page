@@ -107,9 +107,15 @@ const StepCard = ({ step, index, activeStep }) => {
                 Activate Now
               </button>
 
-              <div className="mt-4 text-green-600 font-semibold text-sm flex items-center">
-                <span className="mr-1">✓</span> Successfully Activated!
-              </div>
+              <motion.div
+                  className="mt-4 text-green-600 font-semibold text-sm flex items-center"
+                  initial={{ opacity: 0 }} // pehle invisible
+                  animate={isActive ? { opacity: 1 } : { opacity: 0 }} // active hone par fade-in
+                  transition={{ duration: 0.8, delay: 1.5 }} // thoda delay ke baad dikhega
+                >
+                  <span className="mr-1">✓</span> Successfully Activated!
+                </motion.div>
+
             </motion.div>
           )}
 

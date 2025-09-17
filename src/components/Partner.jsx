@@ -55,9 +55,13 @@ export default function PartnerDiagram() {
       ],
       monthlyEarning: "₹3,000/month",
       revenue: "Earn 5% to 15% revenue share",
-      teamBuildingIncome: "₹5000 per direct GP, ₹3000 per indirect referral",
+      teamBuildingIncome: ["Earn ₹5,000 for every GP you onboard" , 
+        "Get ₹3,000 when your onboarded GP Brings another"],
       teamRevenueIncome: "Not applicable at this level",
-      marketingSupport: "Basic marketing materials and guidance",
+      marketingSupport: ["Support within 3-6 hours",
+           "Full Support System",
+           "Expert help anytime you need it."            
+      ],
       image: <img src="/GP.png" alt="Growth Partner" className="rounded-full" width={70} height={70} />,
       color: "from-blue-300 to-blue-400",
       borderColor: "border-blue-400",
@@ -80,10 +84,15 @@ export default function PartnerDiagram() {
         "Earn an additional 5% to 8% as team revenue bonus and 3 - 6 hours response time for quick issue resolution",
       ],
       monthlyEarning: "₹3,000/month",
-      revenue: "Earn 5% to 15% revenue share + 5% to 10% team revenue",
-      teamBuildingIncome: "₹5000 per direct GP, ₹3000 per indirect referral",
-      teamRevenueIncome: "5% to 10% from team performance",
-      marketingSupport: "Advanced marketing resources and tools",
+      revenue: "Earn up to 15% revenue share on all successful leads you generate",
+      teamBuildingIncome: ["Earn ₹5000 for every Gp you onboard"
+        ,"Get ₹3,000 when your onboarded GP brings another"
+      ],
+      teamRevenueIncome: "Extra earn 5% to 8% for team revenue",
+      marketingSupport: ["Support within 3-6 hours.",
+        "Full support System",
+        "Expert help,anytime you need it."
+      ],
       image: <img src="/SGP.png" alt="Super Growth Partner" className="rounded-full" width={70} height={70} />,
       color: "from-purple-300 to-purple-500",
       borderColor: "border-purple-400",
@@ -106,10 +115,17 @@ export default function PartnerDiagram() {
             "Earn 3% to 7% revenue share from the franchises on boarded by your direct franchisees",
       ],
       monthlyEarning: "₹3,000/month",
-      revenue: "Earn 5% to 15% revenue share + 5% to 10% team revenue + 3% to 7% secondary team revenue",
-      teamBuildingIncome: "₹5000 per direct GP, ₹3000 per indirect referral",
-      teamRevenueIncome: "5% to 10% + 3% to 7% from secondary teams",
-      marketingSupport: "Exclusive campaigns & dedicated manager",
+      revenue: "Earn up to 15% revenue share on all successful leads you generate",
+      teamBuildingIncome: ["Earn ₹5000 for every Gp you onboard"
+        ,"Get ₹3,000 when your onboarded GP brings another"
+      ],      
+      teamRevenueIncome: ["Extra earn 5% to 8% for direct team revenue",
+        "Extra earn 3% to 7% for indirect team revenue"
+      ],
+      marketingSupport: ["Support within 3-6 hours",
+        "Full support system",
+        "Expert help, anytime you need it."
+      ],
       image: <img src="/PGP.png" alt="Premium Growth Partner" className="rounded-full" width={70} height={70} />,
       color: "from-amber-100 to-amber-300",
       borderColor: "border-amber-400",
@@ -170,50 +186,78 @@ export default function PartnerDiagram() {
                 <div className="p-5 space-y-3 flex-1 flex flex-col">
                   {/* Requirements */}
                   <div>
-                    <h3 className="font-semibold text-gray-700 mb-2 text-sm">{partner.requireQue}</h3>
+                    {/* <h3 className="font-semibold text-gray-700 mb-2 text-sm">{partner.requireQue}</h3> */}
                     <p className="text-gray-600 text-sm">{partner.requirements}</p>
                   </div>
 
                   {/* Accordions */}
                   <div className="space-y-2">
-                    {["revenue", "teamBuilding", "teamRevenue", "marketing"].map((key) => (
-                      <div key={key}>
-                        <button
-                          className="w-full p-3 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 rounded-lg"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleAccordion(partner.id, key);
-                          }}
-                        >
-                          <span className="font-medium text-sm capitalize">
-                            {key === "teamBuilding"
-                              ? "Team Building Income"
-                              : key === "teamRevenue"
-                              ? "Team Revenue Income"
-                              : key === "marketing"
-                              ? "Marketing Support"
-                              : "Revenue"}
-                          </span>
-                          {expandedAccordions[partner.id] === key ? "−" : "+"}
-                        </button>
-                        {expandedAccordions[partner.id] === key && (
-                          <div className="p-3 text-sm">
-                            {
-                              partner[
-                                key === "teamBuilding"
-                                  ? "teamBuildingIncome"
+                      {["revenue", "teamBuilding", "teamRevenue", "marketing"].map((key) => (
+                          <div key={key}>
+                            <button
+                              className="w-full p-3 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 rounded-lg"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleAccordion(partner.id, key);
+                              }}
+                            >
+                              <span className="font-medium text-sm capitalize">
+                                {key === "teamBuilding"
+                                  ? "Team Building Income"
                                   : key === "teamRevenue"
-                                  ? "teamRevenueIncome"
+                                  ? "Team Revenue Income"
                                   : key === "marketing"
-                                  ? "marketingSupport"
-                                  : "revenue"
-                              ]
-                            }
+                                  ? "Marketing Support"
+                                  : "Revenue"}
+                              </span>
+                              {expandedAccordions[partner.id] === key ? "−" : "+"}
+                            </button>
+
+                            {expandedAccordions[partner.id] === key && (
+                              <div className="p-3 text-sm">
+                                <ul className="list-disc pl-5 space-y-1">
+                                  {Array.isArray(
+                                    partner[
+                                      key === "teamBuilding"
+                                        ? "teamBuildingIncome"
+                                        : key === "teamRevenue"
+                                        ? "teamRevenueIncome"
+                                        : key === "marketing"
+                                        ? "marketingSupport"
+                                        : "revenue"
+                                    ]
+                                  ) ? (
+                                    partner[
+                                      key === "teamBuilding"
+                                        ? "teamBuildingIncome"
+                                        : key === "teamRevenue"
+                                        ? "teamRevenueIncome"
+                                        : key === "marketing"
+                                        ? "marketingSupport"
+                                        : "revenue"
+                                    ].map((item, i) => <li key={i}>{item}</li>)
+                                  ) : (
+                                    <li>
+                                      {
+                                        partner[
+                                          key === "teamBuilding"
+                                            ? "teamBuildingIncome"
+                                            : key === "teamRevenue"
+                                            ? "teamRevenueIncome"
+                                            : key === "marketing"
+                                            ? "marketingSupport"
+                                            : "revenue"
+                                        ]
+                                      }
+                                    </li>
+                                  )}
+                                </ul>
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                        ))}
+                    </div>
+
 
                   {/* Benefits */}
                   <div className="flex-1">
