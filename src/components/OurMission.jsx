@@ -250,44 +250,45 @@ const MissionSection = () => {
                 </p>
 
                 {item.typeData === "corevalues" && (
-                  <motion.ul 
-                    className="space-y-4"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
-                  >
-                    {coreValues.map((value, i) => (
-                      <motion.li
-                        key={i}
-                        variants={coreValueItem}
-                        className="p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4 w-1/2"
-                        whileHover={{ 
-                          x: 8,
-                          transition: { duration: 0.3 }
-                        }}
-                      >
-                        <div className={`p-1 rounded-full bg-gradient-to-r ${item.color} text-white mt-1`}>
-                          <svg
-                            className=" h-3"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                        <div className="">
-                          <h4 className="font-semibold text-gray-900">{value.name}</h4>
-                          {/* <p className="text-gray-600 text-sm mt-1">{value.description}</p> */}
-                        </div>
-                      </motion.li>
-                    ))}
-                  </motion.ul>
+  <motion.div 
+    className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+    variants={containerVariants}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+  >
+    {coreValues.map((value, i) => (
+      <motion.div
+        key={i}
+        variants={coreValueItem}
+        className="p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4"
+        whileHover={{ 
+          x: 8,
+          transition: { duration: 0.3 }
+        }}
+      >
+        <div className={`p-2 rounded-full bg-gradient-to-r ${item.color} text-white mt-1`}>
+          <svg
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+        <div>
+          <h4 className="font-semibold text-gray-900">{value.name}</h4>
+          <p className="text-gray-600 text-sm mt-1">{value.description}</p>
+        </div>
+      </motion.div>
+    ))}
+  </motion.div>
+
                 )}
               </motion.div>
             </motion.div>
