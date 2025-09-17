@@ -99,7 +99,7 @@ export default function ExtraIncome() {
             >
               {steps[activeStep].icon}
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 text-center lg:text-left">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 text-center lg:text-left sm:text-center">
               {steps[activeStep].title}
             </h3>
             <p className="text-sm sm:text-base text-slate-600 whitespace-pre-line">
