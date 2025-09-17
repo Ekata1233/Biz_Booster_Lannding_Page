@@ -21,7 +21,11 @@ export default function AssuranceCard() {
 
   return (
     <div className="mt-12 bg-white shadow-xl rounded-2xl border border-gray-100 p-6 sm:p-8 max-w-4xl mx-auto">
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <div className=" mb-3">
+        <h3 className="text-center">Unlock premium features and grow your team</h3>
+      </div>
+      <hr/>
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mt-3">
         <img
           src="/Icon (3).png"
           alt="Assurance"
@@ -35,13 +39,12 @@ export default function AssuranceCard() {
             <span className="text-blue-600">5X Return</span>
           </h3>
           <p className="text-xs sm:text-sm text-gray-600 mt-2">
-            If you earn less than 5 Lakh in{" "}
-            {assuranceData?.lockInPeriod || 3} year
-            {assuranceData?.lockInPeriod > 1 ? "s" : ""}, we'll refund up to 5X
-            your initial amount
+            Refund up to 5X if earning are less than ₹ 500000 in  {" "}
+            {assuranceData?.lockInPeriod || 3} years
+            
           </p>
           <p className="mt-4 font-semibold text-gray-800 text-sm sm:text-base">
-            Your Extra Benefits:{" "}
+            Your Extra Benefits:{" "}<br/>
             <span className="font-normal text-gray-700">
               You've received ₹
               {assuranceData?.monthlyEarnings?.toLocaleString() || "3,000"} as
@@ -71,27 +74,31 @@ export default function AssuranceCard() {
       {/* Dynamic Data Section */}
       <div className="mt-8 border-t border-gray-200 pt-6 space-y-3 text-xs sm:text-sm text-gray-700">
       <div className="flex justify-between">
-        <span className="font-medium">Franchise Fees</span>
-        <span>
-          <s className="text-gray-500">
-            ₹{assuranceData?.price?.toLocaleString() || "50000"}
-          </s>{" "}
-          <span className="text-green-600 font-semibold ml-2">
-            {assuranceData?.discount || 20}% ₹
-            {assuranceData?.discountedPrice?.toLocaleString() || "10000"}
-          </span>
+        <span className="font-medium mt-2">Franchise Fees</span>
+        <span className="">
+          <div className=" ">
+            <span className="text-green-600 font-semibold ml-2 me-5">
+              {assuranceData?.discount || 10}%
+            </span> 
+            <s className="text-gray-500">
+              ₹ {assuranceData?.price?.toLocaleString() || "100000"}
+            </s>{" "}
+          </div>
+            <span className="text-blue-600 font-semibold ml-8 text-end">
+            ₹ {assuranceData?.discountedPrice?.toLocaleString() || "90000"}
+            </span>
         </span>
       </div>
       <div className="flex justify-between">
         <span className="font-medium">Franchise Deposit (Refundable)</span>
         <span className="font-semibold">
-          ₹{assuranceData?.deposit?.toLocaleString() || "1,00,000"}
+          ₹ {assuranceData?.deposit?.toLocaleString() || "9999"}
         </span>
       </div>
       <div className="flex justify-between font-bold text-blue-800 pt-2 border-t border-gray-100">
         <span className="text-base sm:text-lg">Growth Total</span>
         <span className="text-base sm:text-lg">
-          ₹{assuranceData?.grandtotal?.toLocaleString() || "1,10,000"}
+          ₹ {assuranceData?.grandtotal?.toLocaleString() || "99999"}
         </span>
       </div>
     </div>
