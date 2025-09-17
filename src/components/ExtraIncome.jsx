@@ -58,7 +58,7 @@ export default function ExtraIncome() {
   }, []);
 
   return (
-    <section className="relative w-full bg-gradient-to-br from-slate-200 via-white to-slate-400 py-12 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6">
+    <section className="relative w-full bg-gradient-to-br from-slate-200 via-white to-slate-400 py-12 sm:py-8 md:py-10 lg:py-15 px-4 sm:px-6">
       <div className="container mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
@@ -81,7 +81,7 @@ export default function ExtraIncome() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 sm:space-y-6 text-center lg:text-left lg:ms-20"
+            className="space-y-4 sm:space-y-6 text-center lg:text-left lg:ms-30 "
           >
             <div
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center text-xl sm:text-2xl text-white shadow-sm mx-auto lg:mx-0`}
@@ -125,7 +125,16 @@ export default function ExtraIncome() {
   <img
     src={steps[activeStep].img}
     alt={steps[activeStep].title}
-    className="w-full max-w-xs sm:max-w-sm md:max-w-100 lg:w-100 lg:max-w-100 lg:max-h-100 xl:max-w-lg shadow-blue-200 object-cover"
+    className="w-full 
+      max-w-[160px]   /* Mobile size */
+      sm:max-w-[200px]  /* Small screen */
+      md:max-w-[240px]  /* Tablet */
+      lg:max-w-[280px]  /* Laptop */
+      xl:max-w-[320px]  /* Large desktop */
+      h-auto 
+      rounded-lg 
+      shadow-blue-200 
+      object-contain"
   />
 </motion.div>
         </div>
