@@ -175,7 +175,13 @@ export default function PartnerDiagram() {
                     <h4 className="text-green-900 font-semibold">Assured Earnings</h4>
                     <p className="text-green-900 text-sm">{partner.earnings}</p>
                     <div className="inline-block mt-2">
-                      <span className="text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-medium">
+                      <span  className="
+          rounded-full 
+          bg-blue-100 text-blue-800 font-medium
+          text-[10px] sm:text-xs   /* mobile smaller, desktop same */
+          px-2 py-1 sm:px-3 sm:py-1
+          block sm:inline-block text-center
+        ">
                         Monthly Fixed Earning: {partner.monthlyEarning}
                       </span>
                     </div>
