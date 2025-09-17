@@ -10,23 +10,23 @@ export default function DownloadBanner() {
   const features = [
     {
       icon: <FaCrown className="text-2xl md:text-3xl" />,
-      title: "Premium Franchises",
-      description: "Access exclusive partnerships with top brands"
+      title: "Proven Expert ",
+      description: "With our expertise in industries, our team deliver you a professional and innovative solution, expert guidance and growth. "
     },
     {
       icon: <FaChartLine className="text-2xl md:text-3xl" />,
-      title: "Business Growth Tools",
-      description: "Analytics and insights to scale your operations"
+      title: "Customer Approach   ",
+      description: "We value your satisfaction, with our tailored service that fits your needs. We provide you full support at each step. "
     },
     {
       icon: <FaSync className="text-2xl md:text-3xl" />,
-      title: "Seamless Management",
-      description: "Streamline operations with our all-in-one dashboard"
+      title: "Refundable Policy ",
+      description: "Our service provides you guarantee full refundable if you're not satisfied. This policy serves as a trust among the customer, so that you can start your wonderful journey with our Franchise."
     },
     {
       icon: <FaRocket className="text-2xl md:text-3xl" />,
-      title: "Rapid Expansion",
-      description: "Scale your franchise network with our proven system"
+      title: "Flexible and Scale ",
+      description: "Whether you're a start-up or looking for extra income or established enterprise, our solution is scalable to match your needs and goals."
     }
   ];
 
@@ -133,7 +133,7 @@ export default function DownloadBanner() {
             transition={{ duration: 0.7 }}
             className="space-y-4 md:space-y-6"
           >
-            <h3 className="text-xl md:text-2xl font-bold text-gray-800">Why Choose FetchTrue?</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center">Why Choose FetchTrue?</h3>
             
             {/* Animated Feature Showcase */}
             <div className="h-32 md:h-40 overflow-hidden relative">
