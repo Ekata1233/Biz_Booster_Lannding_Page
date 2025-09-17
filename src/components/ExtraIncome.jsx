@@ -92,14 +92,14 @@ export default function ExtraIncome() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 sm:space-y-6 text-center lg:text-left lg:ms-30 text-justify"
+            className="space-y-4 sm:space-y-6 lg:text-left lg:ms-30 text-justify"
           >
             <div
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center text-xl sm:text-2xl text-white shadow-sm mx-auto lg:mx-0`}
             >
               {steps[activeStep].icon}
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 text-center lg:text-left">
               {steps[activeStep].title}
             </h3>
             <p className="text-sm sm:text-base text-slate-600 whitespace-pre-line">

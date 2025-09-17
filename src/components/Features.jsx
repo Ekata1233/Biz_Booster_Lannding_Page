@@ -73,7 +73,7 @@ export default function Benefits() {
       <div className="text-center mb-16 relative z-10">
         <h3 className="font-bold text-2xl text-[#2164F4]">Benefits of</h3>
         <h2 className="font-bold text-4xl md:text-5xl bg-gradient-to-r from-[#1e3c72] to-[#2a5298] bg-clip-text text-transparent">
-          Becoming a FetchTrue Partner
+           FetchTrue Partner
         </h2>
       </div>
 
