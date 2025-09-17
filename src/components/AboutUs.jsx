@@ -116,9 +116,8 @@ export default function AboutSection() {
               variants={itemVariants}
               className="mt-6 text-gray-700 text-lg max-w-xl mx-auto lg:mx-0"
             >
-              Expand your reach, scale your operations, and unlock franchise
-              opportunities effortlessly. Our platform connects businesses,
-              streamlines processes, and accelerates growth in a modern way.
+             Expand your brand with Fetch True platform India’s first Hybrid B2B Marketplace & Growth Partner Network that helps you start, grow, and scale your business—whether you are an entrepreneur, service provider, or Growth Partner and unlock the potential to earn more than ₹1,00,000/month. 
+             <br/>You can explore our app with varieties of module such as Finance – Planning or saving you can decide how your financial freedom will be, Marketing – Make your brand visible across country or get fame through branding, IT Services – Whether you're a start-up or an enterprise we deliver innovative Development's and many more.    
             </motion.p>
 
             {/* Bullet Points */}
@@ -132,7 +131,16 @@ export default function AboutSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
-                Scalable B2B Solutions
+                  Become our growth partners.               
+                </motion.li>
+              <motion.li variants={itemVariants} className="flex items-center">
+                <span className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+                Scale your Brand with top tools.  
+
               </motion.li>
               <motion.li variants={itemVariants} className="flex items-center">
                 <span className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mr-3">
@@ -140,7 +148,7 @@ export default function AboutSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
-                Franchise Opportunities
+                Get insight of Real-Time growth. 
               </motion.li>
               <motion.li variants={itemVariants} className="flex items-center">
                 <span className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mr-3">
@@ -148,7 +156,7 @@ export default function AboutSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
-                Real-Time Business Insights
+                Unlock your earning potential more than ₹1,00,000/month.
               </motion.li>
             </motion.ul>
 
