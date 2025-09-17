@@ -2,46 +2,57 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { BsGraphUpArrow } from "react-icons/bs";
+
 
 const steps = [
   {
     title: "Earn Extra Income",
-    desc: "Sell financial products with our platform and make extra income every month",
-    extra: "We provide services and franchise opportunities",
+    desc: `🚀 Boost your financial freedom by unlocking the earning potential income.
+           🌟 Your Extra time is your Extra Income, grow your finances with effortless Income Opportunities.
+           ✨ With simple, smart and always fair you can grow your finance with care — Unlock your extra income opportunity.
+           💼 Income beyond the usual, one stream isn’t enough today, you can earn extra income — Just on few clicks.
+           💸 Extra Income is freedom, unlock the potential to earn up to ₹1,00,000/month.`,
+    extra: "",
     icon: "💸",
-    img: "/PGP.png",
+    img: "/Earn Extra Income.png",
     color: "from-blue-500 to-cyan-500",
   },
   {
-    title: "Work from Anywhere",
-    desc: "No fixed hours—you are completely flexible",
-    extra: "Join as a service partner or franchise owner",
+    title: "Work From Home",
+    desc: `💥 Work where you want, work when you want. No office required to stack money just a phone and internet.
+           🏠 Turn your space into workplace — the best office is your own home.
+           ✨ Work with no stress, no traffic — just comfort and success.`,
+    extra: "",
     icon: "🌎",
-    img: "/evergreenopportunities.png",
+    img: "/Work from anywhere.png",
     color: "from-purple-500 to-pink-500",
   },
   {
-    title: "Team earning",
-    desc: "To start your journey, you need to select a package",
-    extra: "Choose from different packages designed for services and franchise",
-    icon: "📦",
-    img: "/boostsales.png",
-    color: "from-amber-500 to-orange-500",
-  },
-  {
     title: "Monthly Payout",
-    desc: "Get your earnings weekly after successful sales",
-    extra: "Both services and franchise models get paid weekly",
+    desc: `💰 Our secure monthly payout system ensures that you get your “amount” without any delays.`,
+    extra: "",
     icon: "💰",
-    img: "/GP.png",
+    img: "/Monthly Payout.png",
     color: "from-green-500 to-emerald-500",
   },
   {
+    title: "Team Earning",
+    desc: `🤝 Build your trusted team, grow together and earn up to ₹1,00,000/month.
+           🌟 Build your team, boost your income and enjoy your earning up to ₹1,00,000/month.
+           💼 Team works that payoff. Build your network, earn more than ₹1,00,000/month.`,
+    extra: "",
+    icon: "💹",
+    img: "/Team Earning.png",
+    color: "from-amber-500 to-orange-500",
+  },
+  {
     title: "Team Revenue Earning",
-    desc: "Learn from experts and grow faster",
-    extra: "We train both service providers and franchise partners",
-    icon: "🎓",
-    img: "/boostsales.png",
+    desc: `📈 Maximize your earning potential by supporting team and earn revenue up to 3-7% for team revenue.
+           💹 Earn up to 3-7% revenue share on all successful leads your team generate.`,
+    extra: "",
+    icon: "📈",
+    img: "/Team Revenue Earning.png",
     color: "from-red-500 to-rose-500",
   },
 ];
@@ -81,7 +92,7 @@ export default function ExtraIncome() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 sm:space-y-6 text-center lg:text-left lg:ms-30 "
+            className="space-y-4 sm:space-y-6 text-center lg:text-left lg:ms-30 text-justify"
           >
             <div
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center text-xl sm:text-2xl text-white shadow-sm mx-auto lg:mx-0`}
@@ -91,12 +102,14 @@ export default function ExtraIncome() {
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
               {steps[activeStep].title}
             </h3>
-            <p className="text-sm sm:text-base text-slate-600">
+            <p className="text-sm sm:text-base text-slate-600 whitespace-pre-line">
               {steps[activeStep].desc}
             </p>
-            <p className="text-xs sm:text-sm text-slate-500">
-              {steps[activeStep].extra}
-            </p>
+            {steps[activeStep].extra && (
+              <p className="text-xs sm:text-sm text-slate-500">
+                {steps[activeStep].extra}
+              </p>
+            )}
 
             {/* Step indicators */}
             <div className="flex justify-center lg:justify-start space-x-2 mt-4 sm:mt-6">
@@ -114,29 +127,23 @@ export default function ExtraIncome() {
               ))}
             </div>
           </motion.div>
-{/* Right side - image */}
-<motion.div
-  key={activeStep + "-img"}
-  initial={{ opacity: 0, x: 30 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.6 }}
-  className="flex justify-center"
->
-  <img
-    src={steps[activeStep].img}
-    alt={steps[activeStep].title}
-    className="w-full 
-      max-w-[160px]   /* Mobile size */
-      sm:max-w-[200px]  /* Small screen */
-      md:max-w-[240px]  /* Tablet */
-      lg:max-w-[280px]  /* Laptop */
-      xl:max-w-[320px]  /* Large desktop */
-      h-auto 
-      rounded-lg 
-      shadow-blue-200 
-      object-contain"
-  />
-</motion.div>
+
+          {/* Right side - image */}
+          <motion.div
+            key={activeStep + "-img"}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center"
+          >
+            <img
+              src={steps[activeStep].img}
+              alt={steps[activeStep].title}
+              className="w-full 
+                max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] xl:max-w-[320px] 
+                 object-cover"
+            />
+          </motion.div>
         </div>
 
         {/* CTA Section */}
@@ -154,10 +161,10 @@ export default function ExtraIncome() {
             Join thousands of partners who are already earning with our platform
           </p>
           <div className="flex justify-center space-x-3 sm:space-x-4">
-
-            <button className="px-4 sm:px-6 py-2 sm:py-3  bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-sm hover:shadow-md">
+            <button className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-sm hover:shadow-md">
               <a href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x">
-              Download Now</a>
+                Download Now
+              </a>
             </button>
           </div>
         </motion.div>
