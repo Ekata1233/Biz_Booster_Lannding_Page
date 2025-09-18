@@ -26,7 +26,7 @@ const MissionSection = () => {
     },
     {
       title: "Our Vision",
-      description:"Our goal is to become India’s most trust online marketplace, helps brand to grow without limits, transferring your dream into reality with Fetch True franchise. We assist you to expand your brand across India. With Fetch True Franchise you unlock earning opportunities are not limited to just one avenue, team revenue, onboarding franchisee and team building are some of the ways you can earn. We support you till your success.",
+      description:"Our goal is to become India’s most trust online marketplace, helps brand to grow without limits, transferring your dream into reality with Fetch True franchise. We assist you to expand your brand across India. With Fetch True Franchise you unlock earning opportunities that are not limited to just one revenue, team revenue, onboarding franchisee and team building are some of the ways you can earn. We support you till your success.",
       image: "/vision.avif",
       color: "from-purple-500 to-purple-600",
       reverse: true,

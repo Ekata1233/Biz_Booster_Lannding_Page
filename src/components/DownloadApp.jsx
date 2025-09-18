@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGooglePlay, FaApple, FaCrown, FaChartLine, FaCheck, FaUsers, FaHandshake, FaSync, FaRocket, FaQrcode } from 'react-icons/fa';
+import { FaCrown, FaChartLine, FaSync, FaRocket, FaHandshake } from 'react-icons/fa';
 
 export default function DownloadBanner() {
   const [stats, setStats] = useState({ businesses: 0, franchises: 0, growth: 0 });
@@ -10,23 +10,23 @@ export default function DownloadBanner() {
   const features = [
     {
       icon: <FaCrown className="text-2xl md:text-3xl" />,
-      title: "Proven Expert ",
-      description: "With our expertise in industries, our team deliver you a professional and innovative solution, expert guidance and growth. "
+      title: "Proven Expert",
+      description: "With our expertise in industries, our team deliver you a professional and innovative solution, expert guidance and growth."
     },
     {
       icon: <FaChartLine className="text-2xl md:text-3xl" />,
-      title: "Customer Approach   ",
-      description: "We value your satisfaction, with our tailored service that fits your needs. We provide you full support at each step. "
+      title: "Customer Approach",
+      description: "We value your satisfaction, with our tailored service that fits your needs. We provide you full support at each step."
     },
     {
       icon: <FaSync className="text-2xl md:text-3xl" />,
-      title: "Refundable Policy ",
-      description: "Our service provides you guarantee full refundable if you're not satisfied. This policy serves as a trust among the customer, so that you can start your wonderful journey with our Franchise."
+      title: "Refundable Policy",
+      description: "Our service provides you guarantee full refundable if you're not satisfied. This policy serves as a trust among the customer."
     },
     {
       icon: <FaRocket className="text-2xl md:text-3xl" />,
-      title: "Flexible and Scale ",
-      description: "Whether you're a start-up or looking for extra income or established enterprise, our solution is scalable to match your needs and goals."
+      title: "Flexible and Scale",
+      description: "Whether you're a start-up or looking for extra income or established enterprise, our solution is scalable to match your needs."
     }
   ];
 
@@ -53,7 +53,7 @@ export default function DownloadBanner() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="w-full max-w-6xl bg-white rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl overflow-hidden">
+      <div className="w-full max-w-4xl bg-white rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl overflow-hidden">
         {/* Animated Header */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -61,7 +61,6 @@ export default function DownloadBanner() {
           transition={{ duration: 0.7, type: "spring" }}
           className="bg-gradient-to-r from-[#00509D] to-[#007ACC] text-white p-6 md:p-8 text-center relative overflow-hidden"
         >
-          {/* Animated background elements */}
           <motion.div
             animate={{
               scale: [1, 1.1, 1],
@@ -124,19 +123,18 @@ export default function DownloadBanner() {
           </div>
         </motion.div>
 
-        {/* Main Banner Content */}
-        <div className=" gap-6 md:gap-8 p-6 md:p-8">
-          {/* Left Column - App Info */}
+        {/* Main Content */}
+        <div className="p-6 md:p-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="space-y-4 md:space-y-6"
+            className="space-y-6 md:space-y-8"
           >
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center">Why Choose FetchTrue?</h3>
             
             {/* Animated Feature Showcase */}
-            <div className="h-32 md:h-40 overflow-hidden relative">
+            <div className="h-40 md:h-48 overflow-hidden relative">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentFeature}
@@ -144,17 +142,21 @@ export default function DownloadBanner() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-start gap-3 md:gap-4 absolute w-full"
+                  className="flex items-start gap-4 md:gap-5 absolute w-full"
                 >
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="p-2 md:p-3 bg-blue-100 rounded-full mt-1"
+                    className="p-3 md:p-4 bg-blue-100 rounded-full mt-1"
                   >
                     {features[currentFeature].icon}
                   </motion.div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 text-base md:text-lg">{features[currentFeature].title}</h4>
-                    <p className="text-gray-600 text-sm md:text-base">{features[currentFeature].description}</p>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-800 text-lg md:text-xl mb-2">
+                      {features[currentFeature].title}
+                    </h4>
+                    <p className="text-gray-600 text-sm md:text-base">
+                      {features[currentFeature].description}
+                    </p>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -172,148 +174,29 @@ export default function DownloadBanner() {
                 />
               ))}
             </div>
-          </motion.div>
-          
-          {/* Right Column - Download CTA */}
-          {/* <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="bg-gradient-to-b from-blue-50 to-indigo-50 p-6 md:p-8 rounded-lg md:rounded-xl shadow-inner relative overflow-hidden"
-          > */}
-            {/* Floating elements */}
-            {/* <motion.div
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute top-6 md:top-10 right-6 md:right-10 text-blue-200 text-4xl md:text-5xl opacity-30"
-            >
-              <FaQrcode />
-            </motion.div>
-            <motion.div
-              animate={{
-                y: [0, 15, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute bottom-6 md:bottom-10 left-6 md:left-10 text-indigo-200 text-4xl md:text-5xl opacity-30"
-            >
-              <FaRocket />
-            </motion.div> */}
             
-            {/* <div className="text-center mb-4 md:mb-6 relative z-10">
-              <motion.h3
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="text-xl md:text-2xl font-bold text-gray-800 mb-2"
-              >
-                Get Started Today
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7 }}
-                className="text-gray-600 text-sm md:text-base"
-              >
-                Download our app and transform your business
-              </motion.p>
-            </div> */}
-            
-            {/* Download Buttons - Updated with smaller size and single row layout */}
-            {/* <div className="flex flex-row gap-3 md:gap-4 mb-6 md:mb-8 relative z-10 justify-center">
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px -10px rgba(0, 80, 157, 0.5)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#00509D] text-white py-2 md:py-3 rounded-lg font-semibold shadow-md max-w-[180px]"
-              >
-                <FaGooglePlay className="text-base md:text-lg" />
-                <div className="text-left">
-                  <div className="text-[10px] md:text-xs">Get it on</div>
-                  <div className="text-xs md:text-sm">Google Play</div>
-                </div>
-              </motion.button>
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px -10px rgba(0, 0, 0, 0.3)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="flex-1 flex items-center justify-center gap-2 bg-gray-900 text-white py-2 md:py-3 rounded-lg font-semibold shadow-md max-w-[180px]"
-              >
-                <FaApple className="text-base md:text-lg" />
-                <div className="text-left">
-                  <div className="text-[10px] md:text-xs">Download on the</div>
-                  <div className="text-xs md:text-sm">App Store</div>
-                </div>
-              </motion.button>
-            </div> */}
-            
-            {/* QR Code Section */}
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.3 }}
-              className="text-center"
+            {/* Stats Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="grid grid-cols-3 gap-4 mt-8 text-center"
             >
-              <div className="inline-block p-2 bg-white rounded-lg shadow-md mb-2">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-200 rounded flex items-center justify-center">
-                  <FaQrcode className="text-2xl md:text-3xl text-gray-400" />
-                </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold text-[#00509D]">{stats.businesses}+</div>
+                <div className="text-sm md:text-base text-gray-600 mt-1">Businesses</div>
               </div>
-              <p className="text-xs md:text-sm text-gray-600">Scan to download</p>
-            </motion.div> */}
-          {/* </motion.div> */}
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold text-[#00509D]">{stats.franchises}+</div>
+                <div className="text-sm md:text-base text-gray-600 mt-1">Franchises</div>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold text-[#00509D]">{stats.growth}%</div>
+                <div className="text-sm md:text-base text-gray-600 mt-1">Growth Rate</div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
-        
-        {/* Trust Badge Footer */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-          className="bg-gray-100 p-4 md:p-6 text-center"
-        >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.7 }}
-            className="text-gray-600 mb-2 md:mb-3 text-sm md:text-base"
-          >
-            Our Service Domain
-          </motion.p>
-          <div className="flex justify-center items-center gap-2 md:gap-4 flex-wrap">
-            {["Franchise", "Business", "Marketing", "Legal","Finance","IT","Education","On-Demand","Onboarding"].map((company, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.9 + index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
-                className="text-white font-semibold px-3 py-1 md:px-4 md:py-2 rounded-md md:rounded-lg shadow-sm text-xs md:text-sm"
-                style={{background: "linear-gradient(135deg, #00509D, #007ACC)"}}
-              >
-                {company}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
       </div>
     </div>
   );

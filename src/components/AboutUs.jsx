@@ -117,8 +117,7 @@ export default function AboutSection() {
               className="mt-4 sm:mt-6 text-gray-700 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 text-justify"
             >
              Expand your brand with Fetch True platform India's first Hybrid B2B Marketplace & Growth Partner Network that helps you start, grow, and scale your business—whether you are an entrepreneur, service provider, or Growth Partner and unlock the potential to earn more than ₹1,00,000/month. 
-             <br className="hidden sm:block"/>You can explore our app with varieties of module such as Finance – Planning or saving you can decide how your financial freedom will be, Marketing – Make your brand visible across country or get fame through branding, IT Services – Whether you're a start-up or an enterprise we deliver innovative Development's and many more.    
-            </motion.p>
+Explore with varieties of multi-sector such as Finance – Financial planning or saving decide how your financial freedom will be; Marketing – Make your brand visible across country or get fame through branding; IT Services – Whether you're a start-up or an enterprise we deliver innovative development's and many more.            </motion.p>
 
             {/* Bullet Points */}
             <motion.ul 
