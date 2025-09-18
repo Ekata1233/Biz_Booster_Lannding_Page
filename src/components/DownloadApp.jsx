@@ -110,7 +110,7 @@ export default function DownloadBanner() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-xl md:text-3xl font-semibold mb-3 md:mb-4"
             >
-              The Ultimate B2B Franchise Platform
+              India's most Trusted Franchise Platform
             </motion.h2>
             
             <motion.p 
