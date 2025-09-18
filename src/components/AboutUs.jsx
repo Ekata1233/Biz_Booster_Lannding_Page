@@ -176,7 +176,7 @@ export default function AboutSection() {
               className="w-[280px] sm:w-[320px] md:w-[380px] lg:w-[480px] relative"
             >
               <img
-                src="/Home Page(1).png" // Replace with your mockup image path
+                src="/Homepage(1).png" // Replace with your mockup image path
                 alt="App Mockup"
                 width={480}
                 height={480}
