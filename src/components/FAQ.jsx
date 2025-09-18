@@ -115,8 +115,8 @@ export default function FAQPage() {
               
               {/* Mobile CTA positioned below Q&A */}
               <div className="faq-cta-mobile">
-                <h3>Still have questions?</h3>
-                <p>Contact our franchise development team for more information</p>
+                <h3>Still have any queries?</h3>
+                <p>Contact our experts team for more information</p>
                 <a href="tel:+9765303735" className="cta-button">
                   Schedule a Consultation
                 </a>
@@ -126,8 +126,8 @@ export default function FAQPage() {
 
           {/* Desktop CTA */}
           <div className="faq-cta">
-            <h3>Still have questions?</h3>
-            <p>Contact our franchise development team for more information</p>
+            <h3>Still have any queries?</h3>
+            <p>Contact our experts team for more information</p>
             <a href="tel:+9765303735" className="cta-button">
               Schedule a Consultation
             </a>
