@@ -25,7 +25,7 @@ export default function FAQPage() {
     {
       question: "What is the typical ROI timeline for your franchise? ",
       answer:
-        "Typically, it takes 3-6 months from signing the agreement to opening your franchise. This includes site selection, build-out, training, and hiring processes.",
+        "Our franchise typically see result 9-12 month depending on your performance. ",
     },
     {
       question: "What territories are available for expansion?",
@@ -33,20 +33,16 @@ export default function FAQPage() {
         "We're currently expanding in the Midwest and Southeast regions. Specific available territories are discussed during our discovery process based on market analysis.",
     },
     {
-      question: "Do you offer financing options?",
+      question: "Can I own multi franchise location? ",
       answer:
-        "While we don't provide direct financing, we have relationships with several lending institutions that offer franchise financing programs with favorable terms for qualified candidates.",
+        "Yes, you can own multi franchise location for qualified candidates who demonstrate the capacity and experience to manage multiple locations.",
     },
     {
-      question: "What is the typical ROI timeline for your franchises?",
+      question: "Is there any refundable policy?",
       answer:
-        "Our franchisees typically see a return on investment within 18-36 months, depending on market conditions, location, and execution of our business model.",
+        "Yes, we give you 5X return if your earning is less than ₹5,00,000 in 3 years ",
     },
-    {
-      question: "Can I own multiple franchise locations?",
-      answer:
-        "Yes, we offer multi-unit development opportunities for qualified candidates who demonstrate the capacity and experience to manage multiple locations.",
-    },
+    
   ];
 
   useEffect(() => {

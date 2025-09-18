@@ -67,7 +67,7 @@ const MissionSection = () => {
       description: "We achieve more when we work together" 
     },
     { 
-      name: "Excellence", 
+      name: "Your satisfaction is our priority.  ", 
       description: "We strive for the highest quality in everything we do" 
     },
     // { 
