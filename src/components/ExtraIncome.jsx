@@ -8,11 +8,12 @@ import { BsGraphUpArrow } from "react-icons/bs";
 const steps = [
   {
     title: "Earn Extra Income",
-    desc: `🚀 Boost your financial freedom by unlocking the earning potential income.
-           🌟 Your Extra time is your Extra Income, grow your finances with effortless Income Opportunities.
-           ✨ With simple, smart and always fair you can grow your finance with care — Unlock your extra income opportunity.
-           💼 Income beyond the usual, one stream isn’t enough today, you can earn extra income — Just on few clicks.
-           💸 Extra Income is freedom, unlock the potential to earn up to ₹1,00,000/month.`,
+    desc: `💸 Extra Income is freedom, unlock the potential to earn up to ₹1,00,000/month.`,
+
+    // 🚀 Boost your financial freedom by unlocking the earning potential income.
+    //        🌟 Your Extra time is your Extra Income, grow your finances with effortless Income Opportunities.
+    //        ✨ With simple, smart and always fair you can grow your finance with care — Unlock your extra income opportunity.
+    //        💼 Income beyond the usual, one stream isn’t enough today, you can earn extra income — Just on few clicks.
     extra: "",
     icon: "💸",
     img: "/Earn Extra Income.png",
@@ -20,9 +21,9 @@ const steps = [
   },
   {
     title: "Work From Home",
-    desc: `💥 Work where you want, work when you want. No office required to stack money just a phone and internet.
-           🏠 Turn your space into workplace — the best office is your own home.
-           ✨ Work with no stress, no traffic — just comfort and success.`,
+    desc: `💥 Work where you want, work when you want. No office required to stack money just a phone and internet.`,
+          //  🏠 Turn your space into workplace — the best office is your own home.
+          //  ✨ Work with no stress, no traffic — just comfort and success.`,
     extra: "",
     icon: "🌎",
     img: "/Work from anywhere.png",
@@ -38,9 +39,9 @@ const steps = [
   },
   {
     title: "Team Earning",
-    desc: `🤝 Build your trusted team, grow together and earn up to ₹1,00,000/month.
-           🌟 Build your team, boost your income and enjoy your earning up to ₹1,00,000/month.
-           💼 Team works that payoff. Build your network, earn more than ₹1,00,000/month.`,
+    desc: `🤝 Build your trusted team, grow together and earn up to ₹1,00,000/month.`,
+          //  🌟 Build your team, boost your income and enjoy your earning up to ₹1,00,000/month.
+          //  💼 Team works that payoff. Build your network, earn more than ₹1,00,000/month.`,
     extra: "",
     icon: "💹",
     img: "/Team Earning.png",
@@ -48,8 +49,8 @@ const steps = [
   },
   {
     title: "Team Revenue Earning",
-    desc: `📈 Maximize your earning potential by supporting team and earn revenue up to 3-7% for team revenue.
-           💹 Earn up to 3-7% revenue share on all successful leads your team generate.`,
+    desc: `📈 Maximize your earning potential by supporting team and earn revenue up to 3-7% for team revenue`,
+          //  💹 Earn up to 3-7% revenue share on all successful leads your team generate.`,
     extra: "",
     icon: "📈",
     img: "/Team Revenue Earning.png",

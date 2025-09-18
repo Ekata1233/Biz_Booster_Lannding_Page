@@ -88,7 +88,7 @@ export default function AboutSection() {
   return (
     <>
       {/* ABOUT SECTION */}
-      <section id="about" className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden py-20 px-6 lg:px-16">
+      <section id="about" className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden py-10 px-6 lg:px-16">
         {/* Background Abstract Shapes */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full opacity-20 blur-3xl -z-10 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-indigo-300 rounded-full opacity-10 blur-3xl -z-10 animate-pulse"></div>
@@ -97,7 +97,7 @@ export default function AboutSection() {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-200 rounded-full opacity-5 blur-3xl -z-10"></div>
         <div className="absolute bottom-1/3 right-1/3 w-40 h-40 bg-blue-200 rounded-full opacity-10 blur-2xl -z-10"></div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 ms-28 justify-between">
           {/* Left Text Section */}
           <motion.div
             initial="hidden"
@@ -176,11 +176,11 @@ export default function AboutSection() {
               className="w-[320px] md:w-[420px] lg:w-[480px] relative"
             >
               <img
-                src="/Fetch True Modules mockup (2).png" // Replace with your mockup image path
+                src="/Home Page(1).png" // Replace with your mockup image path
                 alt="App Mockup"
                 width={480}
                 height={480}
-                className="drop-shadow-2xl rounded-xl"
+                className="drop-shadow-2xl rounded-xl mt-20"
                 priority
               />
               
