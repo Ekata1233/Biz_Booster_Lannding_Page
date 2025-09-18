@@ -41,8 +41,8 @@ const benefitsData = [
     imageUrl: "/passiveicon.png",
   },
   {
-    heading: "Choose Module ",
-    description:"We provide you a solution to all your needs with our various of modules that suits your needs from build brand to earning extra income. We have covered everything for you.  ",
+    heading: "Multi-Sector Platform ",
+    description:"We provide you a solution to all your needs with our various of multi-sector platforms that suits your needs from build brand to earning extra income. We have covered everything for you.  ",
     imageUrl: "/graducation award.png",
   },
   {

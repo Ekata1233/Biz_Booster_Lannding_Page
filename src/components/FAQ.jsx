@@ -13,17 +13,17 @@ export default function FAQPage() {
 
   const faqData = [
     {
-      question: "What are the investment requirements for your franchise?",
+      question: "What is the investment for your franchise?",
       answer:
-        "Our franchise investment ranges from $150,000 to $300,000 depending on location and market size. This includes the franchise fee, equipment, initial inventory, and working capital.",
+        "Our Franchise start from ₹1,00,000 deposit which is refundable and our franchise fee and start earning with our growth partner",
     },
     {
-      question: "What kind of training and support do you provide?",
+      question: "How long does it take to open a franchise? ",
       answer:
-        "We provide comprehensive training covering operations, marketing, and management. Our support includes ongoing coaching, marketing assistance, and access to our proprietary business management platform.",
+        "As you buy our package, we provide you a training for 3-6 days and you can start your franchise. ",
     },
     {
-      question: "How long does it take to open a franchise?",
+      question: "What is the typical ROI timeline for your franchise? ",
       answer:
         "Typically, it takes 3-6 months from signing the agreement to opening your franchise. This includes site selection, build-out, training, and hiring processes.",
     },
