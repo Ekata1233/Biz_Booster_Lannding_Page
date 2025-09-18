@@ -184,7 +184,7 @@ export default function DownloadBanner() {
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center">Why Choose FetchTrue?</h3>
             
             {/* Animated Feature Showcase */}
-            <div className="h-40 md:h-48 overflow-hidden relative">
+            <div className="h-58 md:h-48  overflow-hidden relative">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentFeature}
