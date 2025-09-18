@@ -1,159 +1,74 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Steps.module.css";
 
-const StepCard = ({ step, index, activeStep }) => {
+const StepCard = ({ step, index, activeStep, onVideoEnd }) => {
   const isActive = activeStep === index;
-  const [typedText, setTypedText] = useState("");
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    if (isActive && index === 0) {
-      const phoneNumber = "+91 98xxxxxxx0";
-      setTypedText("");
-      let i = 0;
-      const interval = setInterval(() => {
-        setTypedText((prev) => prev + phoneNumber[i]);
-        i++;
-        if (i === 13) clearInterval(interval);
-      }, 300);
-      return () => clearInterval(interval);
+    if (isActive && videoRef.current) {
+      // Reset and play video when step becomes active
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(console.error);
     }
-  }, [isActive, index]);
+  }, [isActive]);
 
   return (
     <motion.div
-      className={`relative w-full md:w-[320px] flex flex-col items-center transition-all duration-500 `}
+      className={`relative w-full md:w-[320px] flex flex-col items-center transition-all duration-500`}
       initial={{ scale: 0.9, opacity: 0.9 }}
       animate={{ scale: isActive ? 1.05 : 1, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {/* Mobile Mockup */}
+      {/* Video Container (replaces mobile mockup) */}
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
         animate={isActive ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0.8 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className={styles.phone}
+        className={styles.videoContainer}
       >
-        <div className={styles.screen}>
-          {/* Step-Specific Content */}
-          {index === 0 && (
-            <motion.div
-              key="step1"
-              className="w-full p-4 text-center"
-              initial={{ opacity: 0 }}
-              animate={isActive ? { opacity: 1 } : {}}
-              transition={{ delay: 0.5 }}
-            >
-              {/* App header */}
-              <motion.div
-                className="flex justify-between items-center px-2 mb-6"
-              >
-                <div className="w-6 h-6 rounded-full bg-gray-200"></div>
-                <div className="font-semibold text-gray-800">FetchTrue</div>
-                <div className="w-6 h-6 rounded-full bg-gray-200"></div>
-              </motion.div>
-
-              <motion.h3 className="text-lg font-bold text-gray-800 mb-6">
-                Welcome to FetchTrue
-              </motion.h3>
-
-              {/* Input Field */}
-              <motion.div className="relative border rounded-xl p-3 mb-4 text-gray-500 text-sm bg-white shadow-sm mx-4 h-12 flex items-center">
-                <span className="text-gray-400">Enter Mobile Number</span>
-                <motion.div
-                  className="absolute inset-0 flex items-center px-3 rounded-xl bg-white border border-blue-300 shadow-md"
-                  animate={isActive ? { width: "100%" } : {}}
-                  transition={{ duration: 0.9, delay: 1.5 }}
-                >
-                  <span className="font-mono text-gray-700">
-                    {typedText}
-                    <span className="animate-pulse">|</span>
-                  </span>
-                </motion.div>
-              </motion.div>
-
-              <motion.button className="mt-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg shadow-lg w-4/5 font-medium">
-                Sign Up
-              </motion.button>
-            </motion.div>
-          )}
-
-          {index === 1 && (
-            <motion.div
-              key="step2"
-              className="flex flex-col items-center p-4 w-full"
-            >
-              <div className="flex justify-between items-center px-2 mb-6 w-full">
-                <div className="w-6 h-6 rounded-full bg-gray-200"></div>
-                <div className="font-semibold text-gray-800">Packages</div>
-                <div className="w-6 h-6 rounded-full bg-gray-200"></div>
-              </div>
-
-              <h3 className="text-lg font-bold text-gray-800 mb-4">
-                Choose Your Plan
-              </h3>
-
-              <div className="w-full h-40 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl mb-5 flex flex-col items-center justify-center p-4 border border-gray-200 shadow-sm">
-                <img
-                  src="/pkg.jpeg"
-                  alt="Premium Plan"
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-
-              <button className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg shadow-lg w-full font-medium">
-                Activate Now
-              </button>
-
-              <motion.div
-                  className="mt-4 text-green-600 font-semibold text-sm flex items-center"
-                  initial={{ opacity: 0 }} // pehle invisible
-                  animate={isActive ? { opacity: 1 } : { opacity: 0 }} // active hone par fade-in
-                  transition={{ duration: 0.8, delay: 1.5 }} // thoda delay ke baad dikhega
-                >
-                  <span className="mr-1">✓</span> Successfully Activated!
-                </motion.div>
-
-            </motion.div>
-          )}
-
-          {index === 2 && (
-            <motion.div
-              key="step3"
-              className="flex flex-col items-center justify-center p-4 w-full"
-            >
-              <div className="flex justify-between items-center px-2 mb-6 w-full">
-                <div className="w-6 h-6 rounded-full bg-gray-200"></div>
-                <div className="font-semibold text-gray-800">Earnings</div>
-                <div className="w-6 h-6 rounded-full bg-gray-200"></div>
-              </div>
-
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                Your Earnings
-              </h3>
-              <div className="text-gray-600 text-sm mb-6 text-center">
-                Track your monthly income
-              </div>
-
-              <div className="w-36 h-36 bg-gradient-to-r from-green-100 to-blue-100 rounded-full flex items-center justify-center mb-5 shadow-inner">
-                <span className="text-4xl">💰</span>
-              </div>
-
-              <div className="bg-white rounded-xl p-4 shadow-lg w-full text-center border border-gray-100">
-                <div className="text-sm text-gray-600">Current Month</div>
-                <div className="text-2xl font-bold text-green-600 mt-1">
-                  ₹1,00,000
-                </div>
-              </div>
-
-              <p className="text-gray-700 mt-6 text-center text-sm font-medium">
-                Earn up to ₹1 Lakh/month
-              </p>
-            </motion.div>
-          )}
-        </div>
+        {/* Step-Specific Video */}
+        {index === 0 && (
+          <video
+            ref={videoRef}
+            muted
+            playsInline
+            onEnded={onVideoEnd}
+            className={styles.video}
+          >
+            <source src="/Step no 01 Fetch True Install And Sing-Up_v002.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        
+        {index === 1 && (
+          <video
+            ref={videoRef}
+            muted
+            playsInline
+            onEnded={onVideoEnd}
+            className={styles.video}
+          >
+            <source src="/Step no 02 Fetch True Package Activate.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        
+        {index === 2 && (
+          <video
+            ref={videoRef}
+            muted
+            playsInline
+            onEnded={onVideoEnd}
+            className={styles.video}
+          >
+            <source src="/Step no 03 Earning.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
       </motion.div>
 
       {/* Step text */}
@@ -177,13 +92,29 @@ export default function HowItWorks() {
   ];
 
   const [activeStep, setActiveStep] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  // Handle video end - move to next step
+  const handleVideoEnd = () => {
+    if (isAutoPlaying) {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [steps.length]);
+    }
+  };
+
+  // Handle manual step change
+  const handleStepChange = (index) => {
+    setIsAutoPlaying(false);
+    setActiveStep(index);
+  };
+
+  // Reset to auto-play after 30 seconds of inactivity
+  useEffect(() => {
+    let timeout;
+    if (!isAutoPlaying) {
+      timeout = setTimeout(() => setIsAutoPlaying(true), 30000);
+    }
+    return () => clearTimeout(timeout);
+  }, [isAutoPlaying]);
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 md:py-24 overflow-hidden">
@@ -204,13 +135,24 @@ export default function HowItWorks() {
       {/* Steps for desktop */}
       <div className="hidden lg:flex flex-row justify-center items-center gap-8 lg:gap-12 relative z-10 flex-wrap px-4">
         {steps.map((s, i) => (
-          <StepCard key={i} step={s} index={i} activeStep={activeStep} />
+          <StepCard 
+            key={i} 
+            step={s} 
+            index={i} 
+            activeStep={activeStep} 
+            onVideoEnd={handleVideoEnd}
+          />
         ))}
       </div>
 
       {/* Mobile Carousel */}
       <div className="lg:hidden flex flex-col items-center">
-        <StepCard step={steps[activeStep]} index={activeStep} activeStep={activeStep} />
+        <StepCard 
+          step={steps[activeStep]} 
+          index={activeStep} 
+          activeStep={activeStep} 
+          onVideoEnd={handleVideoEnd}
+        />
 
         {/* Dots */}
         <div className="flex justify-center mt-8 space-x-2">
@@ -220,7 +162,7 @@ export default function HowItWorks() {
               className={`w-2 h-2 rounded-full ${
                 i === activeStep ? "bg-blue-500" : "bg-gray-300"
               }`}
-              onClick={() => setActiveStep(i)}
+              onClick={() => handleStepChange(i)}
             />
           ))}
         </div>

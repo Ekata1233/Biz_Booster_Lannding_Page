@@ -284,7 +284,7 @@ export default function DownloadBanner() {
         </div>
         
         {/* Trust Badge Footer */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
@@ -313,7 +313,7 @@ export default function DownloadBanner() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
