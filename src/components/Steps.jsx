@@ -21,7 +21,12 @@ const StepCard = ({ step, index, activeStep, onVideoEnd }) => {
   return (
     <div className={`relative w-full flex flex-col items-center transition-all duration-500 px-4`}>
       {/* Video Container */}
-      <div className={styles.videoContainer}>
+      <div 
+      className={`${styles.videoContainer} transition-transform duration-500 ${
+      isActive ? "scale-115" : "scale-98 opacity-75"
+    }`}
+
+      >
         {/* Step-Specific Video */}
         {index === 0 && (
           <video
@@ -67,14 +72,14 @@ const StepCard = ({ step, index, activeStep, onVideoEnd }) => {
       </div>
 
       {/* Step text */}
-      <div className="w-full mt-6 px-2">
-        <h4 className="font-bold text-lg text-center text-gray-800 mb-2">
-          Step {index + 1}
-        </h4>
-        <p className="text-gray-600 text-center text-sm md:text-base leading-relaxed">
-          {step}
-        </p>
-      </div>
+       <div className="w-full mt-10 px-2">
+    <h4 className="font-bold text-lg text-center text-gray-800 mb-2">
+      Step {index + 1}
+    </h4>
+    <p className="text-gray-600 text-center text-sm md:text-base leading-relaxed">
+      {step}
+    </p>
+  </div>
     </div>
   );
 };

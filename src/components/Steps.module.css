@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 50px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   /* width: 100%; */
   max-width: 250px !important;
   height: 500px;
@@ -41,4 +41,10 @@
   border-radius: 12px;
   font-size: 12px;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .progressBar {
+    display: none;
+  }
 }
