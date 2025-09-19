@@ -76,13 +76,13 @@ export default function VideoHeroPage() {
           }}
         >
           {/* Responsive Heading */}
-          <h1 className=" text-2xl sm:text-xl mt-8 lg:mt-1 md:text-4xl lg:text-5xl font-bold mb-4 leading-snug">
-                   Become Our <span className="text-3xl text-blue-600 lg:text-7xl md:text-5xl sm:text-3xl">GROWTHPARTNERS</span> <span className="lg:text-4xl">With Our Franchise Solution.</span>                                                             
+          <h1 className=" text-2xl sm:text-xl mt-8 lg:mt-1 md:text-4xl lg:text-6xl font-bold mb-4 leading-snug">
+                   Become Our <span className="text-3xl text-blue-600 lg:text-7xl md:text-5xl sm:text-3xl">GROWTHPARTNERS</span> <span className="lg:text-4xl"> and turn your Network into Net-Worth</span>                                                             
                     </h1>
 
           {/* Responsive Subtitle */}
           <p className="text-sm sm:text-base md:text-lg lg:text-2xl mb-8 leading-relaxed">
-            Unlock new opportunities with our powerful platforms and become our Growth Partner's. Join our Franchise. 
+            Unlock new opportunities with our powerful platforms and become our Growth Partner's. 
           </p>
 
           {/* Buttons */}

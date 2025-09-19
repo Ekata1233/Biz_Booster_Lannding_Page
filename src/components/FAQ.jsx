@@ -27,11 +27,7 @@ export default function FAQPage() {
       answer:
         "Our franchise typically see result 9-12 month depending on your performance. ",
     },
-    {
-      question: "What territories are available for expansion?",
-      answer:
-        "We're currently expanding in the Midwest and Southeast regions. Specific available territories are discussed during our discovery process based on market analysis.",
-    },
+    
     {
       question: "Can I own multi franchise location? ",
       answer:

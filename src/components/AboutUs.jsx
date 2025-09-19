@@ -103,7 +103,7 @@ export default function AboutSection() {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left ms-25"
           >
             <motion.h2 
               variants={itemVariants}
@@ -167,18 +167,18 @@ Explore with varieties of multi-sector such as Finance – Financial planning or
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="relative flex flex-col items-center order-first lg:order-last"
+            className="relative flex flex-col items-center order-first lg:order-last "
           >
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="w-[280px] sm:w-[320px] md:w-[380px] lg:w-[480px] relative"
+              className="w-[280px] sm:w-[320px] md:w-[380px] lg:w-[480px] relative ms-20"
             >
               <img
                 src="/Homepage(1).png" // Replace with your mockup image path
                 alt="App Mockup"
-                width={480}
-                height={480}
+                width={400}
+                height={300}
                 className="drop-shadow-2xl rounded-xl mt-4 sm:mt-8 lg:mt-20"
                 priority
               />
@@ -189,7 +189,7 @@ Explore with varieties of multi-sector such as Finance – Financial planning or
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="hidden lg:flex items-center justify-center gap-4 mt-8"
+              className="hidden lg:flex items-center justify-center gap-4 "
             >
               <a
                 href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
@@ -216,6 +216,7 @@ Explore with varieties of multi-sector such as Finance – Financial planning or
               >
                 <FaGooglePlay size={18} className="sm:size-[22px]" /> Google Play
               </a>
+             
               {/* <a
                 href="#"
                 className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 sm:px-5 sm:py-3 rounded-lg font-semibold hover:bg-black transition shadow-md hover:shadow-lg w-full sm:w-auto justify-center text-sm sm:text-base"
