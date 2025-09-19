@@ -1,19 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaHome, FaMoneyBillWave, FaUsers, FaChartLine } from "react-icons/fa";
+import { FaHome, FaLock, FaUsers, FaChartLine,FaProjectDiagram,FaGlobeAsia,FaCalendarAlt,FaPiggyBank } from "react-icons/fa";
 import { BsGraphUpArrow } from "react-icons/bs";
+import {MdAttachMoney,MdTrendingUp} from "react-icons/md"
 
 const steps = [
   {
     title: "Multi-Sector Services",
     desc: "🛠️ All-in-one multi-sector platforms designed to meet every business and earning need.\n🎯 From brand building to extra income, we’ve got everything covered for you.",
-    icon: <FaHome />,
+    icon: <FaProjectDiagram />,
   },
   {
     title: "Nationwide Operation",
     desc: "🌍 Expand your business nationwide with ease, anytime and anywhere.\n	•	📈 Reach more customers and unlock new growth opportunities effortlessly.",
-    icon: <FaHome />,
+    icon: <FaGlobeAsia />,
   },
   {
     title: "Work From Home",
@@ -23,13 +24,13 @@ const steps = [
   {
     title: "Earn Extra Income",
     desc: "💸 Unlock the potential to earn up to ₹1,00,000/month.\n🌟 Your extra time becomes extra income.",
-    icon: <FaMoneyBillWave />,
+    icon: <MdAttachMoney />,
   },
   
   {
     title: "Monthly Payout",
     desc: "💰 Get your payouts on time, every month.\n💸 Assured ₹3000 monthly earning bonus.",
-    icon: <BsGraphUpArrow />,
+    icon: <FaCalendarAlt/>,
   },
   {
     title: "Team Earning",
@@ -39,17 +40,17 @@ const steps = [
   {
     title: "Team Revenue Earning",
     desc: "📈 Earn 3–7% team revenue share.\n💹 Every lead your team generates adds to your income.",
-    icon: <FaChartLine />,
+    icon: <MdTrendingUp />,
   },
   {
     title: "Fixed Earning",
     desc: "	💰 Assured monthly bonus of ₹3000 fixed earning with your package purchase.\n🔒 Guaranteed return on investment for added financial security.",
-    icon: <FaUsers />,
+    icon: <FaLock/>,
   },
   {
     title: "Passive Income",
     desc: "	🚀 Effortless earning with steady and reliable income for long-term financial stability.\n	🔑 Become our Growth Partner to unlock premium features and enjoy financial freedom.",
-    icon: <FaChartLine />,
+    icon: <FaPiggyBank />,
   },
 ];
 
