@@ -16,7 +16,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 function Footer() {
   const footerData = {
     companyName: "FetchTrue",
-    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True.",
+    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True.  Welcome to FetchTrue service we connect business across country, helping you build a secure financial future and make smart decisions. Join us on the path to financial success!",
     address:
       "Office no.307, 3rd Floor, Amanora Chamber, Amanora Mall, Hadapsar, Pune- 411028",
     email: "info@fetchtrue.com",
