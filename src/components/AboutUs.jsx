@@ -130,7 +130,8 @@ export default function AboutSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
-                  Become our growth partners.               
+                   We support start-up, entrepreneur across high-growth industries.  
+               
                 </motion.li>
               <motion.li variants={itemVariants} className="flex items-center">
                 <span className="w-4 h-4 sm:w-5 sm:h-5 bg-blue-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
@@ -138,7 +139,7 @@ export default function AboutSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
-                Scale your Growth with our advanced Dashboard.  
+                   As a growth partner you can create multiple earning opportunities. 
 
               </motion.li>
               <motion.li variants={itemVariants} className="flex items-center">
@@ -147,16 +148,16 @@ export default function AboutSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
-                Get insight of Real-Time growth. 
+                   Unlock your earning potential more than ₹1,00,000/month.             
               </motion.li>
-              <motion.li variants={itemVariants} className="flex items-center">
+              {/* <motion.li variants={itemVariants} className="flex items-center">
                 <span className="w-4 h-4 sm:w-5 sm:h-5 bg-blue-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
                   <svg className="w-2 h-2 sm:w-3 sm:h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </span>
                 Unlock your earning potential more than ₹1,00,000/month.
-              </motion.li>
+              </motion.li> */}
             </motion.ul>
 
             
