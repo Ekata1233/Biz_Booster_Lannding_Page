@@ -20,9 +20,10 @@ export default function Home() {
       <Navbar/>
         <HeroSection />
         <AboutSection />
+         <DownloadApp />
+
         <ServicesPage />
         <HowItWorks />
-        <DownloadApp />
         <PartnerDiagram />
         {/* <KeyFeatures /> */}
         <ExtraIncome />
