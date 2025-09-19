@@ -16,7 +16,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 function Footer() {
   const footerData = {
     companyName: "FetchTrue",
-    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True.  Welcome to FetchTrue service we connect business across country, helping you build a secure financial future and make smart decisions. Join us on the path to financial success!",
+    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True.",
     address:
       "Office no.307, 3rd Floor, Amanora Chamber, Amanora Mall, Hadapsar, Pune- 411028",
     email: "info@fetchtrue.com",
@@ -78,7 +78,8 @@ function Footer() {
 
     {/* Official Info */}
     <div>
-      <h4 className="font-bold mb-5">Official Info:</h4>
+      <h4 className="font-bold mb-3 ">Official Info:</h4>
+      <p className="font-medium">FTFL Technology Pvt Ltd.</p>
       <p className="mb-3">{footerData?.address}</p>
       <Link href={`mailto:${footerData?.email}`} className="mb-2 flex items-center gap-2">
         <FiMail /> {footerData?.email}

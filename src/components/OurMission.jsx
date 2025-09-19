@@ -39,7 +39,7 @@ const MissionSection = () => {
     },
     {
       title: "Our Core Values",
-      description:"Our fundamental beliefs that guide actions, decisions, and relationships. These principles shape our culture and define who we are as a company/Partners.",
+      description:"Our fundamental beliefs that guide actions, decisions, and relationships. These principles shape our culture and define who we are as a company/Partners. As Fetch True growth partners you act as a local ambassador of business at regional level. You represent business in your local areas and work directly with customers, turning them into loyal and profitable clients.  ",
       image: "/coreValues.avif",
       color: "from-emerald-500 to-emerald-600",
       reverse: false,
@@ -55,15 +55,15 @@ const MissionSection = () => {
   // Core values with descriptions
   const coreValues = [
     { 
-      name: "Innovative solutions. ", 
+      name: "We deliver innovative solutions that are suited to your business needs.  ", 
       description: "We constantly seek new ways to solve problems and create value" 
     },
     { 
-      name: "Fully Refundable Policy.", 
+      name: "As a growth partner you create multiple earning opportunities. ", 
       description: "We do what's right, not what's easy" 
     },
     { 
-      name: "We will guide you till you succeed. ", 
+      name: "We provide you a platform to build your team. ", 
       description: "We achieve more when we work together" 
     },
     { 

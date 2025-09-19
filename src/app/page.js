@@ -24,7 +24,7 @@ export default function Home() {
         <HowItWorks />
         <DownloadApp />
         <PartnerDiagram />
-        <KeyFeatures />
+        {/* <KeyFeatures /> */}
         <ExtraIncome />
         <BlogSection />
         <Testimonials />
