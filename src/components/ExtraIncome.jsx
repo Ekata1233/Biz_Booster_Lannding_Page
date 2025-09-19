@@ -11,8 +11,8 @@ const steps = [
     icon: <FaHome />,
   },
   {
-    title: "Multi-Sector Services",
-    desc: "•	🌍 Expand your business nationwide with ease, anytime and anywhere.\n	•	📈 Reach more customers and unlock new growth opportunities effortlessly.",
+    title: "Nationwide Operation",
+    desc: "🌍 Expand your business nationwide with ease, anytime and anywhere.\n	•	📈 Reach more customers and unlock new growth opportunities effortlessly.",
     icon: <FaHome />,
   },
   {
