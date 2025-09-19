@@ -60,7 +60,7 @@ const StepCard = ({ step, index, activeStep, onVideoEnd }) => {
             className={styles.video}
             preload="auto"
           >
-            <source src="/Step no 03 Earning.mp4" type="video/mp4" />
+            <source src="/lead generation Step no 03_V002.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         )}
