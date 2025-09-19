@@ -13,7 +13,7 @@ const steps = [
   },
   {
     title: "Nationwide Operation",
-    desc: "🌍 Expand your business nationwide with ease, anytime and anywhere.\n	•	📈 Reach more customers and unlock new growth opportunities effortlessly.",
+    desc: "🌍 Expand your business nationwide with ease, anytime and anywhere.\n		📈 Reach more customers and unlock new growth opportunities effortlessly.",
     icon: <FaGlobeAsia />,
   },
   {
