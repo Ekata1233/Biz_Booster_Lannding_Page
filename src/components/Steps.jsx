@@ -121,14 +121,14 @@ export default function HowItWorks() {
         <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-[#1e3c72] to-[#2a5298] bg-clip-text text-transparent mt-2">
           Get Started in 3 Simple Steps
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm md:text-base md:text-lg">
+        <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm  md:text-lg">
           Our intuitive process makes it easy to get started with FetchTrue and
           begin managing your business efficiently.
         </p>
       </div>
 
       {/* Steps for desktop */}
-      <div className="hidden lg:flex justify-center items-start gap-8 relative z-10 px-4 max-w-6xl mx-auto">
+      <div className="hidden lg:flex justify-center items-start gap-8 relative z-10  max-w-6xl mx-auto">
         {steps.map((s, i) => (
           <StepCard 
             key={i} 
@@ -136,6 +136,7 @@ export default function HowItWorks() {
             index={i} 
             activeStep={activeStep} 
             onVideoEnd={handleVideoEnd}
+            
           />
         ))}
       </div>
