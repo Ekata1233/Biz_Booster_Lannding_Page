@@ -97,13 +97,13 @@ export default function AboutSection() {
         <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-purple-200 rounded-full opacity-5 blur-xl sm:blur-2xl lg:blur-3xl -z-10"></div>
         <div className="absolute bottom-1/3 right-1/3 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-blue-200 rounded-full opacity-10 blur-lg sm:blur-xl lg:blur-2xl -z-10"></div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16 justify-between">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16 justify-center">
           {/* Left Text Section */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="text-center lg:text-left ms-25"
+            className="text-center lg:text-left lg:ms-25"
           >
             <motion.h2 
               variants={itemVariants}
@@ -173,7 +173,7 @@ export default function AboutSection() {
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="w-[280px] sm:w-[320px] md:w-[380px] lg:w-[480px] relative ms-20"
+              className="w-[280px] sm:w-[320px] md:w-[380px] lg:w-[480px] relative lg:ms-20"
             >
               <img
                 src="/Homepage(1).png" // Replace with your mockup image path
