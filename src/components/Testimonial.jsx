@@ -20,43 +20,43 @@ function Testimonial() {
     {
       para: "This service exceeded my expectations. The team was professional and delivered results faster than I anticipated. I would highly recommend them to again.",
       src: "/api/placeholder/100/100",
-      title: "John Smith",
-      text1: "New York, USA",
+      title: "Aniket",
+      text1: "Kolhapur",
       rating: 4.5
     },
     {
       para: "I've been using this service for over a year now and they consistently deliver excellent results. Their attention to detail is remarkable and their customer support.",
       src: "/api/placeholder/100/100",
-      title: "Sarah Johnson",
-      text1: "London, UK",
+      title: "Ekata",
+      text1: "Mumbai",
       rating: 5
     },
     {
       para: "As a small business owner, finding reliable service providers is crucial. This company has been a game-changer for my business. Their solutions are innovative.",
       src: "/api/placeholder/100/100",
-      title: "Michael Chen",
-      text1: "Toronto, Canada",
+      title: "Akshey",
+      text1: "Pune",
       rating: 4
     },
     {
       para: "The quality of work is exceptional. They understood exactly what I needed and delivered beyond my expectations. Will definitely work with them again and again.",
       src: "/api/placeholder/100/100",
-      title: "Emma Wilson",
-      text1: "Sydney, Australia",
+      title: "Gouri",
+      text1: "Mumbai",
       rating: 4.5
     },
     {
       para: "I was hesitant at first, but I'm so glad I decided to try this service. The results speak for themselves. My business has grown significantly since work continusaly.",
       src: "/api/placeholder/100/100",
-      title: "David Brown",
-      text1: "Berlin, Germany",
+      title: "Pranjal",
+      text1: "Nashik",
       rating: 3.5
     },
     {
       para: "Prompt service, excellent communication, and outstanding results. What more could you ask for? I'm thoroughly impressed and will be a returning customer.",
       src: "/api/placeholder/100/100",
-      title: "Lisa Garcia",
-      text1: "Madrid, Spain",
+      title: "Sapna",
+      text1: "Pune",
       rating: 5
     }
   ];
