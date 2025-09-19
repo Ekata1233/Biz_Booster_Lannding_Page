@@ -233,7 +233,7 @@ export default function AboutSection() {
 
 
       <OurMission />
-      <DownloadApp />
+      {/* <DownloadApp /> */}
 
       {/* STATS SECTION */}
       <section id="stats-section" className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
