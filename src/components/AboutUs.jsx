@@ -4,6 +4,8 @@ import Image from "next/image";
 import { FaGooglePlay, FaApple, FaUsers, FaHandshake, FaChartLine } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import OurMission from "./OurMission";
+import DownloadApp from "@/components/DownloadApp";
+
 
 export default function AboutSection() {
   // Counter Animation for Stats
@@ -231,6 +233,7 @@ export default function AboutSection() {
 
 
       <OurMission />
+      <DownloadApp />
 
       {/* STATS SECTION */}
       <section id="stats-section" className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-16">

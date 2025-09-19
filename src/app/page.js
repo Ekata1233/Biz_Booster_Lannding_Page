@@ -20,7 +20,7 @@ export default function Home() {
       <Navbar/>
         <HeroSection />
         <AboutSection />
-         <DownloadApp />
+         {/* <DownloadApp /> */}
 
         <ServicesPage />
         <HowItWorks />
