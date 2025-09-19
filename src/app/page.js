@@ -11,11 +11,13 @@ import WhatsAppButton from "@/components/WhatsappButton";
 import ExtraIncome from "@/components/ExtraIncome";
 import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQ";
+import Navbar from "@/components/Navbar";
 
 
 export default function Home() {
   return (
     <div>
+      <Navbar/>
         <HeroSection />
         <AboutSection />
         <ServicesPage />
