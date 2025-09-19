@@ -16,8 +16,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 function Footer() {
   const footerData = {
     companyName: "FetchTrue",
-    description:
-      "Welcome to FetchTrue Group! We are dedicated to helping you build a secure financial future and make smart investment decisions. Join us on the path to financial success!",
+    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True.  Welcome to FetchTrue service we connect business across country, helping you build a secure financial future and make smart investment decisions. Join us on the path to financial success!",
     address:
       "Office no.307, 3rd Floor, Amanora Chamber, Amanora Mall, Hadapsar, Pune- 411028",
     email: "info@fetchtrue.com",
@@ -74,7 +73,20 @@ function Footer() {
     <div>
       <h1 className="text-2xl font-extrabold mb-3">{footerData?.companyName}</h1>
       <p className="mb-4 leading-relaxed">{footerData?.description}</p>
-      <h4 className="font-semibold mb-3">Our Social</h4>
+      
+    </div>
+
+    {/* Official Info */}
+    <div>
+      <h4 className="font-bold mb-5">Official Info:</h4>
+      <p className="mb-3">{footerData?.address}</p>
+      <Link href={`mailto:${footerData?.email}`} className="mb-2 flex items-center gap-2">
+        <FiMail /> {footerData?.email}
+      </Link>
+      <Link href={`tel:+${footerData?.phone}`} className="mb-2 flex items-center gap-2">
+        <FaPhoneAlt /> {footerData?.phone}
+      </Link>
+      <h4 className="font-semibold mb-3 mt-4">Our Social</h4>
       <div className="flex flex-wrap gap-4 text-2xl">
         {renderSocialIcons?.map((item, idx) => (
           <a
@@ -88,18 +100,6 @@ function Footer() {
           </a>
         ))}
       </div>
-    </div>
-
-    {/* Official Info */}
-    <div>
-      <h4 className="font-bold mb-5">Official Info:</h4>
-      <p className="mb-3">{footerData?.address}</p>
-      <Link href={`mailto:${footerData?.email}`} className="mb-2 flex items-center gap-2">
-        <FiMail /> {footerData?.email}
-      </Link>
-      <Link href={`tel:+${footerData?.phone}`} className="mb-2 flex items-center gap-2">
-        <FaPhoneAlt /> {footerData?.phone}
-      </Link>
       {/* <p className="mb-2 flex items-center gap-2">
         <TbWorld /> {footerData?.website}
       </p> */}
@@ -152,7 +152,7 @@ function Footer() {
 
   {/* Footer Bottom */}
   <div className="text-center mt-6 border-t border-white/20 pt-4 text-xs sm:text-sm">
-    <p>2025 © All rights Reserved | FetchTrue</p>
+    <p>2025 © All rights Reserved | FTFL Technology Pvt.Ltd</p>
   </div>
 </footer>
 
