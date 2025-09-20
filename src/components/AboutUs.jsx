@@ -234,7 +234,7 @@ export default function AboutSection() {
 
 
       <OurMission />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
 
       {/* STATS SECTION */}
       <section id="stats-section" className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
@@ -281,7 +281,7 @@ export default function AboutSection() {
           </motion.div>
         </motion.div>
 
-        <DownloadBanner />
+        {/* <DownloadBanner /> */}
       </section>
     </>
   );

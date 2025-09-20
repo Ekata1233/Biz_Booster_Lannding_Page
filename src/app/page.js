@@ -12,7 +12,7 @@ import ExtraIncome from "@/components/ExtraIncome";
 import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQ";
 import Navbar from "@/components/Navbar";
-
+import WhyChooseFetchTrue from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
          {/* <DownloadApp /> */}
-
+        <WhyChooseFetchTrue />
         <ServicesPage />
         <HowItWorks />
         <PartnerDiagram />
