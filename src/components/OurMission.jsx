@@ -55,21 +55,21 @@ const MissionSection = () => {
   // Core values with descriptions
   const coreValues = [
     { 
-      name: "We deliver innovative solutions that are suited to your business needs.  ", 
+      name: "As a growth partner you create multiple earning opportunities. ", 
       description: "We constantly seek new ways to solve problems and create value" 
     },
     { 
-      name: "As a growth partner you create multiple earning opportunities. ", 
+      name: "We provide you a platform to build your team. ", 
       description: "We do what's right, not what's easy" 
     },
     { 
-      name: "We provide you a platform to build your team. ", 
+      name: " You can earn on team revenue income. ", 
       description: "We achieve more when we work together" 
     },
-    { 
-      name: "Your satisfaction is our priority.  ", 
-      description: "We strive for the highest quality in everything we do" 
-    },
+    // { 
+    //   name: "Your satisfaction is our priority.  ", 
+    //   description: "We strive for the highest quality in everything we do" 
+    // },
     // { 
     //   name: "Customer Focus", 
     //   description: "Our customers' success is our success" 
@@ -248,7 +248,7 @@ const MissionSection = () => {
 
                 {item.typeData === "corevalues" && (
   <motion.div 
-    className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+    className="flex flex-col gap-2"
     variants={containerVariants}
     initial="hidden"
     animate={inView ? "visible" : "hidden"}
@@ -285,8 +285,8 @@ const MissionSection = () => {
       </motion.div>
     ))}
   </motion.div>
+)}
 
-                )}
               </motion.div>
             </motion.div>
           ))}
