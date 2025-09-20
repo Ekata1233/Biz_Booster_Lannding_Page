@@ -102,7 +102,7 @@ const WhyChooseFetchTrue = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">Why Choose FetchTrue</h2>
+          <h2 className="text-4xl font-bold text-blue-700 mb-4">Why Choose Fetch True</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover the advantages that make us the ideal choice for your business growth and success
           </p>

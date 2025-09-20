@@ -17,18 +17,18 @@ const steps = [
     icon: <FaGlobeAsia />,
   },
   {
-    title: "Work From Home",
+    title: "Work From Anywhere",
     desc: "💥 Work where you want, when you want.\n✨ No stress, no traffic — just comfort and success.",
     icon: <FaHome />,
   },
   {
-    title: "Earn Extra Income",
-    desc: "💸 Unlock the potential to earn up to ₹1,00,000/month.\n🌟 Your extra time becomes extra income.",
-    icon: <MdAttachMoney />,
+    title: "Guarantee Return",
+    desc: "	💸 Unlock the potential to earn up to ₹1,00,000/month.\n🌟 5X assured return if your earning is less than ₹5,00,000 in 3 years.",
+    icon: <FaLock/>,
   },
   
   {
-    title: "Monthly Payout",
+    title: "Weekly Payout",
     desc: "💰 Get your payouts on time, every month.\n💸 Assured ₹3000 monthly earning bonus.",
     icon: <FaCalendarAlt/>,
   },
@@ -43,8 +43,8 @@ const steps = [
     icon: <MdTrendingUp />,
   },
   {
-    title: "Fixed Earning",
-    desc: "	💰 Assured monthly bonus of ₹3000 fixed earning with your package purchase.\n🔒 Guaranteed return on investment for added financial security.",
+    title: "Monthly Fixed Earning",
+    desc: "	💰 Assured monthly bonus of ₹3000 fixed earning with your package purchase.\n💸 Get your payouts on time, every month.",
     icon: <FaLock/>,
   },
   {
