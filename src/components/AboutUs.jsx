@@ -4,7 +4,8 @@ import Image from "next/image";
 import { FaGooglePlay, FaApple, FaUsers, FaHandshake, FaChartLine } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import OurMission from "./OurMission";
-import DownloadApp from "@/components/DownloadApp";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import DownloadBanner from "./DownloadBanner";
 
 
 export default function AboutSection() {
@@ -233,7 +234,7 @@ export default function AboutSection() {
 
 
       <OurMission />
-      <DownloadApp />
+      <WhyChooseUs />
 
       {/* STATS SECTION */}
       <section id="stats-section" className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
@@ -279,6 +280,8 @@ export default function AboutSection() {
             <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">Revenue Growth</p>
           </motion.div>
         </motion.div>
+
+        <DownloadBanner />
       </section>
     </>
   );

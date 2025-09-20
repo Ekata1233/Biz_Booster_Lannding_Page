@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import PartnerDiagram from "@/components/Partner";
 import ServicesPage from "@/components/Services";
 import HowItWorks from "@/components/Steps";
-import DownloadApp from "@/components/DownloadApp";
+import DownloadApp from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonial";
 import ContactUs from "@/components/ContactUs";
 import WhatsAppButton from "@/components/WhatsappButton";
