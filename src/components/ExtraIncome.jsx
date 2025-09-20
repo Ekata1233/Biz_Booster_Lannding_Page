@@ -29,7 +29,7 @@ const steps = [
   
   {
     title: "Weekly Payout",
-    desc: "💰 Get your payouts on time, every month.\n💸 Assured ₹3000 monthly earning bonus.",
+    desc: "✨ You can withdraw payout every weekly.\n🚀 There is no barrier for weekly payout",
     icon: <FaCalendarAlt/>,
   },
   {
