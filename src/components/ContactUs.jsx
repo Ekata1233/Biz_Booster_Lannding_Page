@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,6 +15,39 @@ export default function ContactPage() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+
+  const checkboxVariants = {
+    unchecked: { scale: 1 },
+    checked: { 
+      scale: [1, 1.05, 1],
+      transition: { duration: 0.3 }
+    },
+    hover: { scale: 1.03 },
+  };
 
   // Validation
   const validateForm = () => {
@@ -128,9 +161,32 @@ export default function ContactPage() {
 
   return (
     <div id="contact" className="min-h-screen w-full flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 via-white to-blue-100 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-[#00509D] opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#00509D] opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+      {/* Animated background elements */}
+      <motion.div 
+        className="absolute top-0 left-0 w-72 h-72 bg-[#00509D] opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"
+        animate={{ 
+          scale: [1, 1.1, 1],
+          rotate: [0, 5, 0]
+        }}
+        transition={{ 
+          repeat: Infinity, 
+          duration: 8,
+          ease: "easeInOut"
+        }}
+      ></motion.div>
+      <motion.div 
+        className="absolute bottom-0 right-0 w-96 h-96 bg-[#00509D] opacity-10 rounded-full translate-x-1/3 translate-y-1/3"
+        animate={{ 
+          scale: [1, 1.1, 1],
+          rotate: [0, -5, 0]
+        }}
+        transition={{ 
+          repeat: Infinity, 
+          duration: 10,
+          ease: "easeInOut",
+          delay: 1
+        }}
+      ></motion.div>
 
       <div className="w-full max-w-5xl mx-auto z-10">
         <motion.div
@@ -139,43 +195,72 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
           className="w-full p-6 md:p-10 rounded-2xl shadow-2xl bg-white border border-blue-100 relative overflow-hidden"
         >
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00509D] to-blue-400"></div>
+          <motion.div 
+            className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00509D] to-blue-400"
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 1, delay: 0.5 }}
+          ></motion.div>
 
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold mb-2 text-[#00509D]">Get In Touch</h1>
-            <p className="text-gray-600 max-w-2xl mx-auto">Have questions or want to discuss opportunities? Fill out the form below and our team will get back to you shortly.</p>
+            <motion.h1 
+              className="text-4xl font-bold mb-2 text-[#00509D]"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Get In Touch
+            </motion.h1>
+            <motion.p 
+              className="text-gray-600 max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              Have questions or want to discuss opportunities? Fill out the form below and our team will get back to you shortly.
+            </motion.p>
           </div>
 
           {/* Status Messages */}
-          {submitStatus === "success" && (
-            <motion.div 
-              initial={{ opacity: 0, y: -10 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg border border-green-200 flex items-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Thank you! We will contact you soon.
-            </motion.div>
-          )}
-          {submitStatus === "error" && (
-            <motion.div 
-              initial={{ opacity: 0, y: -10 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg border border-red-200 flex items-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
-              Sorry, there was an error submitting your form. Please try again.
-            </motion.div>
-          )}
+          <AnimatePresence>
+            {submitStatus === "success" && (
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: -10 }}
+                className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg border border-green-200 flex items-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Thank you! We will contact you soon.
+              </motion.div>
+            )}
+            {submitStatus === "error" && (
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: -10 }}
+                className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg border border-red-200 flex items-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                </svg>
+                Sorry, there was an error submitting your form. Please try again.
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <motion.form 
+            onSubmit={handleSubmit} 
+            className="space-y-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* First & Last Name */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="relative">
+              <motion.div className="relative" variants={itemVariants}>
                 <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
@@ -183,19 +268,31 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
-                  <input
+                  <motion.input
                     type="text"
                     name="firstName"
                     placeholder="Enter your first name"
                     value={formData.firstName}
                     onChange={handleChange}
+                    whileFocus={{ scale: 1.01 }}
                     className={`p-4 border rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12 ${errors.firstName ? "border-red-500" : "border-gray-300"}`}
                   />
                 </div>
-                {errors.firstName && <p className="mt-1 text-red-500 text-sm">{errors.firstName}</p>}
-              </div>
+                <AnimatePresence>
+                  {errors.firstName && (
+                    <motion.p 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="mt-1 text-red-500 text-sm"
+                    >
+                      {errors.firstName}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.div>
 
-              <div className="relative">
+              <motion.div className="relative" variants={itemVariants}>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
@@ -203,21 +300,33 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
-                  <input
+                  <motion.input
                     type="text"
                     name="lastName"
                     placeholder="Enter your last name"
                     value={formData.lastName}
                     onChange={handleChange}
+                    whileFocus={{ scale: 1.01 }}
                     className={`p-4 border rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12 ${errors.lastName ? "border-red-500" : "border-gray-300"}`}
                   />
                 </div>
-                {errors.lastName && <p className="mt-1 text-red-500 text-sm">{errors.lastName}</p>}
-              </div>
+                <AnimatePresence>
+                  {errors.lastName && (
+                    <motion.p 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="mt-1 text-red-500 text-sm"
+                    >
+                      {errors.lastName}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             </div>
 
             {/* Email */}
-            <div className="relative">
+            <motion.div className="relative" variants={itemVariants}>
               <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
@@ -225,20 +334,32 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <input
+                <motion.input
                   type="email"
                   name="email"
                   placeholder="your.email@example.com"
                   value={formData.email}
                   onChange={handleChange}
+                  whileFocus={{ scale: 1.01 }}
                   className={`p-4 border rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12 ${errors.email ? "border-red-500" : "border-gray-300"}`}
                 />
               </div>
-              {errors.email && <p className="mt-1 text-red-500 text-sm">{errors.email}</p>}
-            </div>
+              <AnimatePresence>
+                {errors.email && (
+                  <motion.p 
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-1 text-red-500 text-sm"
+                  >
+                    {errors.email}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
 
             {/* Phone Number */}
-            <div className="relative">
+            <motion.div className="relative" variants={itemVariants}>
               <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
@@ -246,24 +367,43 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <input
+                <motion.input
                   type="tel"
                   name="phoneNumber"
                   placeholder="(123) 456-7890"
                   value={formData.phoneNumber}
                   onChange={handlePhoneChange}
+                  whileFocus={{ scale: 1.01 }}
                   className={`p-4 border rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12 ${errors.phoneNumber ? "border-red-500" : "border-gray-300"}`}
                 />
               </div>
-              {errors.phoneNumber && <p className="mt-1 text-red-500 text-sm">{errors.phoneNumber}</p>}
-            </div>
+              <AnimatePresence>
+                {errors.phoneNumber && (
+                  <motion.p 
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-1 text-red-500 text-sm"
+                  >
+                    {errors.phoneNumber}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
 
             {/* Interested (checkboxes) */}
-            <div>
+            <motion.div variants={itemVariants}>
               <p className="font-medium text-gray-700 mb-2">Interested in:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {["Franchise Partner", "Service Provider"].map((item) => (
-                  <label key={item} className={`flex items-center gap-3 p-4 rounded-lg border transition-colors cursor-pointer ${formData.interested.includes(item) ? "border-[#00509D] bg-blue-50" : "border-gray-300 hover:bg-blue-50"}`}>
+                  <motion.label 
+                    key={item} 
+                    variants={checkboxVariants}
+                    initial="unchecked"
+                    animate={formData.interested.includes(item) ? "checked" : "unchecked"}
+                    whileHover="hover"
+                    className={`flex items-center gap-3 p-4 rounded-lg border transition-colors cursor-pointer ${formData.interested.includes(item) ? "border-[#00509D] bg-blue-50" : "border-gray-300 hover:bg-blue-50"}`}
+                  >
                     <div className="flex items-center h-5">
                       <input
                         type="checkbox"
@@ -274,14 +414,25 @@ export default function ContactPage() {
                       />
                     </div>
                     <span className="text-gray-700 font-medium">{item}</span>
-                  </label>
+                  </motion.label>
                 ))}
               </div>
-              {errors.interested && <p className="mt-1 text-red-500 text-sm">{errors.interested}</p>}
-            </div>
+              <AnimatePresence>
+                {errors.interested && (
+                  <motion.p 
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-1 text-red-500 text-sm"
+                  >
+                    {errors.interested}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
 
             {/* Message */}
-            <div className="relative">
+            <motion.div className="relative" variants={itemVariants}>
               <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
               <div className="relative">
                 <div className="absolute top-5 left-3">
@@ -289,22 +440,35 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                   </svg>
                 </div>
-                <textarea
+                <motion.textarea
                   name="message"
                   placeholder="Tell us more about your inquiry..."
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
+                  whileFocus={{ scale: 1.01 }}
                   className="p-4 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12"
-                ></textarea>
+                ></motion.textarea>
               </div>
-              {errors.message && <p className="mt-1 text-red-500 text-sm">{errors.message}</p>}
-            </div>
+              <AnimatePresence>
+                {errors.message && (
+                  <motion.p 
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-1 text-red-500 text-sm"
+                  >
+                    {errors.message}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
 
             {/* Submit Button */}
             <motion.button
               type="submit"
               disabled={isSubmitting}
+              variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full bg-gradient-to-r from-[#00509D] to-blue-600 text-white font-semibold py-4 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-md"
@@ -326,7 +490,7 @@ export default function ContactPage() {
                 </>
               )}
             </motion.button>
-          </form>
+          </motion.form>
         </motion.div>
       </div>
     </div>

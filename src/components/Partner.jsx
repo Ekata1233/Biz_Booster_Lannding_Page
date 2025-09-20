@@ -1,7 +1,7 @@
 // app/components/PartnerDiagram.jsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   FaCheckCircle,
   FaCrown,
@@ -22,10 +22,27 @@ export default function PartnerDiagram() {
   const [activeTier, setActiveTier] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const [expandedAccordions, setExpandedAccordions] = useState({});
+  const cardsContainerRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     setIsVisible(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    
+    // Add scroll event listener for animation triggers
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+        
+        if (isInViewport && !isVisible) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleAccordion = (tierId, accordionKey) => {
@@ -33,6 +50,22 @@ export default function PartnerDiagram() {
       ...prev,
       [tierId]: prev[tierId] === accordionKey ? null : accordionKey,
     }));
+  };
+
+  const scrollToCard = (tierId) => {
+    setActiveTier(tierId);
+    
+    // Smooth scroll to ensure the card is in view
+    setTimeout(() => {
+      const cardElement = document.getElementById(`card-${tierId}`);
+      if (cardElement) {
+        cardElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'nearest',
+          inline: 'center'
+        });
+      }
+    }, 50);
   };
 
  
@@ -134,7 +167,11 @@ export default function PartnerDiagram() {
   ];
 
   return (
-    <section id="growth-partner" className="py-16 px-6 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+   <section 
+      id="growth-partner" 
+      ref={sectionRef}
+      className="py-16 px-6 bg-gradient-to-b from-blue-50 to-white overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2
@@ -154,15 +191,20 @@ export default function PartnerDiagram() {
         </p>
 
         {/* Partner Cards */}
-        <div id="cards-container" className="flex flex-col lg:flex-row gap-6 justify-center items-stretch">
+        <div 
+          id="cards-container" 
+          ref={cardsContainerRef}
+          className="flex flex-col lg:flex-row gap-6 justify-center items-stretch"
+        >
           {partners.map((partner, index) => (
             <div
               key={partner.id}
+              id={`card-${partner.id}`}
               className={`flex flex-col w-full lg:w-1/3 transition-all duration-500 transform ${
                 activeTier === partner.id ? "scale-105" : "opacity-90 scale-95"
               } ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               style={{ transitionDelay: `${index * 150}ms` }}
-              onClick={() => setActiveTier(partner.id)}
+              onClick={() => scrollToCard(partner.id)}
             >
               <div
                 className={`flex-1 bg-white rounded-2xl shadow-lg border-2 ${partner.borderColor} overflow-hidden flex flex-col h-full`}
