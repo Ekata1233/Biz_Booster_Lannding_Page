@@ -112,7 +112,7 @@ export default function AboutSection() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent leading-tight"
             >
-              Grow Your Brand with <br /> Our FetchTrue App
+              Grow with Our <br />  FetchTrue App
             </motion.h2>
             
             <motion.p 
