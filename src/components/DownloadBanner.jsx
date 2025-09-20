@@ -32,7 +32,10 @@ const DownloadBanner = () => {
           
           {/* Download Buttons */}
           <div className="flex flex-col gap-4 lg:w-1/3">
-            <motion.button
+            <motion.a
+            href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
+            target="_blank"
+            rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group bg-white text-blue-700 font-semibold py-4 px-8 rounded-lg flex items-center justify-center gap-3 shadow-lg hover:bg-blue-50 transition-colors"
@@ -40,9 +43,9 @@ const DownloadBanner = () => {
               <FaDownload className="text-lg" />
               <span>Download Now</span>
               <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </motion.a>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <motion.a
                 href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
                 target="_blank"
@@ -64,7 +67,7 @@ const DownloadBanner = () => {
                 <FaApple className="text-lg" />
                 <span>App Store</span>
               </motion.a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>
