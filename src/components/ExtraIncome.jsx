@@ -7,7 +7,7 @@ import {MdAttachMoney,MdTrendingUp} from "react-icons/md"
 
 const steps = [
   {
-    title: "Multi-Sector Services",
+    title: "Multi-Sector Platform",
     desc: "🛠️ All-in-one multi-sector platforms designed to meet every business and earning need.\n🎯 From brand building to extra income, we’ve got everything covered for you.",
     icon: <FaProjectDiagram />,
   },

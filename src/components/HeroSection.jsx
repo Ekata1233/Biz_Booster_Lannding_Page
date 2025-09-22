@@ -48,7 +48,7 @@ export default function HomePage() {
 
           {/* Left Column - Text (Desktop only) */}
           <div
-            className={`hidden lg:block w-full lg:w-1/2 text-center lg:text-left transition-all duration-700 ease-out transform ${
+            className={`hidden lg:block w-full lg:w-1/2 text-center lg:text-left lg:ms-20 transition-all duration-700 ease-out transform ${
               isVisible
                 ? "translate-x-0 opacity-100"
                 : "-translate-x-10 opacity-0"
