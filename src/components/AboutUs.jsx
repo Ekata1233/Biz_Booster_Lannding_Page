@@ -91,7 +91,9 @@ export default function AboutSection() {
   return (
     <>
       {/* ABOUT SECTION */}
-      <section id="about" className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden py-10 px-4 sm:px-6 lg:px-16">
+      
+
+<section id="about" className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden py-10 px-4 sm:px-6 lg:px-16">
         {/* Background Abstract Shapes - Smaller on mobile */}
         <div className="absolute top-0 left-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-blue-300 rounded-full opacity-20 blur-xl sm:blur-2xl lg:blur-3xl -z-10 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem] bg-indigo-300 rounded-full opacity-10 blur-xl sm:blur-2xl lg:blur-3xl -z-10 animate-pulse"></div>

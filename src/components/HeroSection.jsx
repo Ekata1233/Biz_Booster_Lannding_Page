@@ -1,110 +1,138 @@
 "use client";
-
-import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
-import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
-export default function VideoHeroPage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [videoError, setVideoError] = useState(false);
-  const videoRef = useRef(null);
+export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    // Check if video can play
-    if (videoRef.current) {
-      videoRef.current.oncanplay = () => {
-        setIsLoading(false);
-        clearTimeout(timer);
-      };
-    }
-
-    return () => clearTimeout(timer);
+    setIsVisible(true);
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-[#00509D] to-[#003F7D] w-full h-[50vh] md:h-[85vh] lg:h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-blue-200 to-white flex items-center justify-center px-4 sm:px-6 lg:px-12">
       <Head>
-        <title>Business Growth Partnership</title>
+        <title>Growth Partners Program</title>
         <meta
           name="description"
-          content="Become our Growth Partner and turn your network into net worth with our B2B solutions"
+          content="Become our growth partner and turn your network into net worth"
         />
       </Head>
 
-      <section className="relative w-full h-[50vh] md:h-[85vh] lg:h-screen flex items-center justify-center text-center text-white overflow-hidden">
-        {/* Background Video */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          {!videoError ? (
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              poster="/fallback-image.jpg"
-              onError={() => {
-                setVideoError(true);
-                setIsLoading(false);
-              }}
-            >
-              <source src="/Hero.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-[#00509D] to-[#003F7D]"></div>
-          )}
-        </div>
+      {/* Hero Banner */}
+      <section className="container mx-auto py-10 sm:py-14 lg:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+          {/* For small screens: Title comes first */}
+          <div className="lg:hidden w-full text-center transition-all duration-700 ease-out transform">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight mt-15">
+              Become Our{" "}
+              <span className="text-blue-600">GROWTH PARTNERS</span> and Turn
+              Your Network into Net Worth
+            </h1>
+          </div>
 
-        {/* Loading Placeholder */}
-        {isLoading && (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#00509D] to-[#003F7D] flex items-center justify-center z-20">
-            <div className="flex flex-col items-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white mb-4"></div>
-              <div className="text-white text-lg">Loading video...</div>
+          {/* For small screens: Image comes second */}
+          <div className="lg:hidden w-full flex justify-center transition-all duration-700 ease-out transform">
+            <div className="relative w-full max-w-xs sm:max-w-sm h-64 sm:h-80">
+              <Image
+                src="/Group 24.png"
+                alt="App Preview"
+                width={430}
+                height={430}
+                className="object-contain rounded-lg"
+                priority
+              />
             </div>
           </div>
-        )}
 
-        {/* Dark Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-5"></div>
+          {/* Left Column - Text (Desktop only) */}
+          <div
+            className={`hidden lg:block w-full lg:w-1/2 text-center lg:text-left transition-all duration-700 ease-out transform ${
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
+            }`}
+          >
+            <h1 className="text-5xl font-bold text-gray-800 leading-tight mb-4">
+              Become Our{" "}
+              <span className="text-blue-600">GROWTH PARTNERS</span> and Turn
+              Your Network into Net Worth
+            </h1>
 
-        {/* Content */}
-        <div
-          className="relative z-10 px-4 sm:px-6 max-w-3xl mx-auto text-center mt-20"
-          style={{
-            opacity: isLoading ? 0 : 1,
-            transform: isLoading ? "translateY(40px)" : "translateY(0)",
-            transition: "opacity 1s ease, transform 1s ease",
-          }}
-        >
-          {/* Responsive Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            Become Our{" "}
-            <span className="text-blue-400">GROWTH PARTNERS</span> and Turn Your
-            Network into Net Worth
-          </h1>
+            <p className="text-xl text-blue-700 mb-6">
+              Unlock new opportunities with our powerful platforms and become
+              our Growth Partner.
+            </p>
 
-          {/* Responsive Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Unlock new opportunities with our powerful platforms and become our
-            Growth Partner.
-          </p>
+            <div className="flex flex-col space-y-4 mt-8">
+              <p className="text-lg font-medium text-gray-700">
+                Download our app now:
+              </p>
+              <div className="flex justify-start">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    src="/Untitled-1.png"
+                    alt="Get it on Google Play"
+                    className="h-12 w-auto transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
 
-          {/* Call-to-Action Button */}
-          {/* <div className="flex justify-center">
-            <Link
-              href="#contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              Join Now
-            </Link>
-          </div> */}
+          {/* Right Column - Image (Desktop only) */}
+          <div
+            className={`hidden lg:flex w-full lg:w-1/2 justify-center transition-all duration-700 ease-out transform ${
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "translate-x-10 opacity-0"
+            }`}
+          >
+            <div className="relative w-full max-w-lg h-96">
+              <Image
+                src="/Group 24.png"
+                alt="App Preview"
+                width={430}
+                height={430}
+                className="object-contain rounded-xl"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* For small screens: Download button comes third */}
+          <div className="lg:hidden w-full text-center transition-all duration-700 ease-out transform">
+            <p className="text-base text-blue-700 mb-4 mt-5">
+              Unlock new opportunities with our powerful platforms and become
+              our Growth Partner.
+            </p>
+            
+            <div className="flex flex-col space-y-4 mt-6">
+              <p className="text-sm font-medium text-gray-700">
+                Download our app now:
+              </p>
+              <div className="flex justify-center">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    src="/Untitled-1.png"
+                    alt="Get it on Google Play"
+                    className="h-10 w-auto transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

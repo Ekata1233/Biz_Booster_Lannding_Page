@@ -10,7 +10,7 @@ const navLinks = [
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Growth Partner", href: "#growth-partner" },
-  { label: "Features", href: "#features" },
+  // { label: "Features", href: "#features" },
   { label: "Blog", href: "#Blog" }
   // { label: "Franchise", href: "#franchise" },
   // { label: "Contact", href: "#contact" },
@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "bg-white text-black shadow-sm" : "bg-transparent text-white"
+        scrolled ? "bg-white text-blue-950 shadow-sm" : "bg-transparent text-blue-950"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -80,7 +80,7 @@ export default function ExtraIncome() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative p-6 rounded-2xl shadow-lg border border-blue-200/30 
+              className="relative p-6 rounded-2xl shadow-blue-200 border border-blue-200/80 
                          bg-white/60 backdrop-blur-xl hover:shadow-2xl 
                          hover:-translate-y-2 transition-all duration-300"
             >
