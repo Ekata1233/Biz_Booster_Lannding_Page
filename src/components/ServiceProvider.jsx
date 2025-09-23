@@ -1,424 +1,185 @@
-"use client"
+"use client";
+import { motion } from "framer-motion";
+import { FaCheckCircle, FaUsers, FaRocket, FaHandshake, FaChartLine, FaShieldAlt, FaArrowRight, FaStar, FaLightbulb, FaHeart, FaSeedling, FaUserFriends } from "react-icons/fa";
+import Image from 'next/image';
 
-import React, { useState } from 'react';
-import styled from 'styled-components';
-
-const ServiceMediatorWorkflow = () => {
-  const [activeStep, setActiveStep] = useState(0);
-  const [clientApproved, setClientApproved] = useState(false);
-
-  const steps = [
+export default function ServiceProviderSection() {
+  const points = [
     {
-      title: "Requirement Sharing",
-      description: "Client shares their requirements with the Mediator",
-      icon: "📋",
-      color: "#4b6cb7"
+      icon: FaLightbulb,
+      title: "Innovative Solutions",
+      description: "You deliver innovative solutions that are suited to the business needs."
     },
     {
-      title: "Communication to Provider",
-      description: "Mediator communicates with Service Provider",
-      icon: "📞",
-      color: "#3b5998"
+      icon: FaHeart,
+      title: "Customer Priority",
+      description: "Your satisfaction is our priority."
     },
     {
-      title: "Service Fulfillment",
-      description: "Service Provider fulfills the requirement",
-      icon: "🛠️",
-      color: "#2a4d8e"
+      icon: FaChartLine,
+      title: "Tailored Solutions",
+      description: "Gain innovative solutions tailored to your industry."
     },
     {
-      title: "Delivery to Client",
-      description: "Service is delivered to Client through Mediator",
-      icon: "📦",
-      color: "#1a3d84"
+      icon: FaSeedling,
+      title: "Growth Opportunities",
+      description: "Unlock the opportunities for growth."
     },
     {
-      title: "Client Decision",
-      description: "Client either approves or requests changes",
-      icon: "✅",
-      color: "#0a2d7a"
+      icon: FaUserFriends,
+      title: "Loyal Client Base",
+      description: "As service provider we provide you loyal client."
     }
   ];
 
-  const handleNext = () => {
-    if (activeStep < steps.length - 1) {
-      setActiveStep(activeStep + 1);
-    } else {
-      // Reset the cycle
-      setActiveStep(0);
-      setClientApproved(false);
-    }
-  };
-
-  const handleApprove = () => {
-    setClientApproved(true);
-  };
-
-  const handleReject = () => {
-    setClientApproved(false);
-    setActiveStep(0); // Back to requirement sharing
-  };
-
   return (
-    <Container>
-      <Header>
-        <h1>Service Mediator Workflow</h1>
-        <p>How our service mediation process works</p>
-      </Header>
-      
-      <WorkflowContainer>
-        <StepsContainer>
-          {steps.map((step, index) => (
-            <Step 
-              key={index} 
-              active={index <= activeStep}
-              color={step.color}
-              onClick={() => setActiveStep(index)}
-            >
-              <StepIcon>{step.icon}</StepIcon>
-              <StepContent>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </StepContent>
-              <StepNumber>{index + 1}</StepNumber>
-            </Step>
-          ))}
-        </StepsContainer>
-        
-        <ArrowContainer>
-          <Arrow>→</Arrow>
-          <Arrow>→</Arrow>
-          <Arrow>→</Arrow>
-          <Arrow>→</Arrow>
-        </ArrowContainer>
-        
-        <Visualization>
-          <Participants>
-            <Participant active={activeStep >= 0}>
-              <Avatar>👨‍💼</Avatar>
-              <Name>Client</Name>
-            </Participant>
-            
-            <Participant active={activeStep >= 1}>
-              <Avatar>🤝</Avatar>
-              <Name>Mediator</Name>
-            </Participant>
-            
-            <Participant active={activeStep >= 2}>
-              <Avatar>👨‍💻</Avatar>
-              <Name>Service Provider</Name>
-            </Participant>
-          </Participants>
+    <section id="service-providers" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header Section */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            For <span className="text-blue-600">Service Providers</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Join India's fastest-growing service platform and connect with thousands of customers 
+            looking for your expertise.
+          </p>
+        </motion.div>
+
+        {/* Content with Image and Description */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left - Description */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-blue-50 rounded-2xl p-8 h-full">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Vital Role in Business Ecosystem</h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                As a service provider you play a vital role in business ecosystem by delivering tailored solutions that meet diverse customer needs. A trustworthy service provider guarantees that business and client achieve efficiency, development, and sustainability, regardless of the service's focus—technology, marketing, logistics, finance, or on-demand services. Long-term revenue growth and operational resilience are ensured by their capacity to quickly adjust to changing market needs and personalize services.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Right - Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/provider.avif" // Replace with your image path
+                alt="Service Provider on FetchTrue"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              
+              {/* Overlay for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent"></div>
+              
+              {/* Floating Stats */}
+              {/* <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                <div className="text-2xl font-bold text-blue-600">10,000+</div>
+                <div className="text-gray-700 font-medium">Active Providers</div>
+              </div> */}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Points in Card Layout */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose FetchTrue?</h3>
           
-          <Connections>
-            <Connection active={activeStep >= 1} />
-            <Connection active={activeStep >= 2} />
-            <Connection active={activeStep >= 3} />
-            <Connection active={activeStep >= 4} />
-          </Connections>
-        </Visualization>
-        
-        {activeStep === steps.length - 1 && (
-          <DecisionContainer>
-            <h3>Client Decision</h3>
-            <p>Did the client approve the service?</p>
-            <ButtonGroup>
-              <ApproveButton onClick={handleApprove}>Yes, Approved</ApproveButton>
-              <RejectButton onClick={handleReject}>No, Need Changes</RejectButton>
-            </ButtonGroup>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {points.map((point, index) => (
+              <motion.div
+                key={index}
+                className="group bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-3 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <point.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">{point.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{point.description}</p>
+                </div>
+              </motion.div>
+            ))}
             
-            {clientApproved && (
-              <ApprovalMessage>
-                <h4>Service Approved! 🎉</h4>
-                <p>The cycle completes successfully. Client can request new services anytime.</p>
-              </ApprovalMessage>
-            )}
-          </DecisionContainer>
-        )}
-        
-        <Controls>
-          <NextButton onClick={handleNext}>
-            {activeStep < steps.length - 1 ? 'Next Step' : 'Restart Cycle'}
-          </NextButton>
-        </Controls>
-      </WorkflowContainer>
-    </Container>
+            {/* Additional card for CTA */}
+            {/* <motion.div
+              className="group bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex flex-col items-center text-center h-full justify-center text-white">
+                <div className="p-3 bg-white/20 rounded-full mb-4">
+                  <FaStar className="w-8 h-8" />
+                </div>
+                <h4 className="text-xl font-semibold mb-3">Ready to Get Started?</h4>
+                <p className="mb-4 opacity-90">Join thousands of successful service providers today</p>
+                <motion.button 
+                  className="px-6 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Sign Up Now
+                </motion.button>
+              </div>
+            </motion.div> */}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 md:p-12 text-white">
+            <h3 className="text-2xl md:text-4xl font-bold mb-4">Join Our Growing Community</h3>
+            <p className="text-blue-100 mb-8 text-lg">Start your journey with FetchTrue today and unlock new opportunities</p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="https://biz-booster-provider-panel.vercel.app/"
+                className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Sign Up Now
+              </motion.a>
+              {/* <motion.button 
+                className="px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Sales
+              </motion.button> */}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
-};
-
-// Styled Components
-const Container = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-`;
-
-const Header = styled.div`
-  text-align: center;
-  margin-bottom: 40px;
-  
-  h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    color: #7f8c8d;
-    font-size: 18px;
-  }
-`;
-
-const WorkflowContainer = styled.div`
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-`;
-
-const StepsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  position: relative;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #ecf0f1;
-    z-index: 1;
-  }
-`;
-
-const Step = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  flex: 1;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: ${props => props.active ? props.color : '#ecf0f1'};
-    z-index: 1;
-    transition: all 0.3s ease;
-  }
-`;
-
-const StepIcon = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 2;
-`;
-
-const StepContent = styled.div`
-  text-align: center;
-  padding: 0 10px;
-  
-  h3 {
-    margin: 0 0 8px 0;
-    color: #2c3e50;
-    font-size: 16px;
-  }
-  
-  p {
-    margin: 0;
-    color: #7f8c8d;
-    font-size: 14px;
-  }
-`;
-
-const StepNumber = styled.div`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #ecf0f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #7f8c8d;
-  position: absolute;
-  top: 65px;
-  right: calc(50% - 15px);
-  z-index: 2;
-`;
-
-const ArrowContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0 40px 0;
-  padding: 0 30px;
-`;
-
-const Arrow = styled.div`
-  font-size: 24px;
-  color: #bdc3c7;
-`;
-
-const Visualization = styled.div`
-  position: relative;
-  height: 200px;
-  margin-bottom: 40px;
-`;
-
-const Participants = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-`;
-
-const Participant = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: ${props => props.active ? 1 : 0.4};
-  transition: opacity 0.3s ease;
-`;
-
-const Avatar = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-`;
-
-const Name = styled.div`
-  font-weight: bold;
-  color: #2c3e50;
-`;
-
-const Connections = styled.div`
-  position: absolute;
-  top: 40px;
-  left: 80px;
-  right: 80px;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Connection = styled.div`
-  flex: 1;
-  height: 4px;
-  background: ${props => props.active ? '#3498db' : '#ecf0f1'};
-  margin: 0 10px;
-  transition: background 0.3s ease;
-`;
-
-const DecisionContainer = styled.div`
-  text-align: center;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  
-  h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    color: #7f8c8d;
-    margin-bottom: 20px;
-  }
-`;
-
-const ButtonGroup = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-`;
-
-const Button = styled.button`
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-`;
-
-const ApproveButton = styled(Button)`
-  background: #2ecc71;
-  color: white;
-  
-  &:hover {
-    background: #27ae60;
-  }
-`;
-
-const RejectButton = styled(Button)`
-  background: #e74c3c;
-  color: white;
-  
-  &:hover {
-    background: #c0392b;
-  }
-`;
-
-const ApprovalMessage = styled.div`
-  padding: 15px;
-  background: #d4edda;
-  border-radius: 6px;
-  color: #155724;
-  
-  h4 {
-    margin: 0 0 10px 0;
-  }
-  
-  p {
-    margin: 0;
-  }
-`;
-
-const Controls = styled.div`
-  text-align: center;
-`;
-
-const NextButton = styled.button`
-  padding: 12px 30px;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  
-  &:hover {
-    background: #2980b9;
-  }
-`;
-
-export default ServiceMediatorWorkflow;
+}

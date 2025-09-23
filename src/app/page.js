@@ -13,6 +13,7 @@ import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQ";
 import Navbar from "@/components/Navbar";
 import WhyChooseFetchTrue from "@/components/WhyChooseUs";
+import ServiceProviderSection from "@/components/ServiceProvider";
 
 export default function Home() {
   return (
@@ -20,15 +21,18 @@ export default function Home() {
       <Navbar/>
         <HeroSection />
         <AboutSection />
+        
          {/* <DownloadApp /> */}
         <WhyChooseFetchTrue />
         <ServicesPage />
         <HowItWorks />
+        <Testimonials />
+        <ServiceProviderSection />
+
         {/* <PartnerDiagram /> */}
         {/* <KeyFeatures /> */}
         <ExtraIncome />
         <BlogSection />
-        <Testimonials />
         <FAQSection/>
         {/* <ContactUs /> */}
         <WhatsAppButton />
