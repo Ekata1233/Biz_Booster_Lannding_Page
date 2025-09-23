@@ -142,7 +142,7 @@ const WhyChooseFetchTrue = () => {
           <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-8 text-white shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="mb-6 max-w-2xl mx-auto">Join thousands of satisfied clients who have experienced the FetchTrue advantage</p>
-            <Link href="#contact">
+            <Link href="/contact">
              <button className="bg-white text-blue-700 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-blue-50 transition-colors">
               Connect With Us
             </button>

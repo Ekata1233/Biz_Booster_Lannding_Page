@@ -110,18 +110,23 @@ function Footer() {
     <div>
       <h4 className="font-bold mb-4">Quick Links</h4>
       <ul className="space-y-4">
+        <li>
+          <Link href="/contact" className="flex items-center gap-2 hover:text-black">
+            <MdOutlineKeyboardDoubleArrowRight /> Contact Us
+          </Link>
+        </li>
   <li>
-    <Link href="/privacypolicy" className="flex items-center gap-2 hover:underline">
+    <Link href="/privacypolicy" className="flex items-center gap-2 hover:text-black">
       <MdOutlineKeyboardDoubleArrowRight /> Privacy Policy
     </Link>
   </li>
   <li>
-    <Link href="/returnpolicy" className="flex items-center gap-2 hover:underline">
+    <Link href="/returnpolicy" className="flex items-center gap-2 hover:text-black">
       <MdOutlineKeyboardDoubleArrowRight /> Return & Refund Policy
     </Link>
   </li>
   <li>
-    <Link href="/termscondition" className="flex items-center gap-2 hover:underline">
+    <Link href="/termscondition" className="flex items-center gap-2 hover:text-black">
       <MdOutlineKeyboardDoubleArrowRight /> Terms & Conditions
     </Link>
   </li>

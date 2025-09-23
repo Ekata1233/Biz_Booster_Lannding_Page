@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function AssuranceCard() {
@@ -110,9 +111,12 @@ export default function AssuranceCard() {
             Pay using UPI, Card, Net Banking
           </p>
         </div>
-        <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-blue-900 text-sm sm:text-base">
+        <Link href="/contact">
+           <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-blue-900 text-sm sm:text-base">
           Contact Us
         </button>
+        </Link>
+        
       </div>
 
       <div className="mt-4 text-center sm:text-right">

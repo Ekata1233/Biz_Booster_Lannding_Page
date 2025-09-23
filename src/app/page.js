@@ -30,7 +30,7 @@ export default function Home() {
         <BlogSection />
         <Testimonials />
         <FAQSection/>
-        <ContactUs />
+        {/* <ContactUs /> */}
         <WhatsAppButton />
     </div>
   );
