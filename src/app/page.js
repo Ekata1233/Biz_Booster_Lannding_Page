@@ -24,7 +24,7 @@ export default function Home() {
         <WhyChooseFetchTrue />
         <ServicesPage />
         <HowItWorks />
-        <PartnerDiagram />
+        {/* <PartnerDiagram /> */}
         {/* <KeyFeatures /> */}
         <ExtraIncome />
         <BlogSection />
