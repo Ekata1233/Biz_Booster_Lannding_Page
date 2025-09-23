@@ -26,12 +26,12 @@ export default function Home() {
         <WhyChooseFetchTrue />
         <ServicesPage />
         <HowItWorks />
-        <Testimonials />
         <ServiceProviderSection />
 
         {/* <PartnerDiagram /> */}
         {/* <KeyFeatures /> */}
         <ExtraIncome />
+        <Testimonials />
         <BlogSection />
         <FAQSection/>
         {/* <ContactUs /> */}
