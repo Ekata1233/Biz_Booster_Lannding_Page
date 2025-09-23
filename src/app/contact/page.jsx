@@ -21,8 +21,9 @@ export default function ContactPage() {
 
   const typewriterText = [
     "Let's Start Something Amazing Together",
-    "We're excited to hear about your project and help bring your ideas to life.",
-    "Fill out the form below and we'll get back to you within 24 hours."
+ "We're excited to connect with you and help you earn more."   ,
+ "Fill out the form below and we'll get back to you within 24 hours."
+
   ];
 
   // Typewriter animation effect
