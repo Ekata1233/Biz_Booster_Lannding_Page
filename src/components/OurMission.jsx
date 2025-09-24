@@ -152,7 +152,7 @@ const MissionSection = () => {
   };
 
   return (
-    <section
+    <section id="about"
       className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
       ref={ref}
     >
