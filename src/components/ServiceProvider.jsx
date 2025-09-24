@@ -102,7 +102,7 @@ export default function ServiceProviderSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-8 lg:mb-12">Why Choose FetchTrue?</h3>
+          {/* <h3 className="text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-8 lg:mb-12">Why Choose FetchTrue?</h3> */}
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {points.map((point, index) => (
