@@ -4,7 +4,7 @@ export default function EndUserSection() {
   return (
     <section className={styles.endUserSection}>
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Understanding End-User Relationships</h2>
+        <h2 className={styles.sectionTitle}> End-User</h2>
         
         <div className={styles.contentGrid}>
           {/* Definition Card */}
