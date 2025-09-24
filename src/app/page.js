@@ -14,6 +14,7 @@ import FAQSection from "@/components/FAQ";
 import Navbar from "@/components/Navbar";
 import WhyChooseFetchTrue from "@/components/WhyChooseUs";
 import ServiceProviderSection from "@/components/ServiceProvider";
+import EndUserSection from "@/components/EndUser";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         <ServicesPage />
         <HowItWorks />
         <ServiceProviderSection />
-
+        <EndUserSection />
         {/* <PartnerDiagram /> */}
         {/* <KeyFeatures /> */}
         <ExtraIncome />

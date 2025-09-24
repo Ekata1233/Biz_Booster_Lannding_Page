@@ -117,13 +117,13 @@ export default function HowItWorks() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-200 via-white to-purple-100 py-12 md:py-24 overflow-hidden">
       {/* Title */}
       <div className="text-center mb-10 md:mb-16 px-4 relative z-10">
         <h3 className="font-bold text-xl md:text-2xl text-[#2164F4] mb-2">
           How It Works
         </h3>
-        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-[#1e3c72] to-[#2a5298] bg-clip-text text-transparent mt-2">
+        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-[#1e3c72] to-[#2a5298] bg-clip-text  mt-2">
           Get Started in 3 Simple Steps
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm  md:text-lg">
