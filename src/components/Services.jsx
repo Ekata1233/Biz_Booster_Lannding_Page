@@ -269,7 +269,7 @@ const ServicesSection = () => {
                       <img
                         src={service.mainImage}
                         alt={service.title}
-                        className="w-full h-56 object-cover rounded-lg shadow-sm"
+                        className="w-full h-70 object-cover rounded-lg shadow-sm"
                         loading="lazy"
                       />
                      

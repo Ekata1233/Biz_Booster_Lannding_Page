@@ -141,14 +141,14 @@ function Testimonial() {
           ))}
         </Swiper>
 
-        <div className="flex justify-center mt-4">
+        {/* <div className="flex justify-center mt-4">
           <button ref={prevRef} className="mx-2 p-3 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
             <FaArrowLeft />
           </button>
           <button ref={nextRef} className="mx-2 p-3 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
             <FaArrowRight />
           </button>
-        </div>
+        </div> */}
         
         {/* Custom pagination */}
         <div className="testimonial-pagination flex justify-center mt-6 space-x-2" />
