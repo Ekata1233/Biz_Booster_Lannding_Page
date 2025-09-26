@@ -94,7 +94,7 @@ function Footer() {
   );
 
   return (
-    <footer className="text-white bg-gradient-to-r from-[#003f7f] via-[#00509D] to-[#007bbd] pb-3">
+    <footer className="text-white bg-gradient-to-r from-[#003f7f] via-[#00509D] to-[#007bbd] pb-2">
       {/* Container */}
       <div className="max-w-7xl mx-auto px-6 sm:px-12 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
         
@@ -250,7 +250,7 @@ function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center mt-8 border-t border-white/20 pt-4 text-sm">
+      <div className="text-center  border-t border-white/20 pt-4 text-sm">
         <p className="text-white/80">2025 © All rights Reserved | FTFL Technology Pvt.Ltd</p>
       </div>
     </footer>
