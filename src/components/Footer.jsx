@@ -197,7 +197,7 @@ function Footer() {
           </div>
           <h4 className="font-bold mb-4 text-lg">Industries & Services</h4>
 
-          <div className="mb-4 border border-white/20 rounded-lg overflow-hidden">
+          <div className="mb-4 border border-white/20 rounded-lg overflow-hidden w-50 lg:w-full ">
             <button 
               onClick={() => toggleDropdown('industries')}
               className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-white/5 hover:bg-white/10 transition-colors"
@@ -221,7 +221,7 @@ function Footer() {
           </div>
           
           {/* Services Dropdown */}
-          <div className="mb-4 border border-white/20 rounded-lg overflow-hidden">
+          <div className="mb-4 border border-white/20 rounded-lg overflow-hidden w-50 lg:w-full ">
             <button 
               onClick={() => toggleDropdown('services')}
               className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-white/5 hover:bg-white/10 transition-colors"
