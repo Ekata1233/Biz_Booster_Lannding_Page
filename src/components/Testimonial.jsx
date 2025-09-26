@@ -18,35 +18,35 @@ function Testimonial() {
   // Static testimonial data
   const testimonials = [
     {
-      para: "This service exceeded my expectations. The team was professional and delivered results faster than I anticipated. I would highly recommend them to again.",
+      para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform’s verification system builds trust and ensures smooth collaborations. It’s a game-changer for freelancers and businesses alike.",
       src: "/testimonial-1.1.jpg",
       title: "Aniket",
       text1: "Kolhapur",
       rating: 4.5
     },
     {
-      para: "I've been using this service for over a year now and they consistently deliver excellent results. Their attention to detail is remarkable and their customer support.",
+      para: "FetchTrue’s hybrid marketplace is unlike anything I’ve used before. It combines innovation, reliability, and efficiency, allowing us to find the right partners and services quickly. The experience has been seamless and highly productive.",
       src: "/anne-hathaway.jpg",
       title: "Ekata",
       text1: "Mumbai",
       rating: 5
     },
     {
-      para: "As a small business owner, finding reliable service providers is crucial. This company has been a game-changer for my business. Their solutions are innovative.",
+      para:"FetchTrue isn’t just a marketplace—it’s a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently. Their focus on authentic opportunities sets them apart from any other platform we’ve used.",
       src: "/testimonial-1.jpg",
       title: "Akshey",
       text1: "Pune",
       rating: 4
     },
     {
-      para: "The quality of work is exceptional. They understood exactly what I needed and delivered beyond my expectations. Will definitely work with them again and again.",
+      para: "FetchTrue has completely transformed the way I connect with verified service providers. The platform is intuitive, trustworthy, and has helped me grow my business without any hassle. I highly recommend it to anyone looking for reliable solutions.",
       src: "/Ellipse 159.png",
       title: "Gouri",
       text1: "Mumbai",
       rating: 4.5
     },
     {
-      para: "I was hesitant at first, but I'm so glad I decided to try this service. The results speak for themselves. My business has grown significantly since work continusaly.",
+      para: "FetchTrue is more than a marketplace—it’s a growth partner." ,
       src: "/anne.jpg",
       title: "Pranjal",
       text1: "Nashik",

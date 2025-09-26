@@ -63,10 +63,9 @@ export default function ServiceProviderSection() {
             className="w-full"
           >
             <div className="bg-blue-50 rounded-2xl p-6 lg:p-8 h-full">
-              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">Your Vital Role in Business Ecosystem</h3>
+              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">Your Role in Business as Service Provider. </h3>
               <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
-                As a service provider you play a vital role in business ecosystem by delivering tailored solutions that meet diverse customer needs. A trustworthy service provider guarantees that business and client achieve efficiency, development, and sustainability, regardless of the service's focus—technology, marketing, logistics, finance, or on-demand services. Long-term revenue growth and operational resilience are ensured by their capacity to quickly adjust to changing market needs and personalize services.
-              </p>
+As a service provider you play a important role in business ecosystem by delivering tailored solutions that meet diverse customer needs. A trustworthy service provider guarantees that business and client achieve efficiency, development, and sustainability, regardless of the service's focus—technology, marketing, finance, or on-demand services. Service providers generate Long-term revenue growth and operational resilience are ensured by their capacity to quickly adjust to changing market needs and personalize services.              </p>
             </div>
           </motion.div>
 

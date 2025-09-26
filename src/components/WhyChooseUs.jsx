@@ -23,8 +23,8 @@ const WhyChooseFetchTrue = () => {
       animationDelay: 0.1
     },
     {
-      title: "High Earning Potential",
-      description: "Earn through client referrals, service sales, and franchise deals with earn up to ₹1,00,000.",
+      title: "Trusted and Verified Provider",
+      description: "Every service provider in FetchTrue is verified for authenticity and reliability, we ensure you connect with credible partners. ",
       icon: <FaChartLine className="text-green-600 text-2xl" />,
       bgGradient: "from-green-50 to-emerald-50",
       borderColor: "border-green-100",
@@ -32,8 +32,8 @@ const WhyChooseFetchTrue = () => {
       animationDelay: 0.2
     },
     {
-      title: "Risk-Free Opportunity",
-      description: "No heavy investments required; just connect clients and providers to start earning.",
+      title: "Transparent Workflow",
+      description: "From searching (or posting) your requirement to final delivery, FetchTrue ensure that WorkFlow module make every step visible and trackable, which saves time and efforts.",
       icon: <FaHandHoldingUsd className="text-amber-600 text-2xl" />,
       bgGradient: "from-amber-50 to-yellow-50",
       borderColor: "border-amber-100",
@@ -41,8 +41,8 @@ const WhyChooseFetchTrue = () => {
       animationDelay: 0.3
     },
     {
-      title: "Full Support System",
-      description: "Training, guidance, and ready-made resources to help you succeed as a Growth Partner.",
+      title: "Intelligence Matchmaking",
+      description: "Our platform uses smart tool to match your needs with the right service providers, helping you to find best suitable solution faster and effectively. Training, guidance, and ready-made resources to help you succeed as a Growth Partner.",
       icon: <FaHeadset className="text-purple-600 text-2xl" />,
       bgGradient: "from-purple-50 to-violet-50",
       borderColor: "border-purple-100",
@@ -50,8 +50,8 @@ const WhyChooseFetchTrue = () => {
       animationDelay: 0.4
     },
     {
-      title: "Verified & Trusted Network",
-      description: "Only verified service providers and brands, ensuring quality, reliability, and faster results.",
+      title: "Cost Effective Solution",
+      description: "FetchTrue gives you greater value without charging extra by providing project management, marketing, and lead generating solutions.",
       icon: <FaUserCheck className="text-indigo-600 text-2xl" />,
       bgGradient: "from-indigo-50 to-blue-50",
       borderColor: "border-indigo-100",
@@ -59,8 +59,8 @@ const WhyChooseFetchTrue = () => {
       animationDelay: 0.5
     },
     {
-      title: "Guarantee Return",
-      description: "We provide 5X guarantee return if your earning is less than ₹5,00,000 in 3 years.",
+      title: "Nationwide Reach",
+      description: "You can access business, service providers and opportunities across India, expanding your network and market without boundaries.",
       icon: <FaUndoAlt className="text-red-600 text-2xl" />,
       bgGradient: "from-red-50 to-pink-50",
       borderColor: "border-red-100",

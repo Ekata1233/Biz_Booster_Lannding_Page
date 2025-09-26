@@ -21,10 +21,11 @@ export default function Home() {
     <div>
       <Navbar/>
         <HeroSection />
-        <AboutSection />
         
          {/* <DownloadApp /> */}
         <WhyChooseFetchTrue />
+                <AboutSection />
+
         <ServicesPage />
         <HowItWorks />
         <ServiceProviderSection />
