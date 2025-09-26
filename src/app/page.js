@@ -29,7 +29,7 @@ export default function Home() {
         <ServicesPage />
         <HowItWorks />
         <ServiceProviderSection />
-        <EndUserSection />
+        {/* <EndUserSection /> */}
         {/* <PartnerDiagram /> */}
         {/* <KeyFeatures /> */}
         <ExtraIncome />

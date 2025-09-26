@@ -120,7 +120,7 @@ export default function AboutSection() {
         Where Business Finds <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Trust & Growth</span>
       </h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        India's first Hybrid B2B Marketplace designed to build your success with trusted business opportunities
+        India's first Hybrid Marketplace designed to build your success with trusted business opportunities
       </p>
     </motion.div>
 
@@ -140,9 +140,7 @@ export default function AboutSection() {
                 <span className="text-white font-bold text-lg">✓</span>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                <strong>At FetchTrue, everything begins with you.</strong> We are India's first Hybrid B2B Marketplace, 
-                designed to provide clients like you with convenient access to reputable businesses, vetted services, 
-                and genuine development opportunities—all in one platform.
+                <strong>At FetchTrue, everything begins with you.</strong> We think that every business deserves the right opportunity to develop with confidence, trust, and authenticity. FetchTrue, powered by FTFL Technology Pvt. Ltd., is India's first hybrid marketplace, bringing together corporations, service providers, and entrepreneurs on a single dynamic platform.
               </p>
             </div>
             
@@ -151,10 +149,7 @@ export default function AboutSection() {
                 <span className="text-white font-bold text-lg">⚡</span>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                Our platform is intended to save you time, eliminate risks, and link you exclusively with reputable 
-                service providers and genuine solutions that meet your specific needs. Whether you're looking for the 
-                appropriate partner, trying out new services, or growing your business, FetchTrue makes the process 
-                straightforward, secure, and affordable.
+               Our objective is straightforward: to provide you with dependable connections, verifiable possibilities, and the digital tools you want to expand seamlessly. Whether you're a startup trying to establish your brand, a service provider looking to increase your reach, or an organization looking to access new markets, FetchTrue is your reliable growth partner.
               </p>
             </div>
           </div>
