@@ -139,6 +139,11 @@ function Footer() {
             <h4 className="font-bold mb-4 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               <li>
+                <Link href="/ourvalues" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
+                  <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> About Us
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
                   <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> Contact Us
                 </Link>
