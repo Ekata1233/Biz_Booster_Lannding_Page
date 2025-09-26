@@ -102,20 +102,7 @@ function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <h1 className="text-2xl font-extrabold mb-3">{footerData?.companyName}</h1>
           <p className="mb-4 leading-relaxed text-sm">{footerData?.description}</p>
-        </div>
 
-        {/* Official Info */}
-        <div>
-          <h4 className="font-bold mb-3 text-lg">Official Info</h4>
-          <p className="font-medium text-sm">FTFL Technology Pvt Ltd.</p>
-          <p className="mb-3 text-sm">{footerData?.address}</p>
-          <Link href={`mailto:${footerData?.email}`} className="mb-2 flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
-            <FiMail className="flex-shrink-0" /> {footerData?.email}
-          </Link>
-          <Link href={`tel:+${footerData?.phone}`} className="mb-2 flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
-            <FaPhoneAlt className="flex-shrink-0" /> {footerData?.phone}
-          </Link>
-          
           <h4 className="font-semibold mb-3 mt-4 text-lg">Our Social</h4>
           <div className="flex gap-3 text-xl">
             {renderSocialIcons?.map((item, idx) => (
@@ -130,6 +117,21 @@ function Footer() {
               </a>
             ))}
           </div>
+        </div>
+
+        {/* Official Info */}
+        <div>
+          <h4 className="font-bold mb-3 text-lg">Official Info</h4>
+          <p className="font-medium text-sm">FTFL Technology Pvt Ltd.</p>
+          <p className="mb-3 text-sm">{footerData?.address}</p>
+          <Link href={`mailto:${footerData?.email}`} className="mb-2 flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
+            <FiMail className="flex-shrink-0" /> {footerData?.email}
+          </Link>
+          <Link href={`tel:+${footerData?.phone}`} className="mb-2 flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
+            <FaPhoneAlt className="flex-shrink-0" /> {footerData?.phone}
+          </Link>
+          
+          
         </div>
 
         {/* Quick Links and Download Section Combined */}
@@ -166,10 +168,16 @@ function Footer() {
             </ul>
           </div>
 
+          
+        </div>
+
+        {/* Industries & Services Section */}
+        <div className="sm:col-span-2 lg:col-span-1">
+
           {/* Download Section - Now below Quick Links */}
           <div>
-            <h4 className="font-bold mb-4 text-lg">Download Our App</h4>
-            <div className="flex flex-col gap-4">
+            <h4 className="font-bold mb-2 text-lg">Download Our App</h4>
+            <div className="flex flex-col gap-4 mb-4">
               {renderDownloadLinks?.map((item, idx) => (
                 <a
                   key={idx}
@@ -187,10 +195,6 @@ function Footer() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Industries & Services Section */}
-        <div className="sm:col-span-2 lg:col-span-1">
           <h4 className="font-bold mb-4 text-lg">Industries & Services</h4>
 
           <div className="mb-4 border border-white/20 rounded-lg overflow-hidden">
