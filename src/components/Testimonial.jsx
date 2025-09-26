@@ -18,21 +18,21 @@ function Testimonial() {
   // Static testimonial data
   const testimonials = [
     {
-      para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform’s verification system builds trust and ensures smooth collaborations. It’s a game-changer for freelancers and businesses alike.",
+      para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform's verification system builds trust and ensures smooth collaborations. It's a game-changer for freelancers and businesses alike.",
       src: "/testimonial-1.1.jpg",
       title: "Aniket",
       text1: "Kolhapur",
       rating: 4.5
     },
     {
-      para: "FetchTrue’s hybrid marketplace is unlike anything I’ve used before. It combines innovation, reliability, and efficiency, allowing us to find the right partners and services quickly. The experience has been seamless and highly productive.",
+      para: "FetchTrue's hybrid marketplace is unlike anything I've used before. It combines innovation, reliability, and efficiency, allowing us to find the right partners and services quickly. The experience has been seamless and highly productive.",
       src: "/anne-hathaway.jpg",
       title: "Ekata",
       text1: "Mumbai",
       rating: 5
     },
     {
-      para:"FetchTrue isn’t just a marketplace—it’s a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently. Their focus on authentic opportunities sets them apart from any other platform we’ve used.",
+      para:"FetchTrue isn't just a marketplace—it's a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently. Their focus on authentic opportunities sets them apart from any other platform we've used.",
       src: "/testimonial-1.jpg",
       title: "Akshey",
       text1: "Pune",
@@ -46,7 +46,7 @@ function Testimonial() {
       rating: 4.5
     },
     {
-      para: "FetchTrue is more than a marketplace—it’s a growth partner." ,
+      para: "FetchTrue is more than a marketplace—it's a growth partner." ,
       src: "/anne.jpg",
       title: "Pranjal",
       text1: "Nashik",
@@ -82,9 +82,30 @@ function Testimonial() {
         <meta name="description" content="What our clients say about our services" />
       </Head>
       
-      <div className="container mx-auto px-4 lg:w-300 md:w-150 ">
+      <div className="container mx-auto px-4 lg:w-300 md:w-150">
         <h4 className="text-blue-600 pt-8 pb-2 text-center text-lg font-semibold">----- Testimonial -----</h4>
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">What Our Clients Say</h1>
+
+        {/* CSS for equal height cards */}
+        <style jsx>{`
+          .testimonial-card {
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+          }
+          .testimonial-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+          }
+          .testimonial-text {
+            flex: 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 8;
+            -webkit-box-orient: vertical;
+          }
+        `}</style>
 
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -109,8 +130,9 @@ function Testimonial() {
         >
           {testimonials.map((testi, index) => (
             <SwiperSlide key={index}>
-              <div className="h-full flex justify-center p-2 ">
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-sm flex flex-col items-center text-center transition-transform duration-300 hover:shadow-xl">
+              <div className="h-full flex justify-center p-2">
+                <div className="testimonial-card bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-sm flex flex-col items-center text-center transition-transform duration-300 hover:shadow-xl">
+                  
                   {/* User Image */}
                   <div className="w-20 h-20 rounded-full overflow-hidden mt-6 border-4 border-blue-100">
                     <img 
@@ -132,8 +154,10 @@ function Testimonial() {
                   </div>
 
                   {/* Testimonial Text */}
-                  <div className="bg-blue-50 mt-1 rounded-xl w-full p-4 flex-grow">
-                    <p className="text-gray-700 text-sm text-justify italic">"{testi.para}"</p>
+                  <div className="testimonial-content bg-blue-50 mt-1 rounded-xl w-full p-4">
+                    <p className="testimonial-text text-gray-700 text-sm text-justify italic">
+                      "{testi.para}"
+                    </p>
                   </div>
                 </div>
               </div>
@@ -141,15 +165,6 @@ function Testimonial() {
           ))}
         </Swiper>
 
-        {/* <div className="flex justify-center mt-4">
-          <button ref={prevRef} className="mx-2 p-3 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
-            <FaArrowLeft />
-          </button>
-          <button ref={nextRef} className="mx-2 p-3 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors">
-            <FaArrowRight />
-          </button>
-        </div> */}
-        
         {/* Custom pagination */}
         <div className="testimonial-pagination flex justify-center mt-6 space-x-2" />
       </div>
