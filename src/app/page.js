@@ -15,6 +15,7 @@ import Navbar from "@/components/Navbar";
 import WhyChooseFetchTrue from "@/components/WhyChooseUs";
 import ServiceProviderSection from "@/components/ServiceProvider";
 import EndUserSection from "@/components/EndUser";
+import UniqueValueProposition from "@/components/WhatMakesUsDifferent";
 
 export default function Home() {
   return (
@@ -32,9 +33,10 @@ export default function Home() {
         {/* <EndUserSection /> */}
         {/* <PartnerDiagram /> */}
         {/* <KeyFeatures /> */}
-        <ExtraIncome />
+        {/* <ExtraIncome /> */}
+        <UniqueValueProposition />
         <Testimonials />
-        <BlogSection />
+        {/* <BlogSection /> */}
         <FAQSection/>
         {/* <ContactUs /> */}
         <WhatsAppButton />
