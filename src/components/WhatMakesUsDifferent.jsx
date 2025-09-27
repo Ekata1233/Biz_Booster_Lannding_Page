@@ -61,7 +61,7 @@ const Banner = () => {
             {/* Circular Feature Points */}
             {FEATURES.map((feature, index) => {
               const angle = (index * 360) / FEATURES.length;
-              const radius = 200;
+              const radius = 250; // Increased radius to move points further out
               
               return (
                 <div
@@ -119,8 +119,8 @@ const Banner = () => {
         /* Circular System Container */
         .circular-system {
           position: relative;
-          width: 700px;
-          height: 700px;
+          width: 800px; /* Increased container size */
+          height: 800px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -141,16 +141,19 @@ const Banner = () => {
             0 20px 40px rgba(25, 118, 210, 0.15),
             inset 0 2px 8px rgba(255, 255, 255, 0.8);
           border: 3px solid #bbdefb;
-          position: relative;
-          z-index: 20;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 30; /* Higher z-index to stay above points */
           opacity: 0;
-          transform: scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
           transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .circle-visible {
           opacity: 1;
-          transform: scale(1);
+          transform: translate(-50%, -50%) scale(1);
         }
 
         .circle-content {
@@ -213,14 +216,14 @@ const Banner = () => {
         }
 
         .ring-1 {
-          width: 450px;
-          height: 450px;
+          width: 550px; /* Increased ring size */
+          height: 550px;
           transition-delay: 0.2s;
         }
 
         .ring-2 {
-          width: 500px;
-          height: 500px;
+          width: 600px; /* Increased ring size */
+          height: 600px;
           border-width: 1px;
           transition-delay: 0.4s;
         }
@@ -229,7 +232,7 @@ const Banner = () => {
           opacity: 1;
         }
 
-        /* Feature Circles */
+        /* Feature Circles - FIXED POSITIONING */
         .feature-circle {
           position: absolute;
           top: 50%;
@@ -238,7 +241,7 @@ const Banner = () => {
           opacity: 0;
           transition: all 0.6s ease;
           transition-delay: var(--delay);
-          z-index: 10;
+          z-index: 20; /* Lower than central circle */
         }
 
         .circle-point-visible {
@@ -253,13 +256,14 @@ const Banner = () => {
         .circle-connector {
           position: absolute;
           top: 50%;
-          left: -50px;
-          width: 50px;
+          left: -70px; /* Increased connector length */
+          width: 70px;
           height: 2px;
           background: linear-gradient(90deg, #64b5f6, rgba(100, 181, 246, 0.3));
           transform: translateY(-50%);
           opacity: 0;
           transition: opacity 0.3s ease 0.2s;
+          z-index: 15;
         }
 
         .circle-feature-card {
@@ -267,6 +271,8 @@ const Banner = () => {
           flex-direction: column;
           align-items: center;
           gap: 12px;
+          position: relative;
+          z-index: 20;
         }
 
         .circle-icon-wrapper {
@@ -302,6 +308,8 @@ const Banner = () => {
           min-width: 160px;
           text-align: center;
           transition: all 0.3s ease;
+          position: relative;
+          z-index: 20;
         }
 
         .circle-feature-card:hover .circle-text-bubble {
@@ -320,13 +328,13 @@ const Banner = () => {
         /* Hover effects for connector */
         .circle-feature-card:hover + .circle-connector {
           opacity: 1;
-          width: 60px;
+          width: 80px;
         }
 
         /* Rotating animation for central circle */
         @keyframes rotateSlow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+          from { transform: translate(-50%, -50%) rotate(0deg); }
+          to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         .central-circle:hover {
@@ -343,18 +351,18 @@ const Banner = () => {
           animation: float 3s ease-in-out infinite;
         }
 
-        /* Desktop - Perfect Circular Layout */
+        /* Desktop Layout - FIXED */
         @media (min-width: 1025px) {
           .circular-system {
-            width: 700px;
-            height: 700px;
+            width: 800px;
+            height: 800px;
           }
         }
 
         @media (max-width: 1024px) {
           .circular-system {
-            width: 600px;
-            height: 600px;
+            width: 700px;
+            height: 700px;
           }
 
           .central-circle {
@@ -371,17 +379,22 @@ const Banner = () => {
           }
 
           .ring-1 {
-            width: 380px;
-            height: 380px;
+            width: 480px;
+            height: 480px;
           }
 
           .ring-2 {
-            width: 420px;
-            height: 420px;
+            width: 530px;
+            height: 530px;
           }
 
           .feature-circle {
-            --radius: 170px;
+            --radius: 220px;
+          }
+
+          .circle-connector {
+            left: -60px;
+            width: 60px;
           }
 
           .circle-icon-wrapper {
@@ -395,11 +408,10 @@ const Banner = () => {
           }
         }
 
-        /* Tablet Layout - Smaller Circle */
         @media (max-width: 900px) {
           .circular-system {
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
           }
 
           .central-circle {
@@ -416,17 +428,22 @@ const Banner = () => {
           }
 
           .ring-1 {
-            width: 320px;
-            height: 320px;
+            width: 400px;
+            height: 400px;
           }
 
           .ring-2 {
-            width: 360px;
-            height: 360px;
+            width: 450px;
+            height: 450px;
           }
 
           .feature-circle {
-            --radius: 140px;
+            --radius: 180px;
+          }
+
+          .circle-connector {
+            left: -50px;
+            width: 50px;
           }
 
           .circle-text-bubble {
@@ -438,32 +455,25 @@ const Banner = () => {
           }
         }
 
-        /* Mobile Layout - Stacked Vertical Layout */
+        /* Mobile Layout */
         @media (max-width: 768px) {
           .banner-wrapper {
             min-height: auto;
             padding: 40px 20px;
-            overflow: visible;
-          }
-
-          .banner-container {
-            overflow: visible;
           }
 
           .circular-system {
             width: 100%;
             height: auto;
-            min-height: auto;
             display: block;
-            position: relative;
           }
 
           .central-circle {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 40px auto;
             position: relative;
+            top: auto;
+            left: auto;
             transform: none;
+            margin: 0 auto 40px auto;
             opacity: 1;
           }
 
@@ -471,35 +481,15 @@ const Banner = () => {
             transform: none;
           }
 
-          .circle-content {
-            padding: 25px;
-          }
-
-          .main-heading {
-            font-size: 1.4rem;
-          }
-
-          .highlight {
-            font-size: 1.6rem;
-          }
-
-          .subtitle-circle {
-            font-size: 0.8rem;
-          }
-
-          /* Hide orbit rings on mobile */
           .orbit-ring {
             display: none;
           }
 
-          /* Mobile Features Layout - 2 Columns Grid */
           .circular-path {
             position: relative;
             top: auto;
             left: auto;
             transform: none;
-            width: 100%;
-            height: auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
@@ -513,8 +503,6 @@ const Banner = () => {
             transform: none !important;
             opacity: 1;
             margin: 0;
-            width: 100%;
-            height: auto;
           }
 
           .circle-point-visible {
@@ -533,10 +521,6 @@ const Banner = () => {
             box-shadow: 0 4px 15px rgba(25, 118, 210, 0.1);
             min-width: auto;
             width: 100%;
-            height: 100%;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
           }
 
           .circle-text-bubble {
@@ -551,7 +535,6 @@ const Banner = () => {
 
           .circle-feature-text {
             font-size: 0.8rem;
-            line-height: 1.2;
           }
 
           .circle-icon-wrapper {
@@ -565,82 +548,11 @@ const Banner = () => {
           }
         }
 
-        /* Small Mobile - Single Column */
         @media (max-width: 480px) {
-          .banner-wrapper {
-            padding: 30px 15px;
-          }
-
-          .central-circle {
-            width: 180px;
-            height: 180px;
-            margin-bottom: 30px;
-          }
-
-          .circle-content {
-            padding: 20px;
-          }
-
-          .main-heading {
-            font-size: 1.2rem;
-          }
-
-          .highlight {
-            font-size: 1.4rem;
-          }
-
           .circular-path {
             grid-template-columns: 1fr;
-            gap: 12px;
             max-width: 300px;
             margin: 30px auto 0 auto;
-          }
-
-          .circle-feature-card {
-            padding: 10px 15px;
-            border-radius: 40px;
-          }
-
-          .circle-icon-wrapper {
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
-          }
-
-          .circle-icon {
-            font-size: 1.2rem;
-          }
-
-          .circle-feature-text {
-            font-size: 0.75rem;
-          }
-        }
-
-        /* Very Small Mobile */
-        @media (max-width: 380px) {
-          .central-circle {
-            width: 160px;
-            height: 160px;
-          }
-
-          .circle-content {
-            padding: 15px;
-          }
-
-          .main-heading {
-            font-size: 1.1rem;
-          }
-
-          .highlight {
-            font-size: 1.2rem;
-          }
-
-          .circular-path {
-            max-width: 280px;
-          }
-
-          .circle-feature-card {
-            padding: 8px 12px;
           }
         }
 
@@ -658,10 +570,6 @@ const Banner = () => {
           .ring-visible {
             opacity: 1;
             transform: none;
-          }
-          
-          .central-circle:hover {
-            animation: none;
           }
         }
       `}</style>
