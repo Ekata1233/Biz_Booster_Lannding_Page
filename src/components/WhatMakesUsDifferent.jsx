@@ -3,17 +3,18 @@
 import { useState, useEffect, useRef } from 'react';
 
 const FEATURES = [
-  { id: 1, icon: '👥', title: 'Customer Centric Platform' },
-  { id: 2, icon: '💬', title: 'Seamless Communication' },
-  { id: 3, icon: '📍', title: 'Real-Time Process Tracking' },
-  { id: 4, icon: '✅', title: 'Verified Business and Service Providers' },
-  { id: 5, icon: '🛠️', title: 'Integrated Business Tools' },
-  { id: 6, icon: '📈', title: 'Scalable and Flexible Solution' },
-  { id: 7, icon: '🔒', title: 'Secure Data Management' }
+  { id: 1, icon: '👥', title: 'Customer Centric Platform', description: 'Built around your needs and preferences' },
+  { id: 2, icon: '💬', title: 'Seamless Communication', description: 'Connect effortlessly with your team' },
+  { id: 3, icon: '📍', title: 'Real-Time Process Tracking', description: 'Monitor progress as it happens' },
+  { id: 4, icon: '✅', title: 'Verified Business Providers', description: 'Trusted and certified partners' },
+  { id: 5, icon: '🛠️', title: 'Integrated Business Tools', description: 'All-in-one solution for your business' },
+  { id: 6, icon: '📈', title: 'Scalable and Flexible', description: 'Grow with your business needs' },
+  { id: 7, icon: '🔒', title: 'Secure Data Management', description: 'Your data is always protected' }
 ];
 
 const Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeCard, setActiveCard] = useState(null);
   const bannerRef = useRef(null);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const Banner = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (bannerRef.current) {
@@ -36,61 +37,63 @@ const Banner = () => {
   return (
     <section ref={bannerRef} className="banner-wrapper">
       <div className="banner-container">
-        <div className="circular-system">
-          {/* Central Circle with Heading */}
-          <div className={`central-circle ${isVisible ? 'circle-visible' : ''}`}>
-            <div className="circle-content">
-              <div className="heading-circle">
-                <h1 className="main-heading">
-                  What Makes Us 
-                  <span className="highlight"> Different?</span>
-                </h1>
+        {/* Header Section */}
+        <div className={`header-content ${isVisible ? 'header-visible' : ''}`}>
+          <div className="badge">Why Choose Us</div>
+          <h1 className="main-title">
+            What Makes Us 
+            <span className="highlight"> Different?</span>
+          </h1>
+          <p className="subtitle">
+            Experience the next generation of business solutions designed to transform 
+            your operations and drive sustainable growth.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="features-grid">
+          {FEATURES.map((feature, index) => (
+            <div
+              key={feature.id}
+              className={`feature-card ${isVisible ? 'card-visible' : ''} ${
+                activeCard === feature.id ? 'card-active' : ''
+              }`}
+              style={{ '--delay': `${index * 0.1}s` }}
+              onMouseEnter={() => setActiveCard(feature.id)}
+              onMouseLeave={() => setActiveCard(null)}
+            >
+              {/* Animated Background Effect */}
+              <div className="card-glow"></div>
+              
+              {/* Icon Container */}
+              <div className="icon-container">
+                <div className="icon-wrapper">
+                  <span className="icon">{feature.icon}</span>
+                </div>
+                <div className="icon-bg"></div>
               </div>
-              <div className="subtitle-circle">
-                Innovative Business Solutions
+
+              {/* Content */}
+              <div className="card-content">
+                <h3 className="card-title">{feature.title}</h3>
+                <p className="card-description">{feature.description}</p>
+              </div>
+
+              {/* Hover Indicator */}
+              <div className="hover-indicator">
+                <div className="indicator-dot"></div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Circular Path for Features */}
-          <div className="circular-path">
-            {/* Animated Orbit Rings */}
-            <div className={`orbit-ring ring-1 ${isVisible ? 'ring-visible' : ''}`}></div>
-            <div className={`orbit-ring ring-2 ${isVisible ? 'ring-visible' : ''}`}></div>
-            
-            {/* Circular Feature Points */}
-            {FEATURES.map((feature, index) => {
-              const angle = (index * 360) / FEATURES.length;
-              const radius = 250; // Increased radius to move points further out
-              
-              return (
-                <div
-                  key={feature.id}
-                  className={`feature-circle ${isVisible ? 'circle-point-visible' : ''}`}
-                  style={{
-                    '--angle': `${angle}deg`,
-                    '--radius': `${radius}px`,
-                    '--delay': `${index * 0.1}s`
-                  }}
-                >
-                  {/* Connector Line */}
-                  <div className="circle-connector"></div>
-                  
-                  {/* Circular Feature Card */}
-                  <div className="circle-feature-card">
-                    <div className="circle-icon-wrapper">
-                      <div className="circle-icon-bg">
-                        <span className="circle-icon">{feature.icon}</span>
-                      </div>
-                    </div>
-                    <div className="circle-text-bubble">
-                      <span className="circle-feature-text">{feature.title}</span>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        {/* Floating Background Elements */}
+        <div className="floating-elements">
+          <div className="float-circle circle-1"></div>
+          <div className="float-circle circle-2"></div>
+          <div className="float-circle circle-3"></div>
+          <div className="float-blob blob-1"></div>
+          <div className="float-blob blob-2"></div>
         </div>
       </div>
 
@@ -98,476 +101,366 @@ const Banner = () => {
         .banner-wrapper {
           width: 100%;
           min-height: 100vh;
-          background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+          background: linear-gradient(135deg, #0c1a2d 0%, #1a3a5f 50%, #2a4a7a 100%);
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 80px 20px;
           position: relative;
-          overflow: visible;
+          overflow: hidden;
         }
 
         .banner-container {
           max-width: 1200px;
           width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: visible;
-        }
-
-        /* Circular System Container */
-        .circular-system {
           position: relative;
-          width: 800px; /* Increased container size */
-          height: 800px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto;
-          overflow: visible;
+          z-index: 2;
         }
 
-        /* Central Circle */
-        .central-circle {
-          width: 280px;
-          height: 280px;
-          background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 
-            0 20px 40px rgba(25, 118, 210, 0.15),
-            inset 0 2px 8px rgba(255, 255, 255, 0.8);
-          border: 3px solid #bbdefb;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 30; /* Higher z-index to stay above points */
-          opacity: 0;
-          transform: translate(-50%, -50%) scale(0.8);
-          transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .circle-visible {
-          opacity: 1;
-          transform: translate(-50%, -50%) scale(1);
-        }
-
-        .circle-content {
+        /* Header Styles */
+        .header-content {
           text-align: center;
-          padding: 30px;
-        }
-
-        .heading-circle {
-          background: linear-gradient(135deg, #1976d2, #1565c0);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          margin-bottom: 10px;
-        }
-
-        .main-heading {
-          font-size: 1.8rem;
-          font-weight: 700;
-          line-height: 1.3;
-          margin: 0;
-        }
-
-        .highlight {
-          display: block;
-          font-size: 2rem;
-          margin-top: 5px;
-        }
-
-        .subtitle-circle {
-          font-size: 0.9rem;
-          color: #546e7a;
-          font-weight: 500;
-          background: rgba(187, 222, 251, 0.5);
-          padding: 8px 15px;
-          border-radius: 20px;
-          display: inline-block;
-        }
-
-        /* Circular Path */
-        .circular-path {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          height: 100%;
-          overflow: visible;
-        }
-
-        /* Orbit Rings */
-        .orbit-ring {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          border-radius: 50%;
-          border: 2px dashed rgba(100, 181, 246, 0.4);
+          margin-bottom: 80px;
           opacity: 0;
+          transform: translateY(30px);
           transition: all 0.8s ease;
         }
 
-        .ring-1 {
-          width: 550px; /* Increased ring size */
-          height: 550px;
-          transition-delay: 0.2s;
-        }
-
-        .ring-2 {
-          width: 600px; /* Increased ring size */
-          height: 600px;
-          border-width: 1px;
-          transition-delay: 0.4s;
-        }
-
-        .ring-visible {
+        .header-visible {
           opacity: 1;
+          transform: translateY(0);
         }
 
-        /* Feature Circles - FIXED POSITIONING */
-        .feature-circle {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          opacity: 0;
-          transition: all 0.6s ease;
-          transition-delay: var(--delay);
-          z-index: 20; /* Lower than central circle */
+        .badge {
+          display: inline-block;
+          background: linear-gradient(135deg, #00c6ff, #0072ff);
+          color: white;
+          padding: 8px 20px;
+          border-radius: 25px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
         }
 
-        .circle-point-visible {
-          opacity: 1;
-          transform: 
-            translate(-50%, -50%)
-            rotate(var(--angle))
-            translateX(var(--radius))
-            rotate(calc(-1 * var(--angle)));
+        .main-title {
+          font-size: 3.5rem;
+          font-weight: 800;
+          color: white;
+          margin: 0 0 20px 0;
+          line-height: 1.2;
         }
 
-        .circle-connector {
-          position: absolute;
-          top: 50%;
-          left: -70px; /* Increased connector length */
-          width: 70px;
-          height: 2px;
-          background: linear-gradient(90deg, #64b5f6, rgba(100, 181, 246, 0.3));
-          transform: translateY(-50%);
-          opacity: 0;
-          transition: opacity 0.3s ease 0.2s;
-          z-index: 15;
+        .highlight {
+          background: linear-gradient(135deg, #00c6ff, #0072ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
-        .circle-feature-card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 12px;
+        .subtitle {
+          font-size: 1.2rem;
+          color: #b0c7e8;
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+
+        /* Features Grid */
+        .features-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 30px;
           position: relative;
-          z-index: 20;
+          z-index: 2;
         }
 
-        .circle-icon-wrapper {
+        .feature-card {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 30px;
+          position: relative;
+          overflow: hidden;
+          opacity: 0;
+          transform: translateY(40px) scale(0.95);
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          transition-delay: var(--delay);
+        }
+
+        .card-visible {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+
+        .card-active {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(0, 198, 255, 0.3);
+          transform: translateY(-10px) scale(1.02);
+        }
+
+        .card-glow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, #00c6ff, transparent);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .card-active .card-glow {
+          opacity: 1;
+        }
+
+        /* Icon Styles */
+        .icon-container {
+          position: relative;
           width: 80px;
           height: 80px;
-          background: linear-gradient(135deg, #1976d2, #64b5f6);
+          margin-bottom: 20px;
+        }
+
+        .icon-wrapper {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, #00c6ff, #0072ff);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
-          border: 3px solid white;
-          transition: all 0.3s ease;
           position: relative;
+          z-index: 2;
+          transition: all 0.3s ease;
         }
 
-        .circle-feature-card:hover .circle-icon-wrapper {
+        .card-active .icon-wrapper {
           transform: scale(1.1) rotate(5deg);
-          box-shadow: 0 12px 30px rgba(25, 118, 210, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4);
         }
 
-        .circle-icon {
+        .icon {
           font-size: 2rem;
           filter: brightness(0) invert(1);
         }
 
-        .circle-text-bubble {
-          background: white;
-          padding: 10px 16px;
-          border-radius: 25px;
-          box-shadow: 0 5px 15px rgba(25, 118, 210, 0.2);
-          border: 2px solid #e3f2fd;
-          min-width: 160px;
-          text-align: center;
-          transition: all 0.3s ease;
+        .icon-bg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100px;
+          height: 100px;
+          background: rgba(0, 198, 255, 0.1);
+          border-radius: 50%;
+          z-index: 1;
+          animation: pulse 3s ease-in-out infinite;
+        }
+
+        /* Card Content */
+        .card-content {
           position: relative;
-          z-index: 20;
+          z-index: 2;
         }
 
-        .circle-feature-card:hover .circle-text-bubble {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
-          border-color: #64b5f6;
+        .card-title {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: white;
+          margin: 0 0 12px 0;
         }
 
-        .circle-feature-text {
-          font-size: 0.8rem;
-          font-weight: 600;
-          color: #37474f;
-          line-height: 1.3;
+        .card-description {
+          font-size: 0.95rem;
+          color: #b0c7e8;
+          line-height: 1.5;
+          margin: 0;
+          opacity: 0.8;
+          transition: opacity 0.3s ease;
         }
 
-        /* Hover effects for connector */
-        .circle-feature-card:hover + .circle-connector {
+        .card-active .card-description {
           opacity: 1;
-          width: 80px;
         }
 
-        /* Rotating animation for central circle */
-        @keyframes rotateSlow {
-          from { transform: translate(-50%, -50%) rotate(0deg); }
-          to { transform: translate(-50%, -50%) rotate(360deg); }
+        /* Hover Indicator */
+        .hover-indicator {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          opacity: 0;
+          transition: all 0.3s ease;
         }
 
-        .central-circle:hover {
-          animation: rotateSlow 20s linear infinite;
+        .card-active .hover-indicator {
+          opacity: 1;
         }
 
-        /* Floating animation for feature circles */
+        .indicator-dot {
+          width: 8px;
+          height: 8px;
+          background: #00c6ff;
+          border-radius: 50%;
+          animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* Floating Background Elements */
+        .floating-elements {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .float-circle {
+          position: absolute;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(0, 198, 255, 0.1) 0%, transparent 70%);
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .circle-1 {
+          width: 200px;
+          height: 200px;
+          top: 10%;
+          left: 5%;
+          animation-delay: 0s;
+        }
+
+        .circle-2 {
+          width: 150px;
+          height: 150px;
+          top: 60%;
+          right: 10%;
+          animation-delay: 2s;
+        }
+
+        .circle-3 {
+          width: 100px;
+          height: 100px;
+          bottom: 20%;
+          left: 15%;
+          animation-delay: 4s;
+        }
+
+        .float-blob {
+          position: absolute;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(0, 114, 255, 0.05) 0%, transparent 70%);
+          animation: float 8s ease-in-out infinite;
+          filter: blur(40px);
+        }
+
+        .blob-1 {
+          width: 300px;
+          height: 300px;
+          top: 20%;
+          right: 5%;
+        }
+
+        .blob-2 {
+          width: 400px;
+          height: 400px;
+          bottom: 10%;
+          left: 5%;
+          animation-delay: 4s;
+        }
+
+        /* Animations */
         @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
         }
 
-        .circle-feature-card:hover {
-          animation: float 3s ease-in-out infinite;
+        @keyframes pulse {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); }
+          50% { transform: translate(-50%, -50%) scale(1.1); }
         }
 
-        /* Desktop Layout - FIXED */
-        @media (min-width: 1025px) {
-          .circular-system {
-            width: 800px;
-            height: 800px;
-          }
+        @keyframes bounce {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(5px); }
         }
 
+        /* Responsive Design */
         @media (max-width: 1024px) {
-          .circular-system {
-            width: 700px;
-            height: 700px;
+          .main-title {
+            font-size: 3rem;
           }
 
-          .central-circle {
-            width: 240px;
-            height: 240px;
+          .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .banner-wrapper {
+            padding: 60px 20px;
           }
 
-          .main-heading {
-            font-size: 1.5rem;
+          .main-title {
+            font-size: 2.5rem;
           }
 
-          .highlight {
-            font-size: 1.7rem;
+          .subtitle {
+            font-size: 1.1rem;
           }
 
-          .ring-1 {
-            width: 480px;
-            height: 480px;
+          .header-content {
+            margin-bottom: 50px;
           }
 
-          .ring-2 {
-            width: 530px;
-            height: 530px;
+          .feature-card {
+            padding: 25px;
           }
 
-          .feature-circle {
-            --radius: 220px;
-          }
-
-          .circle-connector {
-            left: -60px;
-            width: 60px;
-          }
-
-          .circle-icon-wrapper {
+          .icon-container {
             width: 70px;
             height: 70px;
           }
 
-          .circle-text-bubble {
-            min-width: 140px;
-            padding: 8px 14px;
-          }
-        }
-
-        @media (max-width: 900px) {
-          .circular-system {
-            width: 600px;
-            height: 600px;
-          }
-
-          .central-circle {
-            width: 200px;
-            height: 200px;
-          }
-
-          .main-heading {
-            font-size: 1.3rem;
-          }
-
-          .highlight {
-            font-size: 1.5rem;
-          }
-
-          .ring-1 {
-            width: 400px;
-            height: 400px;
-          }
-
-          .ring-2 {
-            width: 450px;
-            height: 450px;
-          }
-
-          .feature-circle {
-            --radius: 180px;
-          }
-
-          .circle-connector {
-            left: -50px;
-            width: 50px;
-          }
-
-          .circle-text-bubble {
-            min-width: 120px;
-          }
-
-          .circle-feature-text {
-            font-size: 0.75rem;
-          }
-        }
-
-        /* Mobile Layout */
-        @media (max-width: 768px) {
-          .banner-wrapper {
-            min-height: auto;
-            padding: 40px 20px;
-          }
-
-          .circular-system {
-            width: 100%;
-            height: auto;
-            display: block;
-          }
-
-          .central-circle {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
-            margin: 0 auto 40px auto;
-            opacity: 1;
-          }
-
-          .circle-visible {
-            transform: none;
-          }
-
-          .orbit-ring {
-            display: none;
-          }
-
-          .circular-path {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 30px;
-          }
-
-          .feature-circle {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none !important;
-            opacity: 1;
-            margin: 0;
-          }
-
-          .circle-point-visible {
-            transform: none !important;
-          }
-
-          .circle-connector {
-            display: none;
-          }
-
-          .circle-feature-card {
-            flex-direction: row;
-            background: white;
-            padding: 12px 15px;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.1);
-            min-width: auto;
-            width: 100%;
-          }
-
-          .circle-text-bubble {
-            background: none;
-            box-shadow: none;
-            border: none;
-            padding: 0;
-            min-width: auto;
-            text-align: left;
-            flex: 1;
-          }
-
-          .circle-feature-text {
-            font-size: 0.8rem;
-          }
-
-          .circle-icon-wrapper {
-            width: 45px;
-            height: 45px;
-            min-width: 45px;
-          }
-
-          .circle-icon {
-            font-size: 1.3rem;
+          .icon {
+            font-size: 1.8rem;
           }
         }
 
         @media (max-width: 480px) {
-          .circular-path {
+          .main-title {
+            font-size: 2rem;
+          }
+
+          .features-grid {
             grid-template-columns: 1fr;
-            max-width: 300px;
-            margin: 30px auto 0 auto;
+          }
+
+          .feature-card {
+            padding: 20px;
+          }
+
+          .badge {
+            font-size: 0.8rem;
+            padding: 6px 16px;
           }
         }
 
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
-          .central-circle,
-          .feature-circle,
-          .orbit-ring {
+          .feature-card,
+          .header-content,
+          .float-circle,
+          .float-blob {
             transition: none;
             animation: none;
           }
           
-          .circle-visible,
-          .circle-point-visible,
-          .ring-visible {
+          .card-visible,
+          .header-visible {
             opacity: 1;
             transform: none;
           }
