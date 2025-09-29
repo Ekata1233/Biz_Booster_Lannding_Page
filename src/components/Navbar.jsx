@@ -7,11 +7,11 @@ import { Menu, X, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Growth Partner", href: "#growth-partner" },
+  // { label: "About Us", href: "#about" },
+  // { label: "Services", href: "#services" },
+  // { label: "Growth Partner", href: "#growth-partner" },
   // { label: "Features", href: "#features" },
-  { label: "Blog", href: "#Blog" }
+  // { label: "Blog", href: "#Blog" }
   // { label: "Franchise", href: "#franchise" },
   // { label: "Contact", href: "#contact" },
 ];
@@ -101,11 +101,11 @@ export default function Navbar() {
               Blog
             </Link> */}
             <Link
-              href="#contact"
+              href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
               onClick={() => setMobileOpen(false)}
               className="mt-3 inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-800  px-4 py-2 text-base font-semibold text-white hover:bg-blue-700"
             >
-              Contact Us <ChevronRight className="h-4 w-4" />
+              Download Now <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

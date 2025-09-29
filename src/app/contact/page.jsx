@@ -21,9 +21,8 @@ export default function ContactPage() {
 
   const typewriterText = [
     "Let's Start Something Amazing Together",
- "We're excited to connect with you and help you earn more."   ,
- "Fill out the form below and we'll get back to you within 24 hours."
-
+    "We're excited to connect with you and help you earn more.",
+    "Fill out the form below and we'll get back to you within 24 hours."
   ];
 
   // Typewriter animation effect
@@ -226,18 +225,18 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-500/10 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-purple-500/10 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-200/30 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-blue-300/20 to-transparent"></div>
         
-        {/* Floating shapes */}
+        {/* Floating shapes - softer colors for light background */}
         <motion.div
-          className="absolute top-20 left-10 w-4 h-4 bg-blue-400 rounded-full"
+          className="absolute top-20 left-10 w-4 h-4 bg-blue-300 rounded-full opacity-60"
           animate={{
             y: [0, -20, 0],
-            opacity: [0.5, 1, 0.5],
+            opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
             duration: 4,
@@ -246,10 +245,10 @@ export default function ContactPage() {
           }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full"
+          className="absolute top-40 right-20 w-6 h-6 bg-blue-400 rounded-full opacity-50"
           animate={{
             y: [0, 30, 0],
-            opacity: [0.3, 0.7, 0.3],
+            opacity: [0.2, 0.5, 0.2],
           }}
           transition={{
             duration: 5,
@@ -259,10 +258,10 @@ export default function ContactPage() {
           }}
         />
         <motion.div
-          className="absolute bottom-32 left-20 w-8 h-8 bg-cyan-400 rounded-full"
+          className="absolute bottom-32 left-20 w-8 h-8 bg-cyan-300 rounded-full opacity-40"
           animate={{
             y: [0, -25, 0],
-            opacity: [0.4, 0.8, 0.4],
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
             duration: 6,
@@ -282,23 +281,23 @@ export default function ContactPage() {
           variants={containerVariants}
         >
           <motion.div variants={fadeInUp} className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-white to-cyan-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-blue-800 to-cyan-600 bg-clip-text text-transparent mb-6">
               Contact Us
             </h1>
             
             <div className="min-h-[120px] flex items-center justify-center">
-              <div className="text-xl md:text-2xl text-blue-200 font-light max-w-4xl mx-auto leading-relaxed">
+              <div className="text-xl md:text-2xl text-gray-700 font-light max-w-4xl mx-auto leading-relaxed">
                 {currentLine === 0 && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-3xl md:text-4xl font-bold text-white mb-4"
+                    className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                   >
                     {currentText}
                     <motion.span
                       animate={{ opacity: [0, 1, 0] }}
                       transition={{ duration: 0.8, repeat: Infinity }}
-                      className="ml-1"
+                      className="ml-1 text-gray-900"
                     >
                       |
                     </motion.span>
@@ -309,13 +308,13 @@ export default function ContactPage() {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-blue-200 mb-2"
+                    className="text-gray-700 mb-2"
                   >
                     {currentText}
                     <motion.span
                       animate={{ opacity: [0, 1, 0] }}
                       transition={{ duration: 0.8, repeat: Infinity }}
-                      className="ml-1"
+                      className="ml-1 text-gray-700"
                     >
                       |
                     </motion.span>
@@ -327,20 +326,20 @@ export default function ContactPage() {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="text-blue-200 mb-2"
+                      className="text-gray-700 mb-2"
                     >
                       {typewriterText[1]}
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="text-cyan-200"
+                      className="text-blue-700"
                     >
                       {currentText}
                       <motion.span
                         animate={{ opacity: [0, 1, 0] }}
                         transition={{ duration: 0.8, repeat: Infinity }}
-                        className="ml-1"
+                        className="ml-1 text-blue-700"
                       >
                         |
                       </motion.span>
@@ -361,44 +360,44 @@ export default function ContactPage() {
             variants={slideInLeft}
             className="space-y-8"
           >
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
+            <div className="bg-white backdrop-blur-lg rounded-2xl p-8 border border-blue-200 shadow-lg">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h2>
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-blue-200 text-sm">Phone</p>
-                    <p className="text-white font-semibold">9309517500</p>
+                    <p className="text-gray-600 text-sm">Phone</p>
+                    <p className="text-gray-900 font-semibold">9309517500</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-blue-200 text-sm">Email</p>
-                    <p className="text-white font-semibold">info@fetchtrue.com</p>
+                    <p className="text-gray-600 text-sm">Email</p>
+                    <p className="text-gray-900 font-semibold">info@fetchtrue.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-blue-200 text-sm">Address</p>
-                    <p className="text-white font-semibold">FTFL Technology Pvt Ltd.<br/>Office no.307, 3rd Floor, Amanora Chamber, Amanora Mall, <br />Hadapsar, Pune- 411028</p>
+                    <p className="text-gray-600 text-sm">Address</p>
+                    <p className="text-gray-900 font-semibold">FTFL Technology Pvt Ltd.<br/>Office no.307, 3rd Floor, Amanora Chamber, Amanora Mall, <br />Hadapsar, Pune- 411028</p>
                   </div>
                 </div>
               </div>
@@ -409,24 +408,24 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+              className="bg-gradient-to-br from-blue-100 to-blue-200 backdrop-blur-lg rounded-2xl p-8 border border-blue-300 shadow-lg"
             >
-              <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-              <ul className="space-y-3 text-blue-200">
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Why Choose Us?</h3>
+              <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span>24/7 Customer Support</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span>All-in-One Platform</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span>Verified & Trusted Network</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span>Guarantee Return</span>
                 </li>
               </ul>
@@ -438,10 +437,10 @@ export default function ContactPage() {
             initial="hidden"
             animate="visible"
             variants={slideInRight}
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+            className="bg-white backdrop-blur-lg rounded-2xl p-8 border border-blue-200 shadow-lg"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Send us a Message</h2>
-            <p className="text-blue-200 mb-8">We'll get back to you as soon as possible</p>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">Send us a Message</h2>
+            <p className="text-gray-600 mb-8">We'll get back to you as soon as possible</p>
 
             {/* Status Messages */}
             <AnimatePresence>
@@ -450,7 +449,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: -10 }} 
                   animate={{ opacity: 1, y: 0 }} 
                   exit={{ opacity: 0, y: -10 }}
-                  className="mb-6 p-4 bg-green-500/20 text-green-200 rounded-lg border border-green-400/30 flex items-center"
+                  className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg border border-green-300 flex items-center"
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -463,7 +462,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: -10 }} 
                   animate={{ opacity: 1, y: 0 }} 
                   exit={{ opacity: 0, y: -10 }}
-                  className="mb-6 p-4 bg-red-500/20 text-red-200 rounded-lg border border-red-400/30 flex items-center"
+                  className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg border border-red-300 flex items-center"
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -477,63 +476,63 @@ export default function ContactPage() {
               {/* Name Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <motion.div variants={itemVariants}>
-                  <label className="block text-sm font-medium text-blue-200 mb-2">First Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                   <input
                     type="text"
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full p-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition-colors"
+                    className="w-full p-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     placeholder="Enter your first name"
                   />
-                  {errors.firstName && <p className="mt-1 text-red-400 text-sm">{errors.firstName}</p>}
+                  {errors.firstName && <p className="mt-1 text-red-600 text-sm">{errors.firstName}</p>}
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label className="block text-sm font-medium text-blue-200 mb-2">Last Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                   <input
                     type="text"
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full p-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition-colors"
+                    className="w-full p-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     placeholder="Enter your last name"
                   />
-                  {errors.lastName && <p className="mt-1 text-red-400 text-sm">{errors.lastName}</p>}
+                  {errors.lastName && <p className="mt-1 text-red-600 text-sm">{errors.lastName}</p>}
                 </motion.div>
               </div>
 
               {/* Email */}
               <motion.div variants={itemVariants}>
-                <label className="block text-sm font-medium text-blue-200 mb-2">Email Address</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition-colors"
+                  className="w-full p-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   placeholder="your.email@example.com"
                 />
-                {errors.email && <p className="mt-1 text-red-400 text-sm">{errors.email}</p>}
+                {errors.email && <p className="mt-1 text-red-600 text-sm">{errors.email}</p>}
               </motion.div>
 
               {/* Phone */}
               <motion.div variants={itemVariants}>
-                <label className="block text-sm font-medium text-blue-200 mb-2">Phone Number</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                 <input
                   type="tel"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handlePhoneChange}
-                  className="w-full p-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition-colors"
+                  className="w-full p-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   placeholder="(123) 456-7890"
                 />
-                {errors.phoneNumber && <p className="mt-1 text-red-400 text-sm">{errors.phoneNumber}</p>}
+                {errors.phoneNumber && <p className="mt-1 text-red-600 text-sm">{errors.phoneNumber}</p>}
               </motion.div>
 
               {/* Interests */}
               <motion.div variants={itemVariants}>
-                <label className="block text-sm font-medium text-blue-200 mb-3">Interested In</label>
+                <label className="block text-sm font-medium text-gray-700 mb-3">Interested In</label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {["Franchise Partner", "Service Provider"].map((item) => (
                     <motion.label
@@ -542,8 +541,8 @@ export default function ContactPage() {
                       whileHover="hover"
                       className={`flex items-center p-3 rounded-lg border transition-all cursor-pointer ${
                         formData.interested.includes(item)
-                          ? "bg-blue-500/20 border-blue-400"
-                          : "bg-white/5 border-white/10 hover:bg-white/10"
+                          ? "bg-blue-100 border-blue-400 text-blue-700"
+                          : "bg-blue-50 border-blue-200 hover:bg-blue-100 text-gray-700"
                       }`}
                     >
                       <input
@@ -551,27 +550,27 @@ export default function ContactPage() {
                         value={item}
                         checked={formData.interested.includes(item)}
                         onChange={handleInterestChange}
-                        className="text-blue-400 focus:ring-blue-400 w-4 h-4 rounded"
+                        className="text-blue-600 focus:ring-blue-500 w-4 h-4 rounded border-blue-300"
                       />
-                      <span className="text-white ml-3">{item}</span>
+                      <span className="ml-3 font-medium">{item}</span>
                     </motion.label>
                   ))}
                 </div>
-                {errors.interested && <p className="mt-1 text-red-400 text-sm">{errors.interested}</p>}
+                {errors.interested && <p className="mt-1 text-red-600 text-sm">{errors.interested}</p>}
               </motion.div>
 
               {/* Message */}
               <motion.div variants={itemVariants}>
-                <label className="block text-sm font-medium text-blue-200 mb-2">Your Message</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full p-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition-colors resize-none"
+                  className="w-full p-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors resize-none"
                   placeholder="Tell us more about your inquiry..."
                 ></textarea>
-                {errors.message && <p className="mt-1 text-red-400 text-sm">{errors.message}</p>}
+                {errors.message && <p className="mt-1 text-red-600 text-sm">{errors.message}</p>}
               </motion.div>
 
               {/* Submit Button */}
@@ -581,7 +580,7 @@ export default function ContactPage() {
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold py-4 rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg"
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-4 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30"
               >
                 {isSubmitting ? (
                   <>

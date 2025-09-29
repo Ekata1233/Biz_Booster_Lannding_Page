@@ -160,10 +160,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div id="contact" className="min-h-screen w-full flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 via-white to-blue-100 relative overflow-hidden">
-      {/* Animated background elements */}
+    <div id="contact" className="min-h-screen w-full flex items-center justify-center p-4 bg-white relative overflow-hidden">
+      {/* Subtle background elements */}
       <motion.div 
-        className="absolute top-0 left-0 w-72 h-72 bg-[#00509D] opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"
+        className="absolute top-0 left-0 w-72 h-72 bg-gray-100 rounded-full -translate-x-1/2 -translate-y-1/2"
         animate={{ 
           scale: [1, 1.1, 1],
           rotate: [0, 5, 0]
@@ -175,7 +175,7 @@ export default function ContactPage() {
         }}
       ></motion.div>
       <motion.div 
-        className="absolute bottom-0 right-0 w-96 h-96 bg-[#00509D] opacity-10 rounded-full translate-x-1/3 translate-y-1/3"
+        className="absolute bottom-0 right-0 w-96 h-96 bg-gray-100 rounded-full translate-x-1/3 translate-y-1/3"
         animate={{ 
           scale: [1, 1.1, 1],
           rotate: [0, -5, 0]
@@ -193,10 +193,10 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full p-6 md:p-10 rounded-2xl shadow-2xl bg-white border border-blue-100 relative overflow-hidden"
+          className="w-full p-6 md:p-10 rounded-2xl shadow-lg bg-white border border-gray-200 relative overflow-hidden"
         >
           <motion.div 
-            className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00509D] to-blue-400"
+            className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00509D] to-blue-600"
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -204,7 +204,7 @@ export default function ContactPage() {
 
           <div className="text-center mb-8">
             <motion.h1 
-              className="text-4xl font-bold mb-2 text-[#00509D]"
+              className="text-4xl font-bold mb-2 text-gray-900"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -212,7 +212,7 @@ export default function ContactPage() {
               Get In Touch
             </motion.h1>
             <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto"
+              className="text-gray-700 max-w-2xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -228,7 +228,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: -10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 exit={{ opacity: 0, y: -10 }}
-                className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg border border-green-200 flex items-center"
+                className="mb-6 p-4 bg-green-100 text-green-800 rounded-lg border border-green-200 flex items-center"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -241,7 +241,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: -10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 exit={{ opacity: 0, y: -10 }}
-                className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg border border-red-200 flex items-center"
+                className="mb-6 p-4 bg-red-100 text-red-800 rounded-lg border border-red-200 flex items-center"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -261,10 +261,10 @@ export default function ContactPage() {
             {/* First & Last Name */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div className="relative" variants={itemVariants}>
-                <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                <label className="block text-sm font-medium text-gray-800 mb-1">First Name</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
@@ -284,7 +284,7 @@ export default function ContactPage() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-1 text-red-500 text-sm"
+                      className="mt-1 text-red-600 text-sm"
                     >
                       {errors.firstName}
                     </motion.p>
@@ -293,10 +293,10 @@ export default function ContactPage() {
               </motion.div>
 
               <motion.div className="relative" variants={itemVariants}>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                <label className="block text-sm font-medium text-gray-800 mb-1">Last Name</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
-                    <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
@@ -316,7 +316,7 @@ export default function ContactPage() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-1 text-red-500 text-sm"
+                      className="mt-1 text-red-600 text-sm"
                     >
                       {errors.lastName}
                     </motion.p>
@@ -327,10 +327,10 @@ export default function ContactPage() {
 
             {/* Email */}
             <motion.div className="relative" variants={itemVariants}>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <label className="block text-sm font-medium text-gray-800 mb-1">Email Address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
-                  <svg className="h-5 w-5 text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -350,7 +350,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-1 text-red-500 text-sm"
+                    className="mt-1 text-red-600 text-sm"
                   >
                     {errors.email}
                   </motion.p>
@@ -360,10 +360,10 @@ export default function ContactPage() {
 
             {/* Phone Number */}
             <motion.div className="relative" variants={itemVariants}>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <label className="block text-sm font-medium text-gray-800 mb-1">Phone Number</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-1">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
@@ -383,7 +383,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-1 text-red-500 text-sm"
+                    className="mt-1 text-red-600 text-sm"
                   >
                     {errors.phoneNumber}
                   </motion.p>
@@ -393,7 +393,7 @@ export default function ContactPage() {
 
             {/* Interested (checkboxes) */}
             <motion.div variants={itemVariants}>
-              <p className="font-medium text-gray-700 mb-2">Interested in:</p>
+              <p className="font-medium text-gray-800 mb-2">Interested in:</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {["Franchise Partner", "Service Provider"].map((item) => (
                   <motion.label 
@@ -402,7 +402,7 @@ export default function ContactPage() {
                     initial="unchecked"
                     animate={formData.interested.includes(item) ? "checked" : "unchecked"}
                     whileHover="hover"
-                    className={`flex items-center gap-3 p-4 rounded-lg border transition-colors cursor-pointer ${formData.interested.includes(item) ? "border-[#00509D] bg-blue-50" : "border-gray-300 hover:bg-blue-50"}`}
+                    className={`flex items-center gap-3 p-4 rounded-lg border transition-colors cursor-pointer ${formData.interested.includes(item) ? "border-[#00509D] bg-blue-50" : "border-gray-300 hover:bg-gray-50"}`}
                   >
                     <div className="flex items-center h-5">
                       <input
@@ -413,7 +413,7 @@ export default function ContactPage() {
                         className="text-[#00509D] focus:ring-[#00509D] w-5 h-5 rounded"
                       />
                     </div>
-                    <span className="text-gray-700 font-medium">{item}</span>
+                    <span className="text-gray-800 font-medium">{item}</span>
                   </motion.label>
                 ))}
               </div>
@@ -423,7 +423,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-1 text-red-500 text-sm"
+                    className="mt-1 text-red-600 text-sm"
                   >
                     {errors.interested}
                   </motion.p>
@@ -433,10 +433,10 @@ export default function ContactPage() {
 
             {/* Message */}
             <motion.div className="relative" variants={itemVariants}>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+              <label className="block text-sm font-medium text-gray-800 mb-1">Your Message</label>
               <div className="relative">
                 <div className="absolute top-5 left-3">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-5 w-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                   </svg>
                 </div>
@@ -447,7 +447,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   rows="4"
                   whileFocus={{ scale: 1.01 }}
-                  className="p-4 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12"
+                  className={`p-4 border rounded-lg w-full focus:ring-2 focus:ring-[#00509D] focus:border-[#00509D] focus:outline-none pl-12 ${errors.message ? "border-red-500" : "border-gray-300"}`}
                 ></motion.textarea>
               </div>
               <AnimatePresence>
@@ -456,7 +456,7 @@ export default function ContactPage() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-1 text-red-500 text-sm"
+                    className="mt-1 text-red-600 text-sm"
                   >
                     {errors.message}
                   </motion.p>

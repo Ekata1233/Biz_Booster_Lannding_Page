@@ -146,10 +146,16 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
+                  <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
                   <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> Contact Us
                 </Link>
               </li>
+             
               <li>
                 <Link href="/privacypolicy" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
                   <MdOutlineKeyboardDoubleArrowRight /> Privacy Policy
