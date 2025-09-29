@@ -19,42 +19,42 @@ function Testimonial() {
   const testimonials = [
     {
       para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform's verification system builds trust and ensures smooth collaborations. It's a game-changer for freelancers and businesses alike.",
-      src: "/testimonial-1.1.jpg",
+      src: "/Profile.jpg",
       title: "Aniket",
       text1: "Kolhapur",
       rating: 4.5
     },
     {
       para: "FetchTrue's hybrid marketplace is unlike anything I've used before. It combines innovation, reliability, and efficiency, allowing us to find the right partners and services quickly. The experience has been seamless and highly productive.",
-      src: "/anne-hathaway.jpg",
+      src: "/Profile.jpg",
       title: "Ekata",
       text1: "Mumbai",
       rating: 5
     },
     {
       para:"FetchTrue isn't just a marketplace—it's a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently. Their focus on authentic opportunities sets them apart from any other platform we've used.",
-      src: "/testimonial-1.jpg",
+      src: "/Profile.jpg",
       title: "Akshey",
       text1: "Pune",
       rating: 4
     },
     {
       para: "FetchTrue has completely transformed the way I connect with verified service providers. The platform is intuitive, trustworthy, and has helped me grow my business without any hassle. I highly recommend it to anyone looking for reliable solutions.",
-      src: "/Ellipse 159.png",
+      src: "/Profile.jpg",
       title: "Gouri",
       text1: "Mumbai",
       rating: 4.5
     },
     {
       para: "FetchTrue is more than a marketplace—it's a growth partner." ,
-      src: "/anne.jpg",
+      src: "/Profile.jpg",
       title: "Pranjal",
       text1: "Nashik",
       rating: 3.5
     },
     {
       para: "Prompt service, excellent communication, and outstanding results. What more could you ask for? I'm thoroughly impressed and will be a returning customer.",
-      src: "/woman.jpg",
+      src: "/Profile.jpg",
       title: "Sapna",
       text1: "Pune",
       rating: 5
