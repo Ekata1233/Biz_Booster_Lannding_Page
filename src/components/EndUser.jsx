@@ -68,13 +68,18 @@ const CustomerSection = () => {
           {/* Left Side - Description */}
           <div className={`description-section ${isVisible ? 'slide-in-left' : ''}`}>
             <div className="definition-card">
-              <h3>Who is a Customer?</h3>
+              <h3>Find the Right Service,Right When You Need It</h3>
               <p>
-                A customer is a person or organization using the FetchTrue platform to find 
-                trustworthy goods, services, or customized solutions from approved suppliers. 
-                The marketplace is driven by customers, who make requests, specify their wants 
-                precisely, and actively interact with service providers to guarantee that the 
-                best solutions are provided.
+                With intelligent search tools, real-time tracking, and verified business profiles, FetchTrue helps clients quickly discover and connect with the services they need, across a wide range of industries. From day-to-day needs to professional assistance, FetchTrue ensures speed, accuracy, and reliability at every step.<br />
+                <span className=''>Industries We Serve</span>
+                <ul>
+                  <li>💼 Business & IT Services.</li>
+                  <li>🏦 Legal Services & Franchise.</li>
+                  <li>🎓 Education & Finance.</li>
+                  <li>🧰 On-Demand & Marketing Services.</li>
+                </ul>
+We eliminate the hassle of traditional service discovery by providing a user-friendly, centralized platform that makes booking or connecting with providers simple and efficient.
+
               </p>
             </div>
 
@@ -87,14 +92,14 @@ const CustomerSection = () => {
               </p>
             </div>
 
-            <div className="cta-buttons">
+            {/* <div className="cta-buttons">
               <button className="primary-btn">
                 Start Your Journey
               </button>
               <button className="secondary-btn">
                 Learn More
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side - Benefits */}
@@ -128,7 +133,7 @@ const CustomerSection = () => {
         </div>
 
         {/* Process Flow */}
-        <div className={`process-flow ${isVisible ? 'fade-in-up' : ''}`}>
+        {/* <div className={`process-flow ${isVisible ? 'fade-in-up' : ''}`}>
           <h3>How It Works</h3>
           <div className="process-steps">
             <div className="process-step">
@@ -163,7 +168,7 @@ const CustomerSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`
