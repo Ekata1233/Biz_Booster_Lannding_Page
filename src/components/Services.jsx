@@ -278,7 +278,7 @@ const ServicesSection = () => {
                 </div>
 
                 <p className="text-gray-600">{service.description}</p>
-                 <div className="flex justify-start mt-3">
+                 {/* <div className="flex justify-start mt-3">
                         <button
                           onClick={() => handlePlayVideo(service)}
                           className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-1 text-sm shadow-lg hover:bg-blue-700 transition flex items-center"
@@ -286,7 +286,7 @@ const ServicesSection = () => {
                         >
                           <span className="mr-1">▶</span> Play Video
                         </button>
-                      </div>
+                      </div> */}
               </motion.article>
             ))}
           </div>
