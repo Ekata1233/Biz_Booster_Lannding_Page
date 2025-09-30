@@ -220,7 +220,7 @@ const ServicesSection = () => {
               <p className="text-gray-600 leading-relaxed text-lg">
                 {activeService?.description}
               </p>
-                <div className="flex justify-left mt-4">
+                {/* <div className="flex justify-left mt-4">
                     <button
                       onClick={() => setShowVideo(true)}
                       className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center"
@@ -228,7 +228,7 @@ const ServicesSection = () => {
                     >
                       <span className="mr-1">▶</span> Play Video
                     </button>
-                  </div>
+                  </div> */}
             </motion.div>
           </div>
 
