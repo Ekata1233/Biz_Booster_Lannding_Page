@@ -136,7 +136,7 @@ export default function AboutSection() {
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
           <div className="space-y-6">
             <div className="flex items-start mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                 <span className="text-white font-bold text-lg">✓</span>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -145,7 +145,7 @@ export default function AboutSection() {
             </div>
             
             <div className="flex items-start">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <div className="w-8 h-8 bg-gradient-to-r  from-blue-500 to-purple-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                 <span className="text-white font-bold text-lg">⚡</span>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -303,14 +303,19 @@ export default function AboutSection() {
         >
           <a
             href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
-            className="flex items-center gap-3 bg-gray-900 text-white px-6 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center group"
+            // className="flex items-center gap-3 bg-gray-900 text-white px-6 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto justify-center group"
           >
-            <FaGooglePlay size={24} className="group-hover:scale-110 transition-transform" />
+            <Image src="/Untitled-1.png" alt="Google Play" width={150} height={150} />
+            {/* <FaGooglePlay size={24} className="group-hover:scale-110 transition-transform" />
             <div className="text-left">
               <div className="text-xs opacity-80">Get it on</div>
               <div className="text-lg">Google Play</div>
-            </div>
+            </div> */}
           </a>
+          {/* <a href="https://www.apple.com/app-store/">
+            <Image src="/Untitled-2.png" alt="App Store" width={150} height={150} />
+            
+          </a> */}
         </motion.div>
       </motion.div>
     </div>
