@@ -145,9 +145,14 @@ function Footer() {
                   <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/blog" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
                   <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> Blog
+                </Link>
+              </li> */}
+              <li>
+                <Link href="/faq" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
+                  <MdOutlineKeyboardDoubleArrowRight className="flex-shrink-0" /> FAQ
                 </Link>
               </li>
               <li>
@@ -178,7 +183,7 @@ function Footer() {
         </div>
 
         {/* Industries & Services Section */}
-        <div className="sm:col-span-2 lg:col-span-1">
+        {/* <div className="sm:col-span-2 lg:col-span-1">
 
           {/* Download Section - Now below Quick Links */}
           <div>
@@ -201,7 +206,7 @@ function Footer() {
               ))}
             </div>
           </div>
-          <h4 className="font-bold mb-4 text-lg">Industries & Services</h4>
+          {/* <h4 className="font-bold mb-4 text-lg">Industries & Services</h4>
 
           <div className="mb-4 border border-white/20 rounded-lg overflow-hidden w-50 lg:w-full ">
             <button 
@@ -224,10 +229,10 @@ function Footer() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
           
           {/* Services Dropdown */}
-          <div className="mb-4 border border-white/20 rounded-lg overflow-hidden w-50 lg:w-full ">
+          {/* <div className="mb-4 border border-white/20 rounded-lg overflow-hidden w-50 lg:w-full ">
             <button 
               onClick={() => toggleDropdown('services')}
               className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-white/5 hover:bg-white/10 transition-colors"
@@ -248,11 +253,11 @@ function Footer() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
           
           {/* Industries Dropdown */}
           
-        </div>
+        {/* </div> */}
       </div>
 
       {/* Footer Bottom */}

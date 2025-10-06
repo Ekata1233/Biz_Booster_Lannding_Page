@@ -131,7 +131,7 @@ function Testimonial() {
           {testimonials.map((testi, index) => (
             <SwiperSlide key={index}>
               <div className="h-full flex justify-center p-2">
-                <div className="testimonial-card bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-sm flex flex-col items-center text-center transition-transform duration-300 hover:shadow-xl">
+                <div className="testimonial-card  overflow-hidden w-full max-w-sm flex flex-col items-center text-center transition-transform duration-300 hover:shadow-xl">
                   
                   {/* User Image */}
                   <div className="w-20 h-20 rounded-full overflow-hidden mt-6 border-4 border-blue-100">
@@ -155,7 +155,7 @@ function Testimonial() {
 
                   {/* Testimonial Text */}
                   <div className="testimonial-content bg-blue-50 mt-1 rounded-xl w-full p-4">
-                    <p className="testimonial-text text-gray-700 text-sm text-justify italic">
+                    <p className="testimonial-text text-gray-700 text-sm text-justify">
                       "{testi.para}"
                     </p>
                   </div>

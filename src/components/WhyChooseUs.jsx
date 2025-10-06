@@ -23,14 +23,24 @@ const WhyChooseFetchTrue = () => {
       animationDelay: 0.1
     },
     {
-      title: "Trusted and Verified Provider",
-      description: "Every service provider in FetchTrue is verified for authenticity and reliability, we ensure you connect with credible partners. ",
-      icon: <FaChartLine className="text-green-600 text-2xl" />,
-      bgGradient: "from-green-50 to-emerald-50",
-      borderColor: "border-green-100",
-      titleColor: "text-green-800",
-      animationDelay: 0.2
+      title: "Real-time Connectivity",
+      description: "Allow visitors to view real-time information about available providers, their proximity, response times and connect quickly with the providers.",
+      icon: <FaHeadset className="text-purple-600 text-2xl" />,
+      bgGradient: "from-purple-50 to-violet-50",
+      borderColor: "border-purple-100",
+      titleColor: "text-purple-800",
+      animationDelay: 0.4
     },
+     {
+      title: "Cost Effective Solution",
+      description: "FetchTrue gives you greater value without charging extra by providing project management, marketing, and lead generating solutions.",
+      icon: <FaUserCheck className="text-indigo-600 text-2xl" />,
+      bgGradient: "from-indigo-50 to-blue-50",
+      borderColor: "border-indigo-100",
+      titleColor: "text-indigo-800",
+      animationDelay: 0.5
+    },
+   
     {
       title: "Transparent Workflow",
       description: "From searching (or posting) your requirement to final delivery, FetchTrue ensure that WorkFlow module make every step visible and trackable, which saves time and efforts.",
@@ -40,27 +50,20 @@ const WhyChooseFetchTrue = () => {
       titleColor: "text-amber-800",
       animationDelay: 0.3
     },
-    {
-      title: "Intelligence Matchmaking",
-      description: "Our platform uses smart tool to match your needs with the right service providers, helping you to find best suitable solution faster and effectively. Training, guidance, and ready-made resources to help you succeed as a Growth Partner.",
-      icon: <FaHeadset className="text-purple-600 text-2xl" />,
-      bgGradient: "from-purple-50 to-violet-50",
-      borderColor: "border-purple-100",
-      titleColor: "text-purple-800",
-      animationDelay: 0.4
+     {
+      title: "On-Ground Support",
+      description: "At FetchTrue, we believe that service goes beyond online communication. That’s why our dedicated team provides real on-ground support whenever an issue arises. If there’s any problems or delay, we personally reach out and coordinate directly with the service provider. ",
+      icon: <FaChartLine className="text-green-600 text-2xl" />,
+      bgGradient: "from-green-50 to-emerald-50",
+      borderColor: "border-green-100",
+      titleColor: "text-green-800",
+      animationDelay: 0.2
     },
-    {
-      title: "Cost Effective Solution",
-      description: "FetchTrue gives you greater value without charging extra by providing project management, marketing, and lead generating solutions.",
-      icon: <FaUserCheck className="text-indigo-600 text-2xl" />,
-      bgGradient: "from-indigo-50 to-blue-50",
-      borderColor: "border-indigo-100",
-      titleColor: "text-indigo-800",
-      animationDelay: 0.5
-    },
+    
+   
     {
       title: "Nationwide Reach",
-      description: "You can access business, service providers and opportunities across India, expanding your network and market without boundaries.",
+      description: "Fetch True provides you to accessibility by matching you with certified services in all cities, towns, and states of India, ensuring dependability and quality wherever you do business.",
       icon: <FaUndoAlt className="text-red-600 text-2xl" />,
       bgGradient: "from-red-50 to-pink-50",
       borderColor: "border-red-100",
@@ -126,7 +129,7 @@ const WhyChooseFetchTrue = () => {
                 {card.icon}
               </div>
               <h3 className={`font-bold ${card.titleColor} text-xl mb-3`}>{card.title}</h3>
-              <p className="text-gray-700">{card.description}</p>
+              <p className="text-gray-700 text-justify">{card.description}</p>
             </motion.div>
           ))}
         </motion.div>

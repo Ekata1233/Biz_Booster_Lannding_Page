@@ -1,140 +1,149 @@
 "use client";
 import Head from "next/head";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function HomePage() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const slides = [
+    {
+      title: "Stop Searching - Start Fetching with Fetch True",
+      highlight: "Find your Trusted Service with Trusted Partners",
+      description: "The Fetch True give you a quick access to every service you need. It acts as the control center, where you can explore, and connect with services effortlessly.",
+      image: "/Screenshot 2025-10-06 164553-01-01-01-01.png",
+    },
+    {
+      title: "All In One Service Platform",
+      highlight: "Everything You Need, All in One Place just with one click",
+      description: "Fetch True makes it easy for you to find, connect, and get services—all in one platform. With diverse sector of services, you can choose your needs.",
+      image: "/All In One Services (2).png",
+    },
+    {
+      // title: "Start Your Journey",
+      highlight: "Start your Journey with Fetch True",
+      description: "At Fetch True, you aren't just service users—you play an important role in shaping the platform. By engaging beyond just using services, you can grow while unlocking exclusive benefits for yourself.",
+      image: "/Group 44.png",
+    }
+  ];
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  }, [slides.length]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [nextSlide, isAutoPlaying]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-200 to-white flex items-center justify-center px-4 sm:px-6 lg:px-12">
+    <div 
+      className="min-h-screen bg-gradient-to-br from-blue-300 via-blue-500 to-[#00509D] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden"
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
+    >
       <Head>
-        <title>Growth Partners Program</title>
+        <title>Fetch True - Your Service Partner</title>
         <meta
           name="description"
-          content="Become our growth partner and turn your network into net worth"
+          content="Join Fetch True - Your trusted partner for finding all the services you need in one platform"
         />
       </Head>
 
-      {/* Hero Banner */}
-      <section className="container mx-auto py-10 sm:py-14 lg:py-24">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
-          {/* For small screens: Title comes first */}
-          <div className="lg:hidden w-full text-center transition-all duration-700 ease-out transform">
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight mt-15">
-              Become Our{" "}
-              <span className="text-blue-600">GROWTH PARTNERS</span> and Turn
-              Your Network into Net Worth
-            </h1>
-          </div>
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 lg:left-8 z-10 p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
+        aria-label="Previous slide"
+      >
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
 
-          {/* For small screens: Image comes second */}
-          <div className="lg:hidden w-full flex justify-center transition-all duration-700 ease-out transform">
-            <div className="relative w-full max-w-xs sm:max-w-sm h-64 sm:h-80">
-              <Image
-                src="/Group 24.png"
-                alt="App Preview"
-                width={430}
-                height={430}
-                className="object-contain rounded-lg"
-                priority
-              />
-            </div>
-          </div>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 lg:right-8 z-10 p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
+        aria-label="Next slide"
+      >
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
 
-          {/* Left Column - Text (Desktop only) */}
-          <div
-            className={`hidden lg:block w-full lg:w-1/2 text-center lg:text-left lg:ms-20 transition-all duration-700 ease-out transform ${
-              isVisible
-                ? "translate-x-0 opacity-100"
-                : "-translate-x-10 opacity-0"
-            }`}
-          >
-            <h1 className="text-5xl font-bold text-gray-800 leading-tight mb-4">
-              Become Our{" "}
-              <span className="text-blue-600">GROWTH PARTNERS</span> and Turn
-              Your Network into Net Worth
-            </h1>
+      {/* Carousel Container */}
+      <div className="w-full max-w-7xl mx-auto py-10 sm:py-14 lg:py-24 relative">
+        {/* Carousel Slides */}
+        <div className="relative w-full h-full">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 transition-all duration-500 ease-in-out ${
+                index === currentSlide
+                  ? "opacity-100 block"
+                  : "opacity-0 hidden"
+              }`}
+            >
+              {/* Text Content */}
+              <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-2xl  text-white leading-tight">
+                  {slide.title}{" "}
+                  {slide.highlight && (
+                    <span className="block mt-2 text-black text-shadow-lg text-4xl sm:text-5xl lg:text-6xl font-bold"> 
+                      {slide.highlight}
+                    </span>
+                  )}
+                </h1>
 
-            <p className="text-xl text-blue-700 mb-6">
-              Unlock new opportunities with our powerful platforms and become
-              our Growth Partner.
-            </p>
+                <p className="text-lg sm:text-xl font-medium text-white/90 leading-relaxed">
+                  {slide.description}
+                </p>
+              </div>
 
-            <div className="flex flex-col space-y-4 mt-8">
-              <p className="text-lg font-medium text-gray-700">
-                Download our app now:
-              </p>
-              <div className="flex justify-start">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <img
-                    src="/Untitled-1.png"
-                    alt="Get it on Google Play"
-                    className="h-12 w-auto transition-transform duration-300 hover:scale-105"
+              {/* Image Content */}
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg">
+                  <Image
+                    src={slide.image}
+                    alt="App Preview"
+                    width={600}
+                    height={900}
+                    className="object-contain rounded-xl w-full h-auto"
+                    priority={index === 0}
                   />
-                </a>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Right Column - Image (Desktop only) */}
-          <div
-            className={`hidden lg:flex w-full lg:w-1/2 justify-center transition-all duration-700 ease-out transform ${
-              isVisible
-                ? "translate-x-0 opacity-100"
-                : "translate-x-10 opacity-0"
-            }`}
-          >
-            <div className="relative w-full max-w-lg h-96">
-              <Image
-                src="/Group 24.png"
-                alt="App Preview"
-                width={430}
-                height={430}
-                className="object-contain rounded-xl"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* For small screens: Download button comes third */}
-          <div className="lg:hidden w-full text-center transition-all duration-700 ease-out transform">
-            <p className="text-base text-blue-700 mb-4 mt-5">
-              Unlock new opportunities with our powerful platforms and become
-              our Growth Partner.
-            </p>
-            
-            <div className="flex flex-col space-y-4 mt-6">
-              <p className="text-sm font-medium text-gray-700">
-                Download our app now:
-              </p>
-              <div className="flex justify-center">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  <img
-                    src="/Untitled-1.png"
-                    alt="Get it on Google Play"
-                    className="h-10 w-auto transition-transform duration-300 hover:scale-105"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center mt-10 lg:mt-12 space-x-3">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-white w-8' 
+                  : 'bg-white/50 hover:bg-white/80'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

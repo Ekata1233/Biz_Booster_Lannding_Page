@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const scrollVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -41,6 +42,9 @@ export default function PolicyPage() {
 
   return (
     <div  className="mt-5 mb-10 px-6 md:px-20">
+       <div>
+        <Link href="/" className="text-blue-600 hover:underline">Back to Home</Link>
+      </div>
 
       {/* Heading */}
       <motion.h1

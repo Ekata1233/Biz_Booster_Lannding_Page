@@ -7,6 +7,7 @@ import OurMission from "./OurMission";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import DownloadBanner from "./DownloadBanner";
 import WhyChooseFetchTrue from "@/components/WhyChooseUs";
+import Link from "next/link";
 
 
 export default function AboutSection() {
@@ -92,7 +93,9 @@ export default function AboutSection() {
   return (
     <>
       {/* ABOUT SECTION */}
-
+      <div>
+        <Link href="/" className="text-blue-600 hover:underline">Back to Home</Link>
+      </div>
 
 <section id="about" className="relative bg-white overflow-hidden py-16 px-4 sm:px-6 lg:px-16">
   {/* Geometric Background Pattern */}
@@ -330,14 +333,13 @@ export default function AboutSection() {
       {/* <WhyChooseUs /> */}
 
       {/* STATS SECTION */}
-      <section id="stats-section" className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
-        <motion.div
+      {/* <section id="stats-section" className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-16"> */}
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
         >
-          {/* Active Users */}
           <motion.div 
             whileHover={{ y: -5 }}
             className="p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl shadow-lg flex flex-col items-center text-center"
@@ -349,7 +351,6 @@ export default function AboutSection() {
             <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">Active Users</p>
           </motion.div>
 
-          {/* Franchise Partners */}
           <motion.div 
             whileHover={{ y: -5 }}
             className="p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl sm:rounded-2xl shadow-lg flex flex-col items-center text-center"
@@ -361,7 +362,6 @@ export default function AboutSection() {
             <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">Franchise Partners</p>
           </motion.div>
 
-          {/* Revenue Growth */}
           <motion.div 
             whileHover={{ y: -5 }}
             className="p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl shadow-lg flex flex-col items-center text-center"
@@ -372,10 +372,10 @@ export default function AboutSection() {
             <h3 className="text-3xl sm:text-4xl font-bold text-blue-700">{stats.revenue.toFixed(1)}x</h3>
             <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">Revenue Growth</p>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* <DownloadBanner /> */}
-      </section>
+      {/* </section> */}
     </>
   );
 }

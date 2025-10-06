@@ -8,7 +8,7 @@ export default function ContactPage() {
     lastName: "",
     email: "",
     phoneNumber: "",
-    interested: [],
+    // interested: [],
     message: "",
   });
 
@@ -109,14 +109,14 @@ export default function ContactPage() {
     },
   };
 
-  const checkboxVariants = {
-    unchecked: { scale: 1 },
-    checked: { 
-      scale: [1, 1.05, 1],
-      transition: { duration: 0.3 }
-    },
-    hover: { scale: 1.03 },
-  };
+  // const checkboxVariants = {
+  //   unchecked: { scale: 1 },
+  //   checked: { 
+  //     scale: [1, 1.05, 1],
+  //     transition: { duration: 0.3 }
+  //   },
+  //   hover: { scale: 1.03 },
+  // };
 
   // Validation
   const validateForm = () => {
@@ -139,7 +139,7 @@ export default function ContactPage() {
       }
     }
 
-    if (!formData.interested.length) newErrors.interested = "Please select at least one interest";
+    // if (!formData.interested.length) newErrors.interested = "Please select at least one interest";
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
@@ -177,16 +177,16 @@ export default function ContactPage() {
   };
 
   // Handle interests (checkboxes)
-  const handleInterestChange = (e) => {
-    const { value, checked } = e.target;
-    setFormData((prev) => {
-      let updated = [...prev.interested];
-      if (checked) updated.push(value);
-      else updated = updated.filter((item) => item !== value);
-      return { ...prev, interested: updated };
-    });
-    if (errors.interested) setErrors({ ...errors, interested: "" });
-  };
+  // const handleInterestChange = (e) => {
+  //   const { value, checked } = e.target;
+  //   setFormData((prev) => {
+  //     let updated = [...prev.interested];
+  //     if (checked) updated.push(value);
+  //     else updated = updated.filter((item) => item !== value);
+  //     return { ...prev, interested: updated };
+  //   });
+  //   if (errors.interested) setErrors({ ...errors, interested: "" });
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -213,7 +213,7 @@ export default function ContactPage() {
         lastName: "",
         email: "",
         phoneNumber: "",
-        interested: [],
+        // interested: [],
         message: "",
       });
     } catch (err) {
@@ -531,7 +531,7 @@ export default function ContactPage() {
               </motion.div>
 
               {/* Interests */}
-              <motion.div variants={itemVariants}>
+              {/* <motion.div variants={itemVariants}>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Interested In</label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {["Franchise Partner", "Service Provider"].map((item) => (
@@ -557,7 +557,7 @@ export default function ContactPage() {
                   ))}
                 </div>
                 {errors.interested && <p className="mt-1 text-red-600 text-sm">{errors.interested}</p>}
-              </motion.div>
+              </motion.div> */}
 
               {/* Message */}
               <motion.div variants={itemVariants}>
