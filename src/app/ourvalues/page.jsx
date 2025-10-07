@@ -16,7 +16,7 @@ const Values = () => {
     {
       title: "Our Mission",
       description:"Our mission is to simplify your access to trusted brands and services across India by connecting you with trusted service provider who represent these companies locally. We’re here to break down geographical barriers, giving you reliable, personalized service wherever you are. At Fetch True, we aim to empower you with seamless experiences and unlock new opportunities—so you can make confident choices and enjoy the benefits of trusted services.",
-      image: "/mission.avif",
+      image: "/mission.png",
       color: "from-blue-500 to-blue-600",
       reverse: false,
       typeData: "mission",
@@ -29,7 +29,7 @@ const Values = () => {
     {
       title: "Our Vision",
       description:"To revolutionize the way India connects with services through a smart, secure, and hybrid service marketplace—where technology meets trust. We aim to lead the digital transformation of service discovery by delivering unmatched convenience, transparency, and personalization to every customer. Our vision is to build India’s largest and most reliable service network, bridging the gap between urban and rural markets. By connecting millions of customers with verified brands and empowered local service partners, we strive to create a trusted ecosystem where people, businesses, and communities grow together—unlocking opportunity, driving inclusive growth, and transforming lives across the country.",
-      image: "/vision.avif",
+      image: "/vision.png",
       color: "from-purple-500 to-purple-600",
       reverse: true,
       typeData: "vision",
