@@ -143,7 +143,7 @@ export default function AboutSection() {
                 <span className="text-white font-bold text-lg">✓</span>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                <strong>At FetchTrue, everything begins with you.</strong> We think that every business deserves the right opportunity to develop with confidence, trust, and authenticity. FetchTrue, powered by FTFL Technology Pvt. Ltd., is India's first hybrid marketplace, bringing together corporations, service providers, and entrepreneurs on a single dynamic platform.
+                <strong>At FetchTrue, everything begins with you.</strong> We think that every customer deserves the right service provider so they can grow with in confidence, trust, and authenticity. Fetch True, powered by FTFL Technology Pvt. Ltd., is India's first hybrid service marketplace, bringing together corporations, service providers, and entrepreneurs on a single dynamic platform.
               </p>
             </div>
             
@@ -152,7 +152,7 @@ export default function AboutSection() {
                 <span className="text-white font-bold text-lg">⚡</span>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-               Our objective is straightforward: to provide you with dependable connections, verifiable possibilities, and the digital tools you want to expand seamlessly. Whether you're a startup trying to establish your brand, a service provider looking to increase your reach, or an organization looking to access new markets, FetchTrue is your reliable growth partner.
+               Our objective is straightforward: to provide you, the service with trustworthy connections, verified opportunities, and the digital tools you need to grow confidently and seamlessly. Whether you're exploring new services, seeking the right professionals for your needs, or looking for reliable solutions, Fetch True is your trusted partner in every step of your journey.
               </p>
             </div>
           </div>
