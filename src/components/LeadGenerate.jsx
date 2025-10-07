@@ -7,7 +7,7 @@ const LeadGenerate = () => {
     <>
       {/* Header Section */}
       <section className="py-8 md:py-12 bg-white">
-        <h2 className='text-xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-10 mt-6 md:mt-10'>
+        <h2 className='text-2xl md:text-3xl lg:text-5xl text-blue-700 font-bold text-center mb-6 md:mb-10 mt-6 md:mt-10'>
           #India's First Hybrid Service Marketplace
         </h2>
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>

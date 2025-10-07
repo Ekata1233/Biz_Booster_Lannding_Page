@@ -18,7 +18,7 @@ function Testimonial() {
   // Static testimonial data
   const testimonials = [
     {
-      para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform's verification system builds trust and ensures smooth collaborations. It's a game-changer for freelancers and businesses alike.",
+      para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform's verification system builds trust and ensures smooth collaborations.",
       src: "/Profile.jpg",
       title: "Arjun Verma",
       text1: "Kolhapur",
@@ -32,14 +32,14 @@ function Testimonial() {
       rating: 5
     },
     {
-      para:"FetchTrue isn't just a marketplace—it's a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently. Their focus on authentic opportunities sets them apart from any other platform we've used.",
+      para:"FetchTrue isn't just a marketplace—it's a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently.",
       src: "/Profile.jpg",
       title: "Rahul Deshmukh",
       text1: "Pune",
       rating: 4
     },
     {
-      para: "FetchTrue has completely transformed the way I connect with verified service providers. The platform is intuitive, trustworthy, and has helped me grow my business without any hassle. I highly recommend it to anyone looking for reliable solutions.",
+      para: "FetchTrue has completely transformed the way I connect with verified service providers. The platform is intuitive, trustworthy, and has helped me grow my business without any hassle.",
       src: "/Profile.jpg",
       title: "Harshit Tiwari",
       text1: "Mumbai",

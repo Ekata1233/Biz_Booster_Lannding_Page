@@ -12,20 +12,20 @@ export default function HomePage() {
       title: "All In One Service Platform",
       highlight: "Everything You Need, All in One Place just with one click",
       description: "Fetch True makes it easy for you to find, connect, and get services—all in one platform. With diverse sector of services, you can choose your needs.",
-      image: "/All In One Services (2).png",
+      image: "/Phone Mockup(1).png",
     },
     {
       title: "Stop Searching - Start Fetching with Fetch True",
       highlight: "Find your Trusted Service with Trusted Partners",
       description: "The Fetch True give you a quick access to every service you need. It acts as the control center, where you can explore, and connect with services effortlessly.",
-      image: "/Fetch True (2).png",
+      image: "/All In One Services (2).png",
     },
     
     {
       title: "Nationwide reach. Local trust. Fetch True.",
       highlight: "Connecting you with trusted services across India.",
       description: "Fetch True, isn’t just one city service provider—Our services reach all city and state in India which play an important role in shaping the platform. Our physical approach with every service provider across India makes us different from others.",
-      image: "/Map_Final-01-01.png",
+      image: "/Map_Final_-01.png",
     }
   ];
 
@@ -50,7 +50,7 @@ export default function HomePage() {
 
   return (
     <div 
-      className="min-h-screen bg-gradient-to-br from-blue-300 via-blue-500 to-[#00509D] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="min-h-screen bg-gradient-to-r from-[#007bbd] via-[#00509D] to-[#003f7f] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -101,7 +101,7 @@ export default function HomePage() {
                 <h1 className="text-xl sm:text-xl lg:text-2xl  text-white leading-tight text-justify-center lg:text-left ">
                   {slide.title}{" "}
                   {slide.highlight && (
-                    <span className="block mt-2 text-black text-shadow-lg text-4xl sm:text-5xl lg:text-6xl font-bold"> 
+                    <span className="block mt-2 text-black/70 text-shadow-lg shadow-white text-4xl sm:text-5xl lg:text-6xl font-bold"> 
                       {slide.highlight}
                     </span>
                   )}

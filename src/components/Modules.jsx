@@ -114,7 +114,7 @@ const Modules = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-4 lg:mb-6"
           >
             Our Industry Focus
             {/* Fetch{" "}
@@ -158,7 +158,7 @@ const Modules = () => {
                 
                 {/* Icon with Error Handling */}
                 <div className="mb-4 sm:mb-6 flex items-center justify-center">
-                  <div className="w-40 h-40 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full">
+                  <div className="w-40 h-40 sm:w-20 sm:h-20 md:w-28 md:h-28 flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full">
                     {!imageErrors[module.id] ? (
                       <Image
                         src={module.icon}

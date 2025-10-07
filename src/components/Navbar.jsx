@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "bg-white/50 text-blue-950 shadow-sm" : "bg-transparent text-blue-950"
+        scrolled ? "bg-white text-blue-950 shadow-sm" : "bg-transparent text-white"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden inline-flex items-center justify-center rounded-lg p-2  hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            className="lg:hidden inline-flex items-center  justify-center rounded-lg p-2  hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset "
             aria-label="Toggle menu"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
