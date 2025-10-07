@@ -62,7 +62,7 @@ export default function HomePage() {
       </Head>
 
       {/* Navigation Arrows */}
-      <button
+      {/* <button
         onClick={prevSlide}
         className="absolute left-4 lg:left-8 z-10 p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
         aria-label="Previous slide"
@@ -80,7 +80,7 @@ export default function HomePage() {
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
-      </button>
+      </button> */}
 
       {/* Carousel Container */}
       <div className="w-full max-w-7xl mx-auto py-10 sm:py-14 lg:py-24 relative">

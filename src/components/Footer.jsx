@@ -168,7 +168,7 @@ function Footer() {
               </li>
               <li>
                 <Link href="/returnpolicy" className="flex items-center gap-2 hover:text-gray-200 transition-colors text-sm">
-                  <MdOutlineKeyboardDoubleArrowRight /> Refund Policy
+                  <MdOutlineKeyboardDoubleArrowRight /> Refund & Cancellation Policy
                 </Link>
               </li>
               <li>

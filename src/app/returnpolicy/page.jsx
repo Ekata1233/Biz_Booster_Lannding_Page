@@ -55,7 +55,7 @@ export default function PolicyPage() {
         viewport={{ once: false }}
         className="text-blue-600 font-bold text-center py-10 text-3xl md:text-4xl"
       >
-        Refund Policy
+        Refund & Cancellation Policy
       </motion.h1>
 
       {/* Content */}
