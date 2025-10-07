@@ -11,7 +11,7 @@ const LeadGenerate = () => {
           #India's First Hybrid Service Marketplace
         </h2>
         <div className='container mx-auto px-4 md:px-6'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:ms-40 lg:me-25'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:ms-30 lg:me-25'>
             {/* Left Side - Text */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -27,7 +27,7 @@ const LeadGenerate = () => {
             </div>
             
             {/* Right Side - Image */}
-            <div className='w-full lg:w-1/2 relative mt-8 lg:mt-0 lg:ms-50'>
+            <div className='w-full lg:w-1/2 relative mt-8 lg:mt-0 lg:ms-20'>
               <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 max-w-md mx-auto sm:mx-auto">
                 <Image
                   src={"/12953560_Data_security_01 [Converted]-01-01.png"}
@@ -80,7 +80,7 @@ const LeadGenerate = () => {
       {/* Guaranteed Satisfaction Section */}
       <section className="py-12 md:py-16 bg-white">
         <div className='container mx-auto px-4 md:px-6'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:ms-40 lg:me-25'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:ms-30 lg:me-25'>
             {/* Text Content */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -148,7 +148,7 @@ const LeadGenerate = () => {
       {/* Transparency Communication Section */}
       <section className="py-12 md:py-16 bg-white">
         <div className='container mx-auto px-4 md:px-6'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:ms-40 lg:me-25'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:ms-30 lg:me-25'>
             {/* Text Content */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
