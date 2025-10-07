@@ -253,7 +253,7 @@ const Values = () => {
                   {item.description}
                 </p>
 
-                {item.typeData === "corevalues" && (
+                {/* {item.typeData === "corevalues" && (
   <motion.div 
     className="flex flex-col gap-2"
     variants={containerVariants}
@@ -287,12 +287,11 @@ const Values = () => {
         </div>
         <div>
           <h4 className="font-semibold text-gray-900">{value.name}</h4>
-          {/* <p className="text-gray-600 text-sm mt-1">{value.description}</p> */}
         </div>
       </motion.div>
     ))}
   </motion.div>
-)}
+)} */}
 
               </motion.div>
             </motion.div>
