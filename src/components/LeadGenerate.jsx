@@ -11,7 +11,7 @@ const LeadGenerate = () => {
           #India's First Hybrid Service Marketplace
         </h2>
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-5'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-5 ms-25'>
             {/* Left Side - Text */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -28,7 +28,7 @@ const LeadGenerate = () => {
             
             {/* Right Side - Image */}
             <div className='w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0'>
-              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:me-20">
                 <Image
                   src={"/12953560_Data_security_01 [Converted]-01-01.png"}
                   alt="Verified service providers dashboard"
