@@ -96,7 +96,7 @@ export default function HomePage() {
               }`}
             >
               {/* Text Content */}
-              <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+              <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 mt-10 lg:mt-0">
                 <h1 className="text-3xl sm:text-4xl lg:text-2xl  text-white leading-tight">
                   {slide.title}{" "}
                   {slide.highlight && (
@@ -106,7 +106,7 @@ export default function HomePage() {
                   )}
                 </h1>
 
-                <p className="text-lg sm:text-xl font-medium text-white/90 leading-relaxed">
+                <p className="text-lg sm:text-xl font-medium text-white/90 leading-relaxed text-justify">
                   {slide.description}
                 </p>
               </div>

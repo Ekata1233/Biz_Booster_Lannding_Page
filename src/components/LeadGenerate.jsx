@@ -7,7 +7,7 @@ const LeadGenerate = () => {
     <>
       {/* Header Section */}
       <section className="py-2 md:py-10 bg-white">
-        <h2 className='text-xl md:text-4xl font-bold text-center mb-10 mt-10 lg:mb-20 md:mb-10'>
+        <h2 className='text-xl md:text-4xl font-bold text-center mb-10 mt-10 lg:mb-10 md:mb-10'>
           #India's First Hybrid Service Marketplace
         </h2>
         <div className='container mx-auto px-4 md:px-6'>
@@ -21,7 +21,7 @@ const LeadGenerate = () => {
               <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight'>
                 Verified Service Providers 
               </h1>
-              <p className='text-base md:text-lg text-gray-600 leading-relaxed'>
+              <p className='text-base md:text-lg text-gray-600 leading-relaxed text-justify'>
                 Every provider on FetchTrue undergoes a thorough verification process, ensuring credibility, professionalism, and authenticity. Customers engage only with trusted providers.
               </p>
             </div>
@@ -30,10 +30,10 @@ const LeadGenerate = () => {
             <div className='w-full lg:w-1/2 relative mt-8 lg:mt-0 lg:ms-50'>
               <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 max-w-md mx-auto sm:mx-auto">
                 <Image
-                  src={"/12953560_Data_security_01 [Converted]-01.png"}
+                  src={"/12953560_Data_security_01 [Converted]-01-01.png"}
                   alt="Verified service providers dashboard"
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   className="w-full h-auto"
                   priority
                 />
@@ -56,7 +56,7 @@ const LeadGenerate = () => {
               <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight'>
                 Customer Centric
               </h1>
-              <p className='text-base md:text-lg text-gray-600 leading-relaxed'>
+              <p className='text-base md:text-lg text-gray-600 leading-relaxed text-justify'>
                 At Fetch True, you are the core focus. From connecting you with verified and trusted service providers, we ensure every interaction is smooth and secure. Our platform is designed for ease and customized experiences, suggesting services based on your needs.
               </p>
             </div>
@@ -65,10 +65,10 @@ const LeadGenerate = () => {
             <div className='w-full lg:w-1/2 relative mt-8 lg:mt-0'>
               <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 max-w-md mx-auto">
                 <Image
-                  src={"/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01.png"}
+                  src={"/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png"}
                   alt="Customer centric approach illustration"
-                  width={370}
-                  height={370}
+                  width={350}
+                  height={350}
                   className="w-full h-auto"
                 />
               </div>
@@ -90,7 +90,7 @@ const LeadGenerate = () => {
               <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight'>
                 Guaranteed Satisfaction
               </h1>
-              <p className='text-base md:text-lg text-gray-600 leading-relaxed'>
+              <p className='text-base md:text-lg text-gray-600 leading-relaxed text-justify'>
                 Fetch True ensures a stress-free experience. If any issue arises, we'll immediately connect you with a new service provider to keep things running smoothly, your satisfaction is our top priority.
               </p>
             </div>
@@ -124,7 +124,7 @@ const LeadGenerate = () => {
               <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight'>
                 Get Instant Support
               </h1>
-              <p className='text-base md:text-lg text-gray-600 leading-relaxed'>
+              <p className='text-base md:text-lg text-gray-600 leading-relaxed text-justify'>
                    If there is a problem with a service provider, Fetch True will fix it, either by working with the provider or connecting you with another service provider, so that your service keeps running smoothly.
               </p>
             </div>
@@ -158,7 +158,7 @@ const LeadGenerate = () => {
               <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight'>
                 Transparency Communication
               </h1>
-              <p className='text-base md:text-lg text-gray-600 leading-relaxed'>
+              <p className='text-base md:text-lg text-gray-600 leading-relaxed text-justify'>
                 At Fetch True, we communicate with service providers while keeping your personal information private. Our transparent approach ensures trust at every step, giving you confidence that you're working with verified providers who value honesty and integrity as much as you do.
               </p>
             </div>
@@ -167,7 +167,7 @@ const LeadGenerate = () => {
             <div className='w-full lg:w-1/2 relative mt-8 lg:mt-0 lg:ms-50'>
               <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 max-w-md mx-auto">
                 <Image
-                  src={"/8474028_1895 [Converted]-01.png"}
+                  src={"/8474028_1895 [Converted]-01-01.png"}
                   alt="Transparent communication process illustration"
                   width={350}
                   height={350}
