@@ -50,7 +50,7 @@ export default function PartnersSection() {
   };
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white pt-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-700">Fetch True Partners</h2>
@@ -72,7 +72,7 @@ export default function PartnersSection() {
         </div>
 
         {/* Mobile View - Slider */}
-        <div className="md:hidden relative mt-8">
+        <div className="md:hidden relative">
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
