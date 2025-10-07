@@ -24,7 +24,7 @@ export default function HomePage() {
       title: "Nationwide reach. Local trust. Fetch True.",
       highlight: "Connecting you with trusted services across India.",
       description: "Fetch True, isn’t just one city service provider—Our services reach all city and state in India which play an important role in shaping the platform. Our physical approach with every service provider across India makes us different from others.",
-      image: "/Group 44.png",
+      image: "/Map_Final-01-01.png",
     }
   ];
 
