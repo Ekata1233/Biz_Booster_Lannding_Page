@@ -93,9 +93,7 @@ export default function AboutSection() {
   return (
     <>
       {/* ABOUT SECTION */}
-      <div>
-        <Link href="/" className="text-blue-600 hover:underline">Back to Home</Link>
-      </div>
+     
 
 <section id="about" className="relative bg-white overflow-hidden py-16 px-4 sm:px-6 lg:px-16">
   {/* Geometric Background Pattern */}
@@ -142,7 +140,7 @@ export default function AboutSection() {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                 <span className="text-white font-bold text-lg">✓</span>
               </div>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed text-justify">
                 <strong>At FetchTrue, everything begins with you.</strong> We think that every customer deserves the right service provider so they can grow with in confidence, trust, and authenticity. Fetch True, powered by FTFL Technology Pvt. Ltd., is India's first hybrid service marketplace, bringing together corporations, service providers, and entrepreneurs on a single dynamic platform.
               </p>
             </div>
@@ -151,7 +149,7 @@ export default function AboutSection() {
               <div className="w-8 h-8 bg-gradient-to-r  from-blue-500 to-purple-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
                 <span className="text-white font-bold text-lg">⚡</span>
               </div>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed text-justify">
                Our objective is straightforward: to provide you, the service with trustworthy connections, verified opportunities, and the digital tools you need to grow confidently and seamlessly. Whether you're exploring new services, seeking the right professionals for your needs, or looking for reliable solutions, Fetch True is your trusted partner in every step of your journey.
               </p>
             </div>

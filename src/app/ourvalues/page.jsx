@@ -2,6 +2,7 @@
 
 import AboutSection from "@/components/AboutUs";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 const Values = () => {
@@ -14,7 +15,7 @@ const Values = () => {
   const content = [
     {
       title: "Our Mission",
-      description:"Our mission is to simplify your brand expansion across India by connecting companies with trained Growth Partners. We aim you to become our growth partners, unlock the potential growth in financial freedom. Our mission is to simplify your brand expansion across India by connecting companies with trained Growth Partners who represent them locally. We aim to break down geographical barriers and create opportunities for growth in every corner of the country.",
+      description:"Our mission is to simplify your access to trusted brands and services across India by connecting you with trusted service provider who represent these companies locally. We’re here to break down geographical barriers, giving you reliable, personalized service wherever you are. At Fetch True, we aim to empower you with seamless experiences and unlock new opportunities—so you can make confident choices and enjoy the benefits of trusted services.",
       image: "/mission.avif",
       color: "from-blue-500 to-blue-600",
       reverse: false,
@@ -27,7 +28,7 @@ const Values = () => {
     },
     {
       title: "Our Vision",
-      description:"Our goal is to become India’s most trust online marketplace, helps brand to grow without limits, transferring your dream into reality with Fetch True franchise. We assist you to expand your brand across India, where digital technology meets local trust. By combining an online marketplace with a strong on-ground Growth Partner network, we aim to empower every business from start-up to enterprises – to scale faster, expand smarter, and build strong trust and credibility across India and beyond.",
+      description:"To revolutionize the way India connects with services through a smart, secure, and hybrid service marketplace—where technology meets trust. We aim to lead the digital transformation of service discovery by delivering unmatched convenience, transparency, and personalization to every customer. Our vision is to build India’s largest and most reliable service network, bridging the gap between urban and rural markets. By connecting millions of customers with verified brands and empowered local service partners, we strive to create a trusted ecosystem where people, businesses, and communities grow together—unlocking opportunity, driving inclusive growth, and transforming lives across the country.",
       image: "/vision.avif",
       color: "from-purple-500 to-purple-600",
       reverse: true,
@@ -40,7 +41,7 @@ const Values = () => {
     },
     {
       title: "Our Core Values",
-      description:"Our fundamental beliefs that guide actions, decisions, and relationships. These principles shape our culture and define who we are as a company/Partners. As Fetch True growth partners you act as a local ambassador of business at regional level. You represent business in your local areas and work directly with customers, turning them into loyal and profitable clients.  ",
+      description:"At Fetch True, our core values guide everything we do—shaping the way we connect, serve, and build trust with you. We believe in creating meaningful relationships that empower you with the best services and support, no matter where you are.Through our local provider, you get a trusted service right in your community—someone who understands your needs and helps turn your service experience into one you can rely on. We work closely with you, ensuring personalized attention and building long-lasting, trustworthy connections.",
       image: "/coreValues.avif",
       color: "from-emerald-500 to-emerald-600",
       reverse: false,
@@ -154,6 +155,9 @@ const Values = () => {
 
   return (
     <>
+     <div className="mt-5">
+        <Link href="/" className="text-blue-600 hover:underline ms-6 mt-10 lg:ms-50 ">Back to Home</Link>
+      </div>
     <AboutSection />
     <section id="about"
       className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white"
@@ -245,7 +249,7 @@ const Values = () => {
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   {item.title}
                 </h3>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed text-justify">
                   {item.description}
                 </p>
 
