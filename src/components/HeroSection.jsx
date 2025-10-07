@@ -9,17 +9,18 @@ export default function HomePage() {
 
   const slides = [
     {
-      title: "Stop Searching - Start Fetching with Fetch True",
-      highlight: "Find your Trusted Service with Trusted Partners",
-      description: "The Fetch True give you a quick access to every service you need. It acts as the control center, where you can explore, and connect with services effortlessly.",
-      image: "/Fetch True (2).png",
-    },
-    {
       title: "All In One Service Platform",
       highlight: "Everything You Need, All in One Place just with one click",
       description: "Fetch True makes it easy for you to find, connect, and get services—all in one platform. With diverse sector of services, you can choose your needs.",
       image: "/All In One Services (2).png",
     },
+    {
+      title: "Stop Searching - Start Fetching with Fetch True",
+      highlight: "Find your Trusted Service with Trusted Partners",
+      description: "The Fetch True give you a quick access to every service you need. It acts as the control center, where you can explore, and connect with services effortlessly.",
+      image: "/Fetch True (2).png",
+    },
+    
     {
       title: "Nationwide reach. Local trust. Fetch True.",
       highlight: "Connecting you with trusted services across India.",
@@ -97,7 +98,7 @@ export default function HomePage() {
             >
               {/* Text Content */}
               <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6 mt-10 lg:mt-0">
-                <h1 className="text-3xl sm:text-4xl lg:text-2xl  text-white leading-tight">
+                <h1 className="text-xl sm:text-xl lg:text-2xl  text-white leading-tight text-justify-center lg:text-left ">
                   {slide.title}{" "}
                   {slide.highlight && (
                     <span className="block mt-2 text-black text-shadow-lg text-4xl sm:text-5xl lg:text-6xl font-bold"> 

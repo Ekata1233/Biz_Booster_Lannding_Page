@@ -11,7 +11,7 @@ const LeadGenerate = () => {
           #India's First Hybrid Service Marketplace
         </h2>
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-5 ms-20'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-5 lg:ms-20'>
             {/* Left Side - Text */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
