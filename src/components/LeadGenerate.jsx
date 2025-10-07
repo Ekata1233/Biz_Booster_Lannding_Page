@@ -11,7 +11,7 @@ const LeadGenerate = () => {
           #India's First Hybrid Service Marketplace
         </h2>
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-5 ms-25'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-5 ms-20'>
             {/* Left Side - Text */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -28,7 +28,7 @@ const LeadGenerate = () => {
             
             {/* Right Side - Image */}
             <div className='w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0'>
-              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:me-20">
+              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:me-15">
                 <Image
                   src={"/12953560_Data_security_01 [Converted]-01-01.png"}
                   alt="Verified service providers dashboard"
@@ -46,7 +46,7 @@ const LeadGenerate = () => {
       {/* Customer Centric Section */}
       <section className="py-8 md:py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row-reverse items-center justify-between gap-6 md:gap-10 lg:gap-12'>
+          <div className='flex flex-col lg:flex-row-reverse items-center justify-between gap-6 md:gap-10 lg:gap-12 lg:me-15'>
             {/* Text Content */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -63,7 +63,7 @@ const LeadGenerate = () => {
             
             {/* Image */}
             <div className='w-full lg:w-1/2 flex justify-center lg:justify-start mt-6 lg:mt-0'>
-              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:ms-20">
                 <Image
                   src={"/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png"}
                   alt="Customer centric approach illustration"
@@ -80,7 +80,7 @@ const LeadGenerate = () => {
       {/* Guaranteed Satisfaction Section */}
       <section className="py-8 md:py-12 bg-white">
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-12'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-12 lg:ms-20'>
             {/* Text Content */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -97,7 +97,7 @@ const LeadGenerate = () => {
             
             {/* Image */}
             <div className='w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0'>
-              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:me-15">
                 <Image
                   src={"/205445046_55218d05-17d7-4aee-b0c1-474c5c5d833e-01.png"}
                   alt="Customer satisfaction guarantee illustration"
@@ -114,7 +114,7 @@ const LeadGenerate = () => {
       {/* Instant Support Section */}
       <section className="py-8 md:py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row-reverse items-center justify-between gap-6 md:gap-10 lg:gap-12'>
+          <div className='flex flex-col lg:flex-row-reverse items-center justify-between gap-6 md:gap-10 lg:gap-12 lg:me-15'>
             {/* Text Content */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -131,7 +131,7 @@ const LeadGenerate = () => {
             
             {/* Image */}
             <div className='w-full lg:w-1/2 flex justify-center lg:justify-start mt-6 lg:mt-0'>
-              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:ms-20">
                 <Image
                   src={"/Get Instant Support-01.png"}
                   alt="Instant support system illustration"
@@ -148,7 +148,7 @@ const LeadGenerate = () => {
       {/* Transparency Communication Section */}
       <section className="py-8 md:py-12 bg-white">
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-12'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-12 lg:ms-20'>
             {/* Text Content */}
             <div className='w-full lg:w-1/2 space-y-4 md:space-y-6 lg:space-y-8'>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-2">
@@ -165,7 +165,7 @@ const LeadGenerate = () => {
             
             {/* Image */}
             <div className='w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0'>
-              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 w-full max-w-xs sm:max-w-sm md:max-w-md lg:me-15">
                 <Image
                   src={"/8474028_1895 [Converted]-01-01.png"}
                   alt="Transparent communication process illustration"
