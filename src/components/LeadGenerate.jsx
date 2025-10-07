@@ -65,10 +65,10 @@ const LeadGenerate = () => {
             <div className='w-full lg:w-1/2 relative mt-8 lg:mt-0'>
               <div className="relative overflow-hidden transform hover:scale-105 transition-transform duration-500 max-w-md mx-auto">
                 <Image
-                  src={"/customer satisfaction.png"}
+                  src={"/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01.png"}
                   alt="Customer centric approach illustration"
-                  width={350}
-                  height={350}
+                  width={370}
+                  height={370}
                   className="w-full h-auto"
                 />
               </div>

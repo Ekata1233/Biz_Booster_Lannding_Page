@@ -12,7 +12,7 @@ export default function HomePage() {
       title: "Stop Searching - Start Fetching with Fetch True",
       highlight: "Find your Trusted Service with Trusted Partners",
       description: "The Fetch True give you a quick access to every service you need. It acts as the control center, where you can explore, and connect with services effortlessly.",
-      image: "/Screenshot 2025-10-06 164553-01-01-01-01.png",
+      image: "/Fetch True (2).png",
     },
     {
       title: "All In One Service Platform",
@@ -21,9 +21,9 @@ export default function HomePage() {
       image: "/All In One Services (2).png",
     },
     {
-      // title: "Start Your Journey",
-      highlight: "Start your Journey with Fetch True",
-      description: "At Fetch True, you aren't just service users—you play an important role in shaping the platform. By engaging beyond just using services, you can grow while unlocking exclusive benefits for yourself.",
+      title: "Nationwide reach. Local trust. Fetch True.",
+      highlight: "Connecting you with trusted services across India.",
+      description: "Fetch True, isn’t just one city service provider—Our services reach all city and state in India which play an important role in shaping the platform. Our physical approach with every service provider across India makes us different from others.",
       image: "/Group 44.png",
     }
   ];

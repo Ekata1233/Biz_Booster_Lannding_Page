@@ -326,7 +326,7 @@ export default function AboutSection() {
 </section>
 
 
-        <WhyChooseFetchTrue/>
+        {/* <WhyChooseFetchTrue/> */}
 
 
       {/* <OurMission /> */}

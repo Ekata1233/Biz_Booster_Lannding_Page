@@ -20,42 +20,42 @@ function Testimonial() {
     {
       para: "As a service provider, FetchTrue has given me access to genuine clients and projects that match my expertise. The platform's verification system builds trust and ensures smooth collaborations. It's a game-changer for freelancers and businesses alike.",
       src: "/Profile.jpg",
-      title: "Aniket",
+      title: "Arjun Verma",
       text1: "Kolhapur",
       rating: 4.5
     },
     {
       para: "FetchTrue's hybrid marketplace is unlike anything I've used before. It combines innovation, reliability, and efficiency, allowing us to find the right partners and services quickly. The experience has been seamless and highly productive.",
       src: "/Profile.jpg",
-      title: "Ekata",
+      title: "Aarushi Mehta",
       text1: "Mumbai",
       rating: 5
     },
     {
       para:"FetchTrue isn't just a marketplace—it's a growth partner. The platform helped us reach new clients, streamline our operations, and scale efficiently. Their focus on authentic opportunities sets them apart from any other platform we've used.",
       src: "/Profile.jpg",
-      title: "Akshey",
+      title: "Rahul Deshmukh",
       text1: "Pune",
       rating: 4
     },
     {
       para: "FetchTrue has completely transformed the way I connect with verified service providers. The platform is intuitive, trustworthy, and has helped me grow my business without any hassle. I highly recommend it to anyone looking for reliable solutions.",
       src: "/Profile.jpg",
-      title: "Gouri",
+      title: "Harshit Tiwari",
       text1: "Mumbai",
       rating: 4.5
     },
     {
-      para: "FetchTrue is more than a marketplace—it's a growth partner." ,
+      para: "FetchTrue is more than a marketplace—it's a growth partner.",
       src: "/Profile.jpg",
-      title: "Pranjal",
+      title: "Karan Joshi",
       text1: "Nashik",
       rating: 3.5
     },
     {
       para: "Prompt service, excellent communication, and outstanding results. What more could you ask for? I'm thoroughly impressed and will be a returning customer.",
       src: "/Profile.jpg",
-      title: "Sapna",
+      title: "Kavya",
       text1: "Pune",
       rating: 5
     }
@@ -146,7 +146,7 @@ function Testimonial() {
                   <h3 className="mt-2 text-xl font-semibold text-gray-800">{testi.title}</h3>
 
                   {/* Location */}
-                  <p className="text-gray-500 text-sm mt-1">{testi.text1}</p>
+                  {/* <p className="text-gray-500 text-sm mt-1">{testi.text1}</p> */}
 
                   {/* Star Rating */}
                   <div className="flex mb-2 mt-2">
