@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        scrolled ? "bg-white text-blue-950 shadow-sm" : "bg-transparent text-white"
+        scrolled ? "bg-white text-blue-950 shadow-sm" : "bg-white/90 text-blue"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

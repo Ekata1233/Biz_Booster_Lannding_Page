@@ -27,7 +27,7 @@ export default function HomePage() {
       title: "Nationwide reach. Local trust. Fetch True.",
       highlight: "Connecting you with trusted services across India.",
       description:
-        "Fetch True isn’t just one city service provider—Our services reach all cities and states in India. Our physical approach with every service provider makes us different from others.",
+        "Fetch True isn't just one city service provider—Our services reach all cities and states in India. Our physical approach with every service provider makes us different from others.",
       image: "/Map_Final_-01.png",
     },
   ];
@@ -65,7 +65,7 @@ export default function HomePage() {
         />
       </Head>
 
-      <div className="w-full max-w-7xl mx-auto py-10 sm:py-14 lg:py-24 relative">
+      <div className="w-full max-w-7xl mx-auto py-10 sm:py-14 lg:py-20 relative">
         <div className="relative w-full h-full overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
@@ -75,47 +75,107 @@ export default function HomePage() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16"
             >
-              {/* Text Content */}
-              <motion.div
-                className="w-full lg:w-1/2 text-center lg:text-left space-y-6 mt-10 lg:mt-0"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                <h1 className="text-xl sm:text-xl lg:text-2xl text-white leading-tight text-justify-center lg:text-left">
-                  {slides[currentSlide].title}{" "}
-                  {slides[currentSlide].highlight && (
-                    <span className="block mt-2 text-black/70 text-shadow-lg shadow-white text-4xl sm:text-5xl lg:text-6xl font-bold">
-                      {slides[currentSlide].highlight}
-                    </span>
-                  )}
-                </h1>
+              {/* Mobile Layout - Column sequence */}
+              <div className="lg:hidden flex flex-col items-center justify-center gap-6 mt-10 lg:mt-0">
+                {/* Title - First */}
+                <motion.div
+                  className="w-full text-center space-y-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1, duration: 0.6 }}
+                >
+                  <h1 className="text-xl sm:text-2xl  text-black leading-tight">
+                    {slides[currentSlide].title}
+                  </h1>
+                </motion.div>
 
-                <p className="text-lg sm:text-xl font-medium text-white/90 leading-relaxed text-justify">
-                  {slides[currentSlide].description}
-                </p>
-              </motion.div>
+                {/* Highlight - Second */}
+                <motion.div
+                  className="w-full text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                >
+                  <span className="text-3xl sm:text-4xl font-bold bg-gradient-to-b from-white to-gray-200 bg-clip-text text-transparent text-justify">
+                    {slides[currentSlide].highlight}
+                  </span>
+                </motion.div>
 
-              {/* Image Content */}
-              <motion.div
-                className="w-full lg:w-1/2 flex justify-center"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.7 }}
-              >
-                <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg">
-                  <Image
-                    src={slides[currentSlide].image}
-                    alt="App Preview"
-                    width={600}
-                    height={900}
-                    className="object-contain rounded-xl w-full h-auto"
-                    priority
-                  />
-                </div>
-              </motion.div>
+                {/* Image - Third */}
+                <motion.div
+                  className="w-full flex justify-center"
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
+                >
+                  <div className="relative w-full max-w-xs">
+                    <Image
+                      src={slides[currentSlide].image}
+                      alt="App Preview"
+                      width={400}
+                      height={600}
+                      className="object-contain rounded-xl w-full h-auto"
+                      priority
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Description - Fourth */}
+                <motion.div
+                  className="w-full text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                >
+                  <p className="text-base sm:text-lg font-medium text-black/80 leading-relaxed text-justify">
+                    {slides[currentSlide].description}
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Desktop Layout - Original side by side */}
+              <div className="hidden lg:flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+                {/* Text Content */}
+                <motion.div
+                  className="w-full lg:w-1/2 text-center lg:text-left space-y-6"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                >
+                  <h1 className="text-xl lg:text-2xl text-black leading-tight text-justify-center lg:text-left">
+                    {slides[currentSlide].title}{" "}
+                    {slides[currentSlide].highlight && (
+                      <span className="block mt-2 bg-gradient-to-b from-white to-gray-200 bg-clip-text text-transparent text-4xl lg:text-6xl font-bold">
+                        {slides[currentSlide].highlight}
+                      </span>
+                    )}
+                  </h1>
+
+                  <p className="text-lg lg:text-xl font-medium text-black/90 leading-relaxed text-justify">
+                    {slides[currentSlide].description}
+                  </p>
+                </motion.div>
+
+                {/* Image Content */}
+                <motion.div
+                  className="w-full lg:w-1/2 flex justify-center"
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
+                >
+                  <div className="relative w-full max-w-lg">
+                    <Image
+                      src={slides[currentSlide].image}
+                      alt="App Preview"
+                      width={600}
+                      height={900}
+                      className="object-contain rounded-xl w-full h-auto lg:mt-10"
+                      priority
+                    />
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
