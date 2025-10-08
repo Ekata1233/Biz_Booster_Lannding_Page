@@ -42,7 +42,7 @@ const Values = () => {
     {
       title: "Our Core Values",
       description:"At Fetch True, our core values guide everything we do—shaping the way we connect, serve, and build trust with you. We believe in creating meaningful relationships that empower you with the best services and support, no matter where you are.Through our local provider, you get a trusted service right in your community—someone who understands your needs and helps turn your service experience into one you can rely on. We work closely with you, ensuring personalized attention and building long-lasting, trustworthy connections.",
-      image: "/coreValues.avif",
+      image: "/coree values.png",
       color: "from-emerald-500 to-emerald-600",
       reverse: false,
       typeData: "corevalues",
