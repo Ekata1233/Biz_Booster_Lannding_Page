@@ -13,7 +13,20 @@ const Values = () => {
 
   // Static content data
   const content = [
-    {
+        {
+      title: "Our Vision",
+      description:"To revolutionize the way India connects with services through a smart, secure, and hybrid service marketplace—where technology meets trust. We aim to lead the digital transformation of service discovery by delivering unmatched convenience, transparency, and personalization to every customer. Our vision is to build India’s largest and most reliable service network, bridging the gap between urban and rural markets. By connecting millions of customers with verified brands and empowered local service partners, we strive to create a trusted ecosystem where people, businesses, and communities grow together—unlocking opportunity, driving inclusive growth, and transforming lives across the country.",
+      image: "/viiiii.png",
+      color: "from-purple-500 to-purple-600",
+      reverse: true,
+      typeData: "vision",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      )
+    },
+     {
       title: "Our Mission",
       description:"Our mission is to simplify your access to trusted brands and services across India by connecting you with trusted service provider who represent these companies locally. We’re here to break down geographical barriers, giving you reliable, personalized service wherever you are. At Fetch True, we aim to empower you with seamless experiences and unlock new opportunities—so you can make confident choices and enjoy the benefits of trusted services.",
       image: "/mission.png",
@@ -25,26 +38,13 @@ const Values = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       )
-    },
-    {
-      title: "Our Vision",
-      description:"To revolutionize the way India connects with services through a smart, secure, and hybrid service marketplace—where technology meets trust. We aim to lead the digital transformation of service discovery by delivering unmatched convenience, transparency, and personalization to every customer. Our vision is to build India’s largest and most reliable service network, bridging the gap between urban and rural markets. By connecting millions of customers with verified brands and empowered local service partners, we strive to create a trusted ecosystem where people, businesses, and communities grow together—unlocking opportunity, driving inclusive growth, and transforming lives across the country.",
-      image: "/vision.png",
-      color: "from-purple-500 to-purple-600",
-      reverse: true,
-      typeData: "vision",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      )
-    },
+    }, 
     {
       title: "Our Core Values",
       description:"At Fetch True, our core values guide everything we do—shaping the way we connect, serve, and build trust with you. We believe in creating meaningful relationships that empower you with the best services and support, no matter where you are.Through our local provider, you get a trusted service right in your community—someone who understands your needs and helps turn your service experience into one you can rely on. We work closely with you, ensuring personalized attention and building long-lasting, trustworthy connections.",
       image: "/coree values.png",
       color: "from-emerald-500 to-emerald-600",
-      reverse: false,
+      reverse: true,
       typeData: "corevalues",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,13 +215,13 @@ const Values = () => {
                   scale: 1.03,
                   transition: { duration: 0.4 }
                 }}
-                className="lg:w-1/2 relative group"
+                className="lg:w-1/2 relative group object-contain"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl w-140 h-90">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-auto aspect-video object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full aspect-video object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div
