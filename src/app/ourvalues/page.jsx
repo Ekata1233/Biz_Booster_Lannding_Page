@@ -42,7 +42,7 @@ const Values = () => {
     {
       title: "Our Core Values",
       description:"At Fetch True, our core values guide everything we do—shaping the way we connect, serve, and build trust with you. We believe in creating meaningful relationships that empower you with the best services and support, no matter where you are.Through our local provider, you get a trusted service right in your community—someone who understands your needs and helps turn your service experience into one you can rely on. We work closely with you, ensuring personalized attention and building long-lasting, trustworthy connections.",
-      image: "/coree values.png",
+      image: "/corrrreeee valuuess.png",
       color: "from-emerald-500 to-emerald-600",
       reverse: true,
       typeData: "corevalues",
@@ -217,11 +217,11 @@ const Values = () => {
                 }}
                 className="lg:w-1/2 relative group object-contain"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl w-140 h-90">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full aspect-video object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-100 aspect-video object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div
