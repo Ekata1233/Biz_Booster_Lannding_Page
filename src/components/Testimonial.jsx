@@ -76,7 +76,7 @@ function Testimonial() {
   };
 
   return (
-    <div className="min-h-screen bg-white px-10">
+    <div className="py-10 bg-white px-10">
       <Head>
         <title>Testimonials</title>
         <meta name="description" content="What our clients say about our services" />
