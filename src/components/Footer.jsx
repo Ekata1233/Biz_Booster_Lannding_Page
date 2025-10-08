@@ -30,7 +30,7 @@ function Footer() {
 
   const footerData = {
     companyName: "FetchTrue",
-    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True.  Welcome to FetchTrue service we connect business across country, helping you build a secure financial future and make smart decisions. Join us on the path to financial success!",
+    description:"FTFL Technology Private Limited is the registered legal entity operating the brand Fetch True. Fetch True is a hybrid service marketplace designed to bridge the gap between customers and verified service providers across India. We simplify the process of finding reliable, skilled professionals by connecting you directly with trusted providers of your needs.",
     address:
       "Office no.307, 3rd Floor, Amanora Chamber, Amanora Mall, Hadapsar, Pune- 411028",
     email: "info@fetchtrue.com",

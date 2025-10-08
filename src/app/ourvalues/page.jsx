@@ -215,7 +215,7 @@ const Values = () => {
                   scale: 1.03,
                   transition: { duration: 0.4 }
                 }}
-                className="lg:w-1/2 relative group object-contain"
+                className="lg:w-1/2 relative group object-cover"
               >
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
@@ -249,7 +249,7 @@ const Values = () => {
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   {item.title}
                 </h3>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed text-justify">
+                <p className="text-lg text-gray-500 mb-8 leading-relaxed text-justify">
                   {item.description}
                 </p>
 
