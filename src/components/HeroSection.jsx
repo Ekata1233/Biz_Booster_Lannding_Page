@@ -85,7 +85,7 @@ export default function HomePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.6 }}
                 >
-                  <h1 className="text-xl sm:text-2xl  text-black leading-tight">
+                  <h1 className="text-xl sm:text-2xl  text-white/80 leading-tight">
                     {slides[currentSlide].title}
                   </h1>
                 </motion.div>
@@ -128,7 +128,7 @@ export default function HomePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                  <p className="text-base sm:text-lg font-medium text-black/80 leading-relaxed text-justify">
+                  <p className="text-base sm:text-lg font-medium text-white/80 leading-relaxed text-justify">
                     {slides[currentSlide].description}
                   </p>
                 </motion.div>
