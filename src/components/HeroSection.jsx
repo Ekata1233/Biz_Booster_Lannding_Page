@@ -53,7 +53,7 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-r from-[#007bbd] via-[#00509D] to-[#003f7f] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden"
+      className="min-h-screen bg-gradient-to-r from-[#1e3c72] via-[#00509D] to-[#003f7f] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
