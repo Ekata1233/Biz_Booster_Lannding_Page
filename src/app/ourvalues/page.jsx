@@ -221,7 +221,7 @@ const Values = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-110 aspect-video object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-100 aspect-video object-fill rounded-2xl transform group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div
