@@ -20,15 +20,17 @@ import PartnersSection from "@/components/PartnerSection";
 import LeadGenerate from "@/components/LeadGenerate";
 import StatsPage from "@/components/Stat";
 import Modules from "@/components/Modules";
+import Stat from "@/components/Stat";
 
 export default function Home() {
   return (
     <div>
       <Navbar/>
         <HeroSection />
+        <Stat/>
                        {/*<AboutSection /> */}
                        <LeadGenerate />
-        <StatsPage />
+        {/* <StatsPage /> */}
 
          {/* <DownloadApp /> */}
         <WhyChooseFetchTrue />

@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className=" lg:flex  md:flex justify-between items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -67,18 +67,18 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
+          {/* <button
             className="lg:hidden inline-flex items-center  justify-center rounded-lg p-2  hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset "
             aria-label="Toggle menu"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          </button> */}
         </div>
       </div>
 
       {/* Mobile Drawer */}
-      <motion.div
+      {/* <motion.div
         initial={{ height: 0 }}
         animate={{ height: mobileOpen ? "auto" : 0 }}
         transition={{ duration: 0.3 }}
@@ -97,9 +97,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-             {/* <Link href="/blog" className="rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100">
-              Blog
-            </Link> */}
+             
             <Link
               href="https://play.google.com/store/apps/details?id=com.fetchtrue.bizbooster2x"
               onClick={() => setMobileOpen(false)}
@@ -109,7 +107,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </header>
   );
 }
