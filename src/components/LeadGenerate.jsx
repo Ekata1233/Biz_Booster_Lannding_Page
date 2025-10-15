@@ -212,139 +212,156 @@ import React from 'react'
 const LeadGenerate = () => {
   return (
     <> 
-      {/* For Desktop  */}
-       <section className='hidden lg:block py-20 mx-20 '>
-       <h2 className='text-black font-bold text-5xl text-center'>Get Any Service Anytime, Anywhere <br/>
-         India’s First <span className="text-[#1E3C72] to-[#2A5298] font-bold">Hybrid Marketplace</span></h2>
-        
-        {/* Verified Service Provider */}
-        <section className=" flex lg:flex py-10 md:py-12 mt-10 ">
-           <div className=' bg-white shadow-lg w-220 items-center ms-20  mt-30'>
-              <div className='p-10 space-y-4'>
-                <span className='text-[#1E3C72] to-[#2A5298] font-semibold'>100% Verified Real Providers</span>
-                <h1 className='font-bold text-4xl'>Verified Service Providers</h1>
-                <p className='font-medium text-xl text-[#626262]'>Every provider on Fetch True is checked, approved,<br/> and reliable. So you can connect with confidence.</p>
-                <ul className='list-disc font-normal text-[#626262] ms-10 space-y-2'>
-                  <li>Verified identity & business details</li>
-                  <li>Quality checked & customer rated</li>
-                  <li>Trusted and experienced professionals</li>
-                  <li>Backed by Fetch True’s trust assurance</li>
-                </ul>
-              </div>
-            </div>
-            <div className='absolute right-0 me-80 mb-20'>
-              <img src="/12953560_Data_security_01 [Converted]-01-01.png" 
-                   alt="Verified service" 
-                   className='w-[400px] h-[400px]'
-              />
-            </div>
+      {/* For Desktop */}
+<section className="hidden lg:block py-16 px-10 xl:px-20 w-full overflow-hidden">
+  <h2 className="text-black font-bold text-4xl xl:text-5xl text-center leading-snug">
+    Get Any Service Anytime, Anywhere <br />
+    India’s First{" "}
+    <span className="text-[#1E3C72] to-[#2A5298] font-bold">Hybrid Marketplace</span>
+  </h2>
 
-        </section>
+  {/* ---------- Verified Service Provider ---------- */}
+  <section className="relative flex flex-wrap py-10 items-center">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] ms-10 xl:ms-20 mt-20 rounded-lg">
+      <div className="p-10 xl:p-12 space-y-4">
+        <span className="text-[#1E3C72] font-semibold">100% Verified Real Providers</span>
+        <h1 className="font-bold text-3xl xl:text-4xl">Verified Service Providers</h1>
+        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+          Every provider on Fetch True is checked, approved, and reliable. <br />
+          So you can connect with confidence.
+        </p>
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+          <li>Verified identity & business details</li>
+          <li>Quality checked & customer rated</li>
+          <li>Trusted and experienced professionals</li>
+          <li>Backed by Fetch True’s trust assurance</li>
+        </ul>
+      </div>
+    </div>
 
-        {/* Customer Centric */}
-        <section className=" flex py-10 md:py-12 mt-10 justify-end">
-          <div className='absolute left-0 ms-70 '>
-              <img src="/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png" 
-                   alt="Verified service" 
-                   className='h-[400px] w-[400px]'
-              />
-            </div>
-           <div className=' bg-white shadow-lg w-220 items-center me-20  mt-30'>
-              <div className='p-10 space-y-4 ms-60'>
-                <span className='text-[#1E3C72] to-[#2A5298] font-semibold'>5X Productivity</span>
-                <h1 className='font-bold text-4xl'>Customer Centric</h1>
-                <p className='font-medium text-xl text-[#626262]'>Everything we build starts with your needs and ends with your satisfaction</p>
-                <ul className='list-disc font-normal text-[#626262] ms-10 space-y-2'>
-                  <li>Verified & trusted service connections</li>
-                  <li>Smooth, secure, and effortless experience</li>
-                  <li>Smart suggestions tailored to you</li>
-                  <li>Designed for comfort, trust, and ease</li>
-                </ul>
-              </div>
-            </div>
-            
+    <div className="absolute right-20 xl:right-40 top-10 ">
+      <img
+        src="/12953560_Data_security_01 [Converted]-01-01.png"
+        alt="Verified service"
+        className="w-[320px] xl:w-[400px] h-auto object-contain"
+      />
+    </div>
+  </section>
 
-        </section>
+  {/* ---------- Customer Centric ---------- */}
+  <section className="relative flex justify-end items-center py-10">
+    <div className="absolute left-10 xl:left-40 top-0">
+      <img
+        src="/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png"
+        alt="Customer Centric"
+        className="h-[300px] xl:h-[350px] w-auto object-contain"
+      />
+    </div>
 
-        {/* Guaranteed Satisfaction */}
-        <section className=" flex py-10 md:py-12 mt-10">
-           <div className=' bg-white shadow-lg w-220 items-center ms-20  mt-30'>
-              <div className='p-10 space-y-4'>
-                <span className='text-[#1E3C72] to-[#2A5298] font-semibold'>100%  Satisfaction</span>
-                <h1 className='font-bold text-4xl'>Guaranteed Satisfaction</h1>
-                <p className='font-medium text-xl text-[#626262]'>Your Satisfaction, Our Promise</p>
-                <ul className='list-disc font-normal text-[#626262] ms-10 space-y-2'>
-                  <li>Hassle-free experience from start to finish</li>
-                  <li>Instant replacement if any issue arises</li>
-                  <li>Your satisfaction is always our top priority</li>
-                  <li>Verified providers for reliable, trustworthy service</li>
-                </ul>
-              </div>
-            </div>
-            <div className='absolute right-0 me-80 mb-20'>
-              <img src="/205445046_55218d05-17d7-4aee-b0c1-474c5c5d833e-01.png" 
-                   alt="Verified service" 
-                   className='w-[400px] h-[400px]'
-              />
-            </div>
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] me-10 xl:me-20 mt-20 rounded-lg">
+      <div className="p-10 xl:p-12 space-y-4 ms-0 lg:ms-65 xl:ms-70">
+        <span className="text-[#1E3C72] font-semibold">5X Productivity</span>
+        <h1 className="font-bold text-3xl xl:text-4xl">Customer Centric</h1>
+        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+          Everything we build starts with your needs and ends with your satisfaction.
+        </p>
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+          <li>Verified & trusted service connections</li>
+          <li>Smooth, secure, and effortless experience</li>
+          <li>Smart suggestions tailored to you</li>
+          <li>Designed for comfort, trust, and ease</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        </section>
+  {/* ---------- Guaranteed Satisfaction ---------- */}
+  <section className="relative flex py-10 items-center">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] ms-10 xl:ms-20 mt-20 rounded-lg">
+      <div className="p-10 xl:p-12 space-y-4">
+        <span className="text-[#1E3C72] font-semibold">100% Satisfaction</span>
+        <h1 className="font-bold text-3xl xl:text-4xl">Guaranteed Satisfaction</h1>
+        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+          Your Satisfaction, Our Promise
+        </p>
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+          <li>Hassle-free experience from start to finish</li>
+          <li>Instant replacement if any issue arises</li>
+          <li>Your satisfaction is always our top priority</li>
+          <li>Verified providers for reliable, trustworthy service</li>
+        </ul>
+      </div>
+    </div>
 
-        {/* Get Instant Support */}
-        <section className=" flex py-10 md:py-12 mt-10 justify-end">
-          <div className='absolute left-0 ms-70'>
-              <img src="/Get Instant Support-01.png" 
-                   alt="Verified service" 
-                   className='h-[450px] w-[450px]'
-              />
-            </div>
-           <div className=' bg-white shadow-lg w-220 items-center me-20  mt-30'>
-              <div className='p-10 space-y-4 ms-60'>
-                <span className='text-[#1E3C72] to-[#2A5298] font-semibold'>Real Time Support</span>
-                <h1 className='font-bold text-4xl'>Get Instant Support</h1>
-                <p className='font-medium text-xl text-[#626262]'>Support That Never Sleeps</p>
-                <ul className='list-disc font-normal text-[#626262] ms-10 space-y-2'>
-                  <li>Quick resolution if any issue arises</li>
-                  <li>Connect instantly with a new provider if needed</li>
-                  <li>Keep your service running smoothly, stress-free</li>
-                  <li>Reliable support whenever you need it</li>
-                </ul>
-              </div>
-            </div>
-            
+    <div className="absolute right-10 xl:right-40 top-2">
+      <img
+        src="/205445046_55218d05-17d7-4aee-b0c1-474c5c5d833e-01.png"
+        alt="Guaranteed Satisfaction"
+        className="w-[340px] xl:w-[420px] h-auto object-contain"
+      />
+    </div>
+  </section>
 
-        </section>
+  {/* ---------- Get Instant Support ---------- */}
+  <section className="relative flex justify-end items-center py-10">
+    <div className="absolute left-10 xl:left-40 top-0">
+      <img
+        src="/Get Instant Support-01.png"
+        alt="Instant Support"
+        className="h-[420px] xl:h-[450px] w-auto object-contain"
+      />
+    </div>
 
-        {/* Transparency Communication */}
-        <section className=" flex py-10 md:py-12 mt-10">
-           <div className=' bg-white shadow-lg w-220 items-center ms-20  mt-30'>
-              <div className='p-10 space-y-4'>
-                <span className='text-[#1E3C72] to-[#2A5298] font-semibold'>Secure and Transparent Communication</span>
-                <h1 className='font-bold text-4xl'>Transparency Communication</h1>
-                <p className='font-medium text-xl text-[#626262]'>Clear, Honest, and Trusted</p>
-                <ul className='list-disc font-normal text-[#626262] ms-10 space-y-2'>
-                  <li>Personal information stays fully private</li>
-                  <li>Clear, honest communication with service providers</li>
-                  <li>Work confidently with verified, trusted professionals</li>
-                  <li>Integrity and transparency at every interaction</li>
-                </ul>
-              </div>
-            </div>
-            <div className='absolute right-0 me-70 mb-20'>
-              <img src="/8474028_1895 [Converted]-01-01.png" 
-                   alt="Verified service" 
-                   className='w-[400px] h-[400px]'
-              />
-            </div>
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] me-10 xl:me-20 mt-20 rounded-lg">
+      <div className="p-10 xl:p-12 space-y-4 ms-0 lg:ms-70 xl:ms-60">
+        <span className="text-[#1E3C72] font-semibold">Real Time Support</span>
+        <h1 className="font-bold text-3xl xl:text-4xl">Get Instant Support</h1>
+        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+          Support That Never Sleeps
+        </p>
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+          <li>Quick resolution if any issue arises</li>
+          <li>Connect instantly with a new provider if needed</li>
+          <li>Keep your service running smoothly, stress-free</li>
+          <li>Reliable support whenever you need it</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        </section>
+  {/* ---------- Transparency Communication ---------- */}
+  <section className="relative flex py-10 items-center">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] ms-10 xl:ms-20 mt-15 rounded-lg">
+      <div className="p-10 xl:p-12 space-y-4">
+        <span className="text-[#1E3C72] font-semibold">
+          Secure and Transparent Communication
+        </span>
+        <h1 className="font-bold text-3xl xl:text-4xl">Transparency Communication</h1>
+        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+          Clear, Honest, and Trusted
+        </p>
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+          <li>Personal information stays fully private</li>
+          <li>Clear, honest communication with service providers</li>
+          <li>Work confidently with verified, trusted professionals</li>
+          <li>Integrity and transparency at every interaction</li>
+        </ul>
+      </div>
+    </div>
 
+    <div className="absolute right-15 xl:right-30 top-5">
+      <img
+        src="/8474028_1895 [Converted]-01-01.png"
+        alt="Transparency Communication"
+        className="w-[380px] xl:w-[430px] h-auto object-contain"
+      />
+    </div>
+  </section>
+</section>
 
-      </section>
-
-      {/* For Mobile  */}
-      <section className="block lg:hidden py-16 px-5  w-full">
-  <h2 className="text-black font-bold text-2xl text-center leading-snug">
+{/* For Mobile  */}
+<section className="block lg:hidden py-12 px-4 w-full">
+  <h2 className="text-black font-bold text-2xl sm:text-3xl text-center leading-snug">
     Get Any Service Anytime, Anywhere <br />
     India’s First{" "}
     <span className="bg-gradient-to-r from-[#1E3C72] to-[#2A5298] text-transparent bg-clip-text">
@@ -352,27 +369,19 @@ const LeadGenerate = () => {
     </span>
   </h2>
 
-  {/* Verified Service Provider Section */}
-  <section className="relative flex flex-col items-center py-10 mt-10">
-    {/* Image */}
-    <img
-      src="/12953560_Data_security_01 [Converted]-01-01.png"
-      alt="Verified Service"
-      className="w-[260px] h-[260px] object-contain"
-    />
-
-    {/* Card */}
-    <div className="bg-white shadow-lg w-full mt-6 px-4 ">
-      <div className="py-6 space-y-4 text-justify px-6">
+  {/* ----------  Verified Service Provider Section ---------- */}
+  <section className="flex flex-col items-center py-16 mt-8 relative">
+    <div className="bg-white shadow-lg w-full max-w-md h-auto mt-16 px-4 rounded-lg">
+      <div className="py-6 space-y-4 text-justify px-4 mt-16">
         <span className="bg-gradient-to-r from-[#1E3C72] to-[#2A5298] text-transparent bg-clip-text font-semibold">
           100% Verified Real Providers
         </span>
         <h1 className="font-bold text-2xl">Verified Service Providers</h1>
-        <p className="font-medium text-[#626262]">
+        <p className="font-medium text-[#626262] text-sm sm:text-base">
           Every provider on Fetch True is checked, approved, and reliable. <br />
           So you can connect with confidence.
         </p>
-        <ul className="list-disc text-left text-[#626262] ms-8 space-y-2">
+        <ul className="list-disc text-left text-[#626262] ms-6 space-y-2 text-sm sm:text-base">
           <li>Verified identity & business details</li>
           <li>Regular quality checks and audits</li>
           <li>Customer reviews and ratings</li>
@@ -380,8 +389,158 @@ const LeadGenerate = () => {
         </ul>
       </div>
     </div>
+
+    <img
+      src="/12953560_Data_security_01 [Converted]-01-01.png"
+      alt="Verified Service"
+      className="w-[220px] sm:w-[260px] h-auto object-contain absolute -top-5"
+    />
+  </section>
+
+  {/* ----------  Customer Centric Section ---------- */}
+  <section className="flex flex-col items-center py-10 relative">
+    <div className="bg-white shadow-lg w-full max-w-md h-auto mt-16 px-4 rounded-lg">
+      <div className="py-6 space-y-4 text-justify px-4 mt-16">
+        <span className="bg-gradient-to-r from-[#1E3C72] to-[#2A5298] text-transparent bg-clip-text font-semibold">
+          5X Productivity
+        </span>
+        <h1 className="font-bold text-2xl">Customer Centric</h1>
+        <p className="font-medium text-[#626262] text-sm sm:text-base">
+          Everything we build starts with your needs and ends with your satisfaction.
+        </p>
+        <ul className="list-disc text-left text-[#626262] ms-6 space-y-2 text-sm sm:text-base">
+          <li>Verified & trusted service connections</li>
+          <li>Smooth, secure, and effortless experience</li>
+          <li>Smart suggestions tailored to you</li>
+          <li>Designed for comfort, trust, and ease</li>
+        </ul>
+      </div>
+    </div>
+
+    <img
+      src="/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png"
+      alt="Customer Centric"
+      className="w-[230px] sm:w-[270px] h-auto object-contain absolute -top-5"
+    />
+  </section>
+
+  {/* ----------  Guaranteed Satisfaction Section ---------- */}
+  <section className="flex flex-col items-center py-12 relative">
+    <div className="bg-white shadow-lg w-full max-w-md h-auto mt-16 px-4 rounded-lg">
+      <div className="py-6 space-y-4 text-justify px-4 mt-16">
+        <span className="bg-gradient-to-r from-[#1E3C72] to-[#2A5298] text-transparent bg-clip-text font-semibold">
+          100% Satisfaction
+        </span>
+        <h1 className="font-bold text-2xl">Guaranteed Satisfaction</h1>
+        <p className="font-medium text-[#626262] text-sm sm:text-base">
+          Your Satisfaction, Our Promise
+        </p>
+        <ul className="list-disc text-left text-[#626262] ms-6 space-y-2 text-sm sm:text-base">
+          <li>Hassle-free experience from start to finish</li>
+          <li>Instant replacement if any issue arises</li>
+          <li>Your satisfaction is always our top priority</li>
+          <li>Verified providers for reliable, trustworthy service</li>
+        </ul>
+      </div>
+    </div>
+
+    <img
+      src="/205445046_55218d05-17d7-4aee-b0c1-474c5c5d833e-01.png"
+      alt="Guaranteed Satisfaction"
+      className="w-[220px] sm:w-[260px] h-auto object-contain absolute -top-5"
+    />
+  </section>
+
+  {/* ----------  Get Instant Support Section ---------- */}
+  <section className="flex flex-col items-center py-12 relative">
+    <div className="bg-white shadow-lg w-full max-w-md h-auto mt-16 px-4 rounded-lg">
+      <div className="py-6 space-y-4 text-justify px-4 mt-16">
+        <span className="bg-gradient-to-r from-[#1E3C72] to-[#2A5298] text-transparent bg-clip-text font-semibold">
+          Real Time Support
+        </span>
+        <h1 className="font-bold text-2xl">Get Instant Support</h1>
+        <p className="font-medium text-[#626262] text-sm sm:text-base">
+          Support That Never Sleeps
+        </p>
+        <ul className="list-disc text-left text-[#626262] ms-6 space-y-2 text-sm sm:text-base">
+          <li>Quick resolution if any issue arises</li>
+          <li>Connect instantly with a new provider if needed</li>
+          <li>Keep your service running smoothly, stress-free</li>
+          <li>Reliable support whenever you need it</li>
+        </ul>
+      </div>
+    </div>
+
+    <img
+      src="/Get Instant Support-01.png"
+      alt="Instant Support"
+      className="w-[230px] sm:w-[270px] h-auto object-contain absolute -top-5"
+    />
+  </section>
+
+  {/* ----------  Transparency Communication Section ---------- */}
+  <section className="flex flex-col items-center py-12 relative">
+    <div className="bg-white shadow-lg w-full max-w-md h-auto mt-16 px-4 rounded-lg">
+      <div className="py-6 space-y-4 text-justify px-4 mt-16">
+        <span className="bg-gradient-to-r from-[#1E3C72] to-[#2A5298] text-transparent bg-clip-text font-semibold">
+          Secure and Transparent Communication
+        </span>
+        <h1 className="font-bold text-2xl">Transparency Communication</h1>
+        <p className="font-medium text-[#626262] text-sm sm:text-base">
+          Clear, Honest, and Trusted
+        </p>
+        <ul className="list-disc text-left text-[#626262] ms-6 space-y-2 text-sm sm:text-base">
+          <li>Personal information stays fully private</li>
+          <li>Clear, honest communication with service providers</li>
+          <li>Work confidently with verified, trusted professionals</li>
+          <li>Integrity and transparency at every interaction</li>
+        </ul>
+      </div>
+    </div>
+
+    <img
+      src="/8474028_1895 [Converted]-01-01.png"
+      alt="Transparency Communication"
+      className="w-[220px] sm:w-[260px] h-auto object-contain absolute -top-5"
+    />
   </section>
 </section>
+
+
+
+{/* CTA Section */}
+<section className="relative w-full h-90 lg:h-80 flex items-center justify-center text-center overflow-hidden">
+  {/* Background Image */}
+  <img
+    src="/cta.jpg"
+    alt="CTA Background"
+    className="absolute inset-0 w-full h-full object-cover opacity-40"
+  />
+
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#1E3C72] to-[#2A5298] opacity-85"></div>
+
+  {/* Content */}
+  <div className="relative z-10 px-6 md:px-10">
+    <h2 className="text-white text-3xl md:text-4xl font-bold">
+      Ready to Transform Your Service Experience?
+    </h2>
+    <p className="text-gray-100 mt-3 max-w-2xl mx-auto">
+      Thousands of customers trust <span className="font-semibold">Fetch True</span> 
+      to deliver fast, verified, and secure services nationwide.
+    </p>
+    <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button className="bg-white text-blue-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+        Get Started Today
+      </button>
+      <button className="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition">
+        Contact Now
+      </button>
+    </div>
+  </div>
+</section>
+
+
 
     </>
   )
