@@ -178,9 +178,9 @@ const WhyChooseUs = () => {
   return (
     <>
      {/* Desktop Screens */}
-<section className="hidden lg:block">
+    <section className="hidden lg:block">
   {/* Title Section */}
-  <div className="flex flex-wrap justify-start items-center text-center py-10 mt-10 px-10 xl:px-32">
+  <div className="flex flex-wrap justify-start items-center text-center py-10 mt-10 px-12 xl:px-32">
     <h2
       className="bg-[#00509D] text-white font-bold text-2xl lg:text-3xl xl:text-4xl p-6 lg:p-8 mb-4 lg:mb-0"
       style={{ borderRadius: "8px 0px 30px 8px" }}
@@ -200,28 +200,30 @@ const WhyChooseUs = () => {
   </div>
 
   {/* Main Section */}
- <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-10 px-6 md:px-10 lg:px-16 xl:px-16 pb-10 overflow-x-hidden">
+<div className="flex flex-col lg:flex-row items-start justify-center gap-8 xl:gap-12 px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-32 pb-10 overflow-x-hidden max-w-[1600px] mx-auto">
+
   {/* Left Image Section */}
-  <div className="w-full lg:w-[40%] flex justify-center lg:justify-end">
+  <div className="w-full lg:w-[35%] flex justify-center lg:justify-end ">
     <img
       src="/why.png"
       alt="Why choose us"
-      className="w-full max-w-[380px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[480px] h-auto object-contain"
+      className="w-full max-w-[350px] md:max-w-[400px] lg:max-w-[440px] xl:max-w-[500px] 2xl:max-w-[550px] h-auto object-contain"
     />
   </div>
 
   {/* Right Content Section */}
   <div className="w-full lg:w-[60%]">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+      
       {/* Row 1 */}
       <div>
-        <h3 className="flex items-center text-[#193CB8] font-bold text-lg xl:text-xl mb-2">
-          <span className="bg-white p-2 rounded-full shadow-md mr-2">
+        <h3 className="flex items-center text-[#193CB8] font-semibold text-base md:text-lg lg:text-xl mb-2">
+          <span className="bg-white p-2 rounded-full shadow-md mr-2 text-lg">
             <FaCubes />
           </span>
           All-in-One Platform
         </h3>
-        <ul className="list-disc ms-5 text-gray-700 text-base xl:text-lg">
+        <ul className="list-disc ms-5 text-gray-700 text-sm md:text-base xl:text-lg">
           <li>Access multiple services in one place</li>
           <li>Quick and seamless connections</li>
           <li>Simplified experience for all your needs</li>
@@ -229,13 +231,13 @@ const WhyChooseUs = () => {
       </div>
 
       <div>
-        <h3 className="flex items-center text-[#6E11B0] font-bold text-lg xl:text-xl mb-2">
-          <span className="bg-white p-2 rounded-full shadow-md mr-2">
+        <h3 className="flex items-center text-[#6E11B0] font-semibold text-base md:text-lg lg:text-xl mb-2">
+          <span className="bg-white p-2 rounded-full shadow-md mr-2 text-lg">
             <FaHeadset />
           </span>
           Real-time Connectivity
         </h3>
-        <ul className="list-disc ms-5 text-gray-700 text-base xl:text-lg">
+        <ul className="list-disc ms-5 text-gray-700 text-sm md:text-base xl:text-lg">
           <li>Instant access to verified service providers</li>
           <li>Quick updates and status tracking</li>
           <li>Stay connected every step of the way</li>
@@ -244,13 +246,13 @@ const WhyChooseUs = () => {
 
       {/* Row 2 */}
       <div>
-        <h3 className="flex items-center text-[#372AAC] font-bold text-lg xl:text-xl mb-2">
-          <span className="bg-white p-2 rounded-full shadow-md mr-2">
+        <h3 className="flex items-center text-[#372AAC] font-semibold text-base md:text-lg lg:text-xl mb-2">
+          <span className="bg-white p-2 rounded-full shadow-md mr-2 text-lg">
             <FaUserCheck />
           </span>
           Cost Effective Solution
         </h3>
-        <ul className="list-disc ms-5 text-gray-700 text-base xl:text-lg">
+        <ul className="list-disc ms-5 text-gray-700 text-sm md:text-base xl:text-lg">
           <li>Competitive pricing across services</li>
           <li>Optimize time and resources</li>
           <li>Get maximum value with minimal effort</li>
@@ -258,13 +260,13 @@ const WhyChooseUs = () => {
       </div>
 
       <div>
-        <h3 className="flex items-center text-[#973C00] font-bold text-lg xl:text-xl mb-2">
-          <span className="bg-white p-2 rounded-full shadow-md mr-2">
+        <h3 className="flex items-center text-[#973C00] font-semibold text-base md:text-lg lg:text-xl mb-2">
+          <span className="bg-white p-2 rounded-full shadow-md mr-2 text-lg">
             <FaHandHoldingUsd />
           </span>
           Transparent Workflow
         </h3>
-        <ul className="list-disc ms-5 text-gray-700 text-base xl:text-lg">
+        <ul className="list-disc ms-5 text-gray-700 text-sm md:text-base xl:text-lg">
           <li>Clear communication with providers</li>
           <li>Verified and trusted processes</li>
           <li>Full visibility at every stage</li>
@@ -273,13 +275,13 @@ const WhyChooseUs = () => {
 
       {/* Row 3 */}
       <div>
-        <h3 className="flex items-center text-[#016630] font-bold text-lg xl:text-xl mb-2">
-          <span className="bg-white p-2 rounded-full shadow-md mr-2">
+        <h3 className="flex items-center text-[#016630] font-semibold text-base md:text-lg lg:text-xl mb-2">
+          <span className="bg-white p-2 rounded-full shadow-md mr-2 text-lg">
             <FaChartLine />
           </span>
           On-Ground Support
         </h3>
-        <ul className="list-disc ms-5 text-gray-700 text-base xl:text-lg">
+        <ul className="list-disc ms-5 text-gray-700 text-sm md:text-base xl:text-lg">
           <li>Physical presence for quality assurance</li>
           <li>Immediate issue resolution</li>
           <li>Personalized support for service delivery</li>
@@ -287,13 +289,13 @@ const WhyChooseUs = () => {
       </div>
 
       <div>
-        <h3 className="flex items-center text-[#9F0712] font-bold text-lg xl:text-xl mb-2">
-          <span className="bg-white p-2 rounded-full shadow-md mr-2">
+        <h3 className="flex items-center text-[#9F0712] font-semibold text-base md:text-lg lg:text-xl mb-2">
+          <span className="bg-white p-2 rounded-full shadow-md mr-2 text-lg">
             <FaUndoAlt />
           </span>
           Nationwide Reach
         </h3>
-        <ul className="list-disc ms-5 text-gray-700 text-base xl:text-lg">
+        <ul className="list-disc ms-5 text-gray-700 text-sm md:text-base xl:text-lg">
           <li>Services available across cities & states</li>
           <li>Rapid connectivity, no matter your location</li>
           <li>Trusted providers everywhere you need</li>
@@ -302,6 +304,7 @@ const WhyChooseUs = () => {
     </div>
   </div>
 </div>
+
 
 </section>
 
