@@ -327,7 +327,7 @@ const WhyChooseUs = () => {
   {/* Features Section */}
   <div className="flex flex-col items-center space-y-5">
     {/* Card 1 */}
-    <div className="bg-white shadow-lg w-full max-w-[300px] sm:max-w-[350px] p-3"
+    <div className="bg-white shadow-lg w-full max-w-[300px] sm:max-w-[350px] p-3 mt-8"
       style={{ borderRadius: "8px" }}>
       <h3 className="flex items-center text-[#193CB8] font-bold text-lg mb-2">
         <span className="bg-white p-2 rounded-full shadow-md mr-2">
