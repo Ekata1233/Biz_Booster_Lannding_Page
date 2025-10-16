@@ -50,11 +50,38 @@ export default function PartnersSection() {
   };
 
   return (
-    <section className="bg-white pt-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-700">Fetch True Partners</h2>
-        </div>
+    <section className="bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-5">
+         {/* Header Section Desktop only*/}
+      <div className="hidden lg:flex flex-wrap justify-start items-center text-center py-5 px-8 md:px-12 xl:px-32">
+        <h2
+          className="bg-[#00509D] text-white font-bold text-2xl lg:text-3xl xl:text-4xl p-6 lg:p-6 mb-4 lg:mb-0"
+          style={{ borderRadius: "8px 0px 30px 8px" }}
+        >
+          Fetch True <br /> Partners
+        </h2>
+        <p
+          className="bg-white shadow-md shadow-gray-200 text-gray-800 text-justify text-base md:text-lg lg:text-xl font-medium p-6 lg:p-8 ms-0 mb-6"
+          style={{
+            borderRadius: "8px 8px 30px 0px",
+            maxWidth: "650px",
+          }}
+        >
+          Strong partnerships. Stronger solutions. Nationwide impact.
+        </p>
+      </div>
+
+      {/* Header Section mobile screens */}
+  <div className="flex lg:hidden py-5">
+            <h2 className="text-md font-bold bg-[#00509D] text-white p-2 text-center justify-center   ms-8" style={{ borderRadius: "8px 0px 30px 8px" }}>               
+              Fetch True Partners</h2>
+            <p className="text-sm bg-white shadow-md shadow-gray-200 text-gray-800 text-justify p-2 mb-3 me-8"
+                style={{
+                 borderRadius: "8px 8px 30px 0px",
+                 }}>
+                Strong partnerships. Stronger solutions. Nationwide impact.
+            </p>
+         </div>
 
         {/* Desktop View - Grid Layout */}
         <div className="hidden md:flex gap-20 items-center justify-center flex-wrap">
@@ -96,46 +123,6 @@ export default function PartnersSection() {
               ))}
             </div>
           </div>
-
-          {/* Navigation Arrows */}
-          {/* {partners.length > 1 && (
-            <>
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
-                aria-label="Previous partner"
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
-                aria-label="Next partner"
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </>
-          )} */}
-
-          {/* Dots Indicator */}
-          {/* {partners.length > 1 && (
-            <div className="flex justify-center mt-6 space-x-2">
-              {partners.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex ? "bg-gray-800" : "bg-gray-300"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-          )} */}
         </div>
       </div>
     </section>

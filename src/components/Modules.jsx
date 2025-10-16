@@ -304,7 +304,7 @@ const Modules = () => {
         </p>
       </div>
 
-      {/* Header Section */}
+      {/* Header Section mobile screens */}
   <div className="flex lg:hidden py-10">
             <h2 className="text-md font-bold bg-[#00509D] text-white p-1 text-center justify-center  ms-8" style={{ borderRadius: "8px 0px 30px 8px" }}>               
               Our Industry Focus</h2>
