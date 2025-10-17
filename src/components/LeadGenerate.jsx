@@ -261,7 +261,7 @@ const LeadGenerate = () => {
       <img
         src="/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png"
         alt="Customer Centric"
-        className="h-[260px] lg:h-[320px] xl:h-[350px] w-auto object-contain"
+        className="h-[260px] lg:h-[300px] xl:h-[350px] w-auto object-contain"
       />
     </div>
 
