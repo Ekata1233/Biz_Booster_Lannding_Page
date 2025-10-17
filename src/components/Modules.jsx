@@ -325,12 +325,12 @@ const Modules = () => {
             className="bg-white rounded-xl shadow-md p-5 flex flex-col items-start text-left hover:shadow-lg transition-all duration-300 h-[230px] justify-start"
           >
             {/* Image in circular background */}
-            <div className="bg-gradient-to-r from-[#DBEAFE] to-[#E0E7FF] rounded-full p-4 mb-4 flex items-center justify-center w-[80px] h-[80px]">
+            <div className="bg-gradient-to-r from-[#DBEAFE] to-[#E0E7FF] rounded-full p-4 mb-4 flex items-center justify-center w-[100px] h-[100px]">
               <Image
                 src={mod.icon}
                 alt={mod.title}
-                width={50}
-                height={50}
+                width={100}
+                height={100}
                 className="object-contain"
               />
             </div>
