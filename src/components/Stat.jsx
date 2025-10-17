@@ -53,11 +53,11 @@ const Stat = () => {
 
   return (
     <section className="bg-[#00509D] w-full py-6">
-      <div className="max-w-6xl mx-auto flex flex-row justify-around items-center gap-6 px-4">
+      <div className="max-w-6xl mx-auto flex flex-row justify-center items-center gap-10 lg:gap-65 px-4 relative">
         {stats.map((stat, index) => (
           <div
             key={stat.id}
-            className="flex flex-col items-center text-center relative px-6"
+            className="flex flex-col items-center text-center relative"
           >
             {/* Stat value */}
             <p className="text-white text-2xl lg:text-4xl font-bold">{stat.value}</p>
@@ -67,7 +67,7 @@ const Stat = () => {
 
             {/* Divider between items */}
             {index < stats.length - 1 && (
-              <div className="absolute right-0  top-1/2 transform -translate-y-1/2 h-10 w-[1.5px] bg-white opacity-50"></div>
+              <div className="absolute top-1/2 right-[-20px] lg:right-[-108px] transform -translate-y-1/2 h-10 w-[1.5px] bg-white opacity-50"></div>
             )}
           </div>
         ))}
@@ -77,6 +77,7 @@ const Stat = () => {
 };
 
 export default Stat;
+
 
 
 
