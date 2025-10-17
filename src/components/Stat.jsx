@@ -42,7 +42,7 @@
 // }
 
 
-import React from "react";
+"use client";
 
 const Stat = () => {
   const stats = [
@@ -53,26 +53,21 @@ const Stat = () => {
 
   return (
     <section className="bg-[#00509D] w-full py-6">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-around items-center sm:gap-6 gap-4 px-4">
+      <div className="max-w-6xl mx-auto flex flex-row justify-around items-center gap-6 px-4">
         {stats.map((stat, index) => (
           <div
             key={stat.id}
-            className="flex flex-col items-center text-center relative sm:px-6"
+            className="flex flex-col items-center text-center relative px-6"
           >
             {/* Stat value */}
-            <p className="text-white text-4xl font-bold">{stat.value}</p>
+            <p className="text-white text-2xl lg:text-4xl font-bold">{stat.value}</p>
 
             {/* Label */}
-            <h3 className="text-white text-lg mt-1">{stat.label}</h3>
+            <h3 className="text-white text-sm lg:text-lg mt-1">{stat.label}</h3>
 
-            {/* Vertical divider (only for 1st and 2nd items on larger screens) */}
+            {/* Divider between items */}
             {index < stats.length - 1 && (
-              <div className="hidden sm:block absolute right-0 left-65 top-1/2 transform -translate-y-1/2 h-10 w-[1.5px] bg-white opacity-50"></div>
-            )}
-
-            {/* Horizontal divider for mobile */}
-            {index < stats.length - 1 && (
-              <div className="sm:hidden mt-4 w-16 h-[1.5px] bg-white opacity-50"></div>
+              <div className="absolute right-0  top-1/2 transform -translate-y-1/2 h-10 w-[1.5px] bg-white opacity-50"></div>
             )}
           </div>
         ))}
@@ -82,6 +77,7 @@ const Stat = () => {
 };
 
 export default Stat;
+
 
 
 
