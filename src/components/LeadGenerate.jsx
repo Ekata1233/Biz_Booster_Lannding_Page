@@ -207,6 +207,7 @@
 
 
 
+import Link from 'next/link'
 import React from 'react'
 
 const LeadGenerate = () => {
@@ -526,16 +527,19 @@ const LeadGenerate = () => {
       Ready to Transform Your Service Experience?
     </h2>
     <p className="text-gray-100 mt-3 max-w-2xl mx-auto">
-      Thousands of customers trust <span className="font-semibold">Fetch True</span> 
+      Thousands of customers trust <span className="font-semibold">Fetch True </span> 
       to deliver fast, verified, and secure services nationwide.
     </p>
     <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
       <button className="bg-white text-blue-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-100 transition">
         Get Started Today
       </button>
-      <button className="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition">
+      <Link href='/contact'>
+        <button className="bg-transparent border-2 border-white text-white font-semibold py-2 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition">
         Contact Now
       </button>
+      </Link>
+      
     </div>
   </div>
 </section>
