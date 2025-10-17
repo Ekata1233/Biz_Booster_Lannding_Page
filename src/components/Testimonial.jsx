@@ -262,7 +262,7 @@ const Testimonial = () => {
           Testimonials
         </h2>
         <p
-          className="text-sm bg-white shadow-md shadow-gray-200 text-gray-800 text-justify p-3 mt-2"
+          className="hidden lg:block text-sm bg-white shadow-md shadow-gray-200 text-gray-800 text-justify p-3 mt-2"
           style={{ borderRadius: "8px 8px 30px 0px" }}
         >
           Every testimonial is a story of trust, satisfaction, and smooth experience.
