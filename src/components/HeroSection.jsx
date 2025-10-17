@@ -243,7 +243,7 @@ const HeroSection = () => {
   }, [isAutoPlaying, nextSlide]);
 
   return (
-    <section className="relative w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[1024px] flex items-center justify-center overflow-hidden text-center mt-15">
+    <section className="relative w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[840px] flex items-center justify-center overflow-hidden text-center mt-0">
       {/* Background Image */}
       <img
         src="/Backround image.png"
@@ -255,8 +255,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1E3C72_0%,_#00000000_70%)] z-5"></div>
 
       {/* Centered Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-5 sm:px-8 text-white max-w-[900px]">
-        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight drop-shadow-lg lg:mt-10">
+      <div className="relative z-10 flex flex-col items-center justify-center px-5 sm:px-8 text-white ">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight drop-shadow-lg lg:mt-23  md:mt-30">
           {slides[currentSlide].title}
         </h1>
 
@@ -268,11 +268,11 @@ const HeroSection = () => {
           {slides[currentSlide].description}
         </p>
 
-        <div className="mt-4 sm:mt-8 md:mt-5">
+        <div className="mt-4 lg:mt-2  sm:mt-8 md:mt-2">
           <img
             src={slides[currentSlide].image}
             alt="Phone Mockup"
-            className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[592px] h-auto object-contain rounded-xl drop-shadow-2xl transition-all duration-700 ease-in-out"
+            className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] xl:w-[500px] h-auto object-contain rounded-xl drop-shadow-2xl transition-all duration-700 ease-in-out"
           />
         </div>
       </div>
