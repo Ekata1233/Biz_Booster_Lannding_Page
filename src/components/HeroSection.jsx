@@ -201,7 +201,6 @@
 // }
 
 "use client";
-import Image from "next/image";
 import React, { useCallback, useState, useEffect } from "react";
 
 const HeroSection = () => {
@@ -214,11 +213,12 @@ const HeroSection = () => {
       highlight: "All In One Service Platform",
       description:
         "Fetch True makes it easy for you to find, connect, and get services—all in one platform. With diverse sector of services, you can choose your needs.",
-      image: "/Phone Mockup(1).png",
+      image: "/All_In_One_Services (2).png",
     },
     {
       title: "Find Trusted Services with Trusted Partners",
-      highlight: "All-in-One Service Platform Stop Searching – Start Fetching with Fetch True",
+      highlight:
+        "All-in-One Service Platform Stop Searching – Start Fetching with Fetch True",
       description:
         "The Fetch True gives you quick access to every service you need. It acts as the control center, where you can explore, and connect with services effortlessly.",
       image: "/Services Banner Images.png",
@@ -236,8 +236,6 @@ const HeroSection = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
 
-  const goToSlide = (index) => setCurrentSlide(index);
-
   useEffect(() => {
     if (!isAutoPlaying) return;
     const interval = setInterval(nextSlide, 5000);
@@ -245,47 +243,45 @@ const HeroSection = () => {
   }, [isAutoPlaying, nextSlide]);
 
   return (
-    <section className="relative w-full flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[1024px] flex items-center justify-center overflow-hidden text-center mt-20">
       {/* Background Image */}
-      <div className="w-full h-auto">
-        <img
-          src="/Backround image.png"
-          alt="Hero Background"
-          className="w-full h-[600px] md:h-[800px] lg:h-[1024px] object-cover"
-        />
-      </div>
+      <img
+        src="/Backround image.png"
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-      {/* Radial Gradient Overlay (semi-circle at top) */}
+      {/* Radial Gradient Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_#1E3C72_0%,_#00000000_70%)] z-5"></div>
 
-      <div className="absolute top-1/6 md:top-1/12 lg:top-1/12 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 z-10 transition-all duration-700 ease-in-out">
-        <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight drop-shadow-lg justify-center">
+      {/* Centered Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-5 sm:px-8 text-white max-w-[900px]">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight drop-shadow-lg lg:mt-10">
           {slides[currentSlide].title}
         </h1>
 
-        <h3 className="text-white font-semibold text-sm sm:text-base md:text-xl lg:text-2xl mt-3 sm:mt-4 drop-shadow-md">
+        <h3 className="font-semibold text-sm sm:text-base md:text-xl lg:text-2xl mt-3 sm:mt-4 drop-shadow-md">
           {slides[currentSlide].highlight}
         </h3>
 
-        <p className="text-white text-xs sm:text-sm md:text-lg mt-3 sm:mt-4 max-w-[90%] sm:max-w-[600px] md:max-w-[750px] leading-relaxed drop-shadow-sm">
+        <p className="text-xs sm:text-sm md:text-lg mt-3 sm:mt-4 max-w-[85%] sm:max-w-[600px] md:max-w-[700px] leading-relaxed drop-shadow-sm mx-auto">
           {slides[currentSlide].description}
         </p>
 
-        <div>
+        <div className="mt-4 sm:mt-8 md:mt-5">
           <img
             src={slides[currentSlide].image}
             alt="Phone Mockup"
-            className="w-[250px] sm:w-[400px] md:w-[450px] lg:w-[550px] xl:w-[592px] h-auto object-contain rounded-xl drop-shadow-2xl transition-all duration-700 ease-in-out"
+            className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[592px] h-auto object-contain rounded-xl drop-shadow-2xl transition-all duration-700 ease-in-out"
           />
         </div>
-
-       
       </div>
     </section>
   );
 };
 
 export default HeroSection;
+
 
 
 
