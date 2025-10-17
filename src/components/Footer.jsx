@@ -94,7 +94,7 @@ function Footer() {
   );
 
   return (
-    <footer className="text-white bg-gradient-to-r from-[#003f7f] via-[#00509D] to-[#007bbd] pb-2">
+    <footer className="text-white bg-gradient-to-r from-[#1E3C72] to-[#2A5298] pb-2">
       {/* Container */}
       <div className="max-w-7xl mx-auto px-6 sm:px-12 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
         
