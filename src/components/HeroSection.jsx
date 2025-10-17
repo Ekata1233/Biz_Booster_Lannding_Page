@@ -243,7 +243,7 @@ const HeroSection = () => {
   }, [isAutoPlaying, nextSlide]);
 
   return (
-    <section className="relative w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[1024px] flex items-center justify-center overflow-hidden text-center mt-20">
+    <section className="relative w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[1024px] flex items-center justify-center overflow-hidden text-center mt-15">
       {/* Background Image */}
       <img
         src="/Backround image.png"
