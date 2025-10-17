@@ -214,24 +214,30 @@ const LeadGenerate = () => {
   return (
     <> 
       {/* For Desktop */}
-<section className="hidden lg:block py-16 px-10 xl:px-20 w-full overflow-hidden">
-  <h2 className="text-black font-bold text-4xl xl:text-5xl text-center leading-snug">
+<section className="hidden lg:block py-16 px-6 lg:px-10 xl:px-20 w-full overflow-hidden">
+  <h2 className="text-black font-bold text-3xl lg:text-4xl xl:text-5xl text-center leading-snug">
     Get Any Service Anytime, Anywhere <br />
     India’s First{" "}
-    <span className="text-[#1E3C72] to-[#2A5298] font-bold">Hybrid Marketplace</span>
+    <span className="text-[#1E3C72] to-[#2A5298] font-bold">
+      Hybrid Marketplace
+    </span>
   </h2>
 
-  {/* ---------- Verified Service Provider ---------- */}
+  {/* ---------- 1. Verified Service Provider ---------- */}
   <section className="relative flex flex-wrap py-10 items-center">
-    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] ms-10 xl:ms-20 mt-20 rounded-lg">
-      <div className="p-10 xl:p-12 space-y-4">
-        <span className="text-[#1E3C72] font-semibold">100% Verified Real Providers</span>
-        <h1 className="font-bold text-3xl xl:text-4xl">Verified Service Providers</h1>
-        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[700px] xl:w-[930px] ms-6 lg:ms-10 xl:ms-20 mt-20 rounded-lg">
+      <div className="p-8 lg:p-10 xl:p-12 space-y-4">
+        <span className="text-[#1E3C72] font-semibold">
+          100% Verified Real Providers
+        </span>
+        <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
+          Verified Service Providers
+        </h1>
+        <p className="font-medium text-base lg:text-lg xl:text-xl text-[#626262]">
           Every provider on Fetch True is checked, approved, and reliable. <br />
           So you can connect with confidence.
         </p>
-        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-sm lg:text-base xl:text-lg">
           <li>Verified identity & business details</li>
           <li>Quality checked & customer rated</li>
           <li>Trusted and experienced professionals</li>
@@ -240,33 +246,35 @@ const LeadGenerate = () => {
       </div>
     </div>
 
-    <div className="absolute right-20 xl:right-40 top-10 ">
+    <div className="absolute right-8 lg:right-16 xl:right-40 top-10">
       <img
         src="/12953560_Data_security_01 [Converted]-01-01.png"
         alt="Verified service"
-        className="w-[320px] xl:w-[400px] h-auto object-contain"
+        className="w-[260px] lg:w-[330px] xl:w-[400px] h-auto object-contain"
       />
     </div>
   </section>
 
-  {/* ---------- Customer Centric ---------- */}
-  <section className="relative flex justify-end items-center py-10">
-    <div className="absolute left-10 xl:left-40 top-0">
+  {/* ---------- 2. Customer Centric (Image Left) ---------- */}
+  <section className="relative flex items-center py-10">
+    <div className="absolute left-8 lg:left-16 xl:left-40 top-5">
       <img
         src="/273155455_679b781f-003b-45c4-aa0c-5797366906a6 (1) [Converted]-01 (1).png"
         alt="Customer Centric"
-        className="h-[300px] xl:h-[350px] w-auto object-contain"
+        className="h-[260px] lg:h-[320px] xl:h-[350px] w-auto object-contain"
       />
     </div>
 
-    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] me-10 xl:me-20 mt-20 rounded-lg">
-      <div className="p-10 xl:p-12 space-y-4 ms-0 lg:ms-65 xl:ms-70">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[700px] xl:w-[930px] ms-auto me-6 lg:me-10 xl:me-20 mt-20 rounded-lg">
+      <div className="p-8 lg:p-10 xl:p-12 space-y-4 xl:ms-90 lg:ms-60">
         <span className="text-[#1E3C72] font-semibold">5X Productivity</span>
-        <h1 className="font-bold text-3xl xl:text-4xl">Customer Centric</h1>
-        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+        <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
+          Customer Centric
+        </h1>
+        <p className="font-medium text-base lg:text-lg xl:text-xl text-[#626262]">
           Everything we build starts with your needs and ends with your satisfaction.
         </p>
-        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-sm lg:text-base xl:text-lg">
           <li>Verified & trusted service connections</li>
           <li>Smooth, secure, and effortless experience</li>
           <li>Smart suggestions tailored to you</li>
@@ -276,16 +284,18 @@ const LeadGenerate = () => {
     </div>
   </section>
 
-  {/* ---------- Guaranteed Satisfaction ---------- */}
-  <section className="relative flex py-10 items-center">
-    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] ms-10 xl:ms-20 mt-20 rounded-lg">
-      <div className="p-10 xl:p-12 space-y-4">
+  {/* ---------- 3. Guaranteed Satisfaction ---------- */}
+  <section className="relative flex items-center py-10">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[700px] xl:w-[930px] ms-6 lg:ms-10 xl:ms-20 mt-20 rounded-lg">
+      <div className="p-8 lg:p-10 xl:p-12 space-y-4">
         <span className="text-[#1E3C72] font-semibold">100% Satisfaction</span>
-        <h1 className="font-bold text-3xl xl:text-4xl">Guaranteed Satisfaction</h1>
-        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+        <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
+          Guaranteed Satisfaction
+        </h1>
+        <p className="font-medium text-base lg:text-lg xl:text-xl text-[#626262]">
           Your Satisfaction, Our Promise
         </p>
-        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-sm lg:text-base xl:text-lg">
           <li>Hassle-free experience from start to finish</li>
           <li>Instant replacement if any issue arises</li>
           <li>Your satisfaction is always our top priority</li>
@@ -294,33 +304,35 @@ const LeadGenerate = () => {
       </div>
     </div>
 
-    <div className="absolute right-10 xl:right-40 top-2">
+    <div className="absolute right-8 lg:right-16 xl:right-40 top-2">
       <img
         src="/205445046_55218d05-17d7-4aee-b0c1-474c5c5d833e-01.png"
         alt="Guaranteed Satisfaction"
-        className="w-[340px] xl:w-[420px] h-auto object-contain"
+        className="w-[280px] lg:w-[340px] xl:w-[420px] h-auto object-contain"
       />
     </div>
   </section>
 
-  {/* ---------- Get Instant Support ---------- */}
-  <section className="relative flex justify-end items-center py-10">
-    <div className="absolute left-10 xl:left-40 top-0">
+  {/* ---------- 4. Get Instant Support (Image Left) ---------- */}
+  <section className="relative flex items-center py-10">
+    <div className="absolute  lg:left-16 xl:left-40 top-0">
       <img
         src="/Get Instant Support-01.png"
         alt="Instant Support"
-        className="h-[420px] xl:h-[450px] w-auto object-contain"
+        className="h-[350px] lg:h-[420px] xl:h-[450px] w-auto object-contain"
       />
     </div>
 
-    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] me-10 xl:me-20 mt-20 rounded-lg">
-      <div className="p-10 xl:p-12 space-y-4 ms-0 lg:ms-70 xl:ms-60">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[700px] xl:w-[930px] ms-auto me-6 lg:me-10 xl:me-20 mt-20 rounded-lg">
+      <div className="p-8 lg:p-10 xl:p-12 space-y-4 xl:ms-90 lg:ms-60">
         <span className="text-[#1E3C72] font-semibold">Real Time Support</span>
-        <h1 className="font-bold text-3xl xl:text-4xl">Get Instant Support</h1>
-        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+        <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
+          Get Instant Support
+        </h1>
+        <p className="font-medium text-base lg:text-lg xl:text-xl text-[#626262]">
           Support That Never Sleeps
         </p>
-        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-sm lg:text-base xl:text-lg">
           <li>Quick resolution if any issue arises</li>
           <li>Connect instantly with a new provider if needed</li>
           <li>Keep your service running smoothly, stress-free</li>
@@ -330,18 +342,20 @@ const LeadGenerate = () => {
     </div>
   </section>
 
-  {/* ---------- Transparency Communication ---------- */}
-  <section className="relative flex py-10 items-center">
-    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[780px] xl:w-[930px] ms-10 xl:ms-20 mt-15 rounded-lg">
-      <div className="p-10 xl:p-12 space-y-4">
+  {/* ---------- 5. Transparency Communication ---------- */}
+  <section className="relative flex items-center py-10">
+    <div className="bg-white shadow-lg max-w-[900px] w-full lg:w-[700px] xl:w-[930px] ms-6 lg:ms-10 xl:ms-20 mt-15 rounded-lg">
+      <div className="p-8 lg:p-10 xl:p-12 space-y-4">
         <span className="text-[#1E3C72] font-semibold">
           Secure and Transparent Communication
         </span>
-        <h1 className="font-bold text-3xl xl:text-4xl">Transparency Communication</h1>
-        <p className="font-medium text-lg xl:text-xl text-[#626262]">
+        <h1 className="font-bold text-2xl lg:text-3xl xl:text-4xl">
+          Transparency Communication
+        </h1>
+        <p className="font-medium text-base lg:text-lg xl:text-xl text-[#626262]">
           Clear, Honest, and Trusted
         </p>
-        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-base xl:text-lg">
+        <ul className="list-disc font-normal text-[#626262] ms-10 space-y-2 text-sm lg:text-base xl:text-lg">
           <li>Personal information stays fully private</li>
           <li>Clear, honest communication with service providers</li>
           <li>Work confidently with verified, trusted professionals</li>
@@ -350,15 +364,17 @@ const LeadGenerate = () => {
       </div>
     </div>
 
-    <div className="absolute right-15 xl:right-30 top-5">
+    <div className="absolute right-8 lg:right-16 xl:right-40 top-5">
       <img
         src="/8474028_1895 [Converted]-01-01.png"
         alt="Transparency Communication"
-        className="w-[380px] xl:w-[430px] h-auto object-contain"
+        className="w-[300px] lg:w-[370px] xl:w-[430px] h-auto object-contain"
       />
     </div>
   </section>
 </section>
+
+
 
 {/* For Mobile  */}
 <section className="block lg:hidden py-12 px-4 w-full">
