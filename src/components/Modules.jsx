@@ -236,13 +236,13 @@ const Modules = () => {
       id: 2,
       title: "Business",
       icon: "/Business_Icon-01-01.png",
-      desc: "This module provides insight into how organizations run and generate revenues.",
+      desc: "The Business Module helps you start, manage, and grow your business effortlessly with powerful, integrated tools",
     },
     {
       id: 3,
       title: "Marketing",
       icon: "/Marketing-Icons-01-01.png",
-      desc: "It helps businesses increase exposure, attract consumers, and generate revenue.",
+      desc: "Marketing helps businesses grow by delivering the right message to the right audience, building brand awareness and long-term success.",
     },
     {
       id: 4,
@@ -322,7 +322,7 @@ const Modules = () => {
         {modules.map((mod) => (
           <div
             key={mod.id}
-            className="bg-white rounded-xl shadow-md p-5 flex flex-col items-start text-left hover:shadow-lg transition-all duration-300 h-[240px] justify-start"
+            className="bg-white rounded-xl shadow-md p-5 flex flex-col items-start text-left hover:shadow-lg transition-all duration-300 h-[250px] lg:h-[280px] xl:h-[260px] justify-start"
           >
             {/* Image in circular background */}
             <div className="bg-gradient-to-r from-[#DBEAFE] to-[#E0E7FF] rounded-full mb-4 flex items-center justify-center w-[100px] h-[100px]">
